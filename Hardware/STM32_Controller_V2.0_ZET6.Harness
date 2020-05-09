@@ -1,13 +1,13 @@
 BEEP=
 download=
 IIC=
-IMU=
 KEY=
+NRF=
 OSC_Inside=
 OSC_Outside=
 RGB=
-TIM=
-TIM3=
+TIM1=
+TIM4=
 UASRT1=
 UASRT2=
 USART3=
