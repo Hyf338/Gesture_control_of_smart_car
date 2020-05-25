@@ -1,0 +1,1 @@
+--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\ST\STM32F10x" --list ".\Lst\stm32f10x_vector.lst" --xref -o ".\Obj\stm32f10x_vector.o" "stm32f10x_vector.s"

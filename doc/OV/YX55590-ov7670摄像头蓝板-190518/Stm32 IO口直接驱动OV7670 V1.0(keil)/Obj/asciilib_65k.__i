@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\source -I.\include -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\Obj\asciilib_65k.o" --omf_browse ".\Obj\asciilib_65k.crf" --depend ".\Obj\asciilib_65k.d" "source\AsciiLib_65k.c"

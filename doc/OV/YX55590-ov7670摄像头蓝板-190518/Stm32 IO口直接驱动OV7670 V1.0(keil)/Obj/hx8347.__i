@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\source -I.\include -I "D:\Keil\ARM\INC\ST\STM32F10x" -o ".\Obj\hx8347.o" --omf_browse ".\Obj\hx8347.crf" --depend ".\Obj\hx8347.d" "source\hx8347.C"

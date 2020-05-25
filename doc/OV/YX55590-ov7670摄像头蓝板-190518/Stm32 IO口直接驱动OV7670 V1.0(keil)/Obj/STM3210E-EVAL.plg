@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+E:\mySTM32\Example\Interrupt\Project\Project.uv2
+Project File Date:  09/23/2008
+
+<h2>Output:</h2>
+Build target 'STM3210E-EVAL'
+compiling stm32f10x_it.c...
+compiling main.c...
+assembling stm32f10x_vector.s...
+linking...
+Program Size: Code=2212 RO-data=356 RW-data=136 ZI-data=1160  
+".\Obj\STM3210E-EVAL.axf" - 0 Error(s), 0 Warning(s).

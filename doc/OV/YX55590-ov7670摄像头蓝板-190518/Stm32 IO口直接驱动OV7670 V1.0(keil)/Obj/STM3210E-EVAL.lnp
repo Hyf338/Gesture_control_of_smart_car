@@ -1,0 +1,4 @@
+--device DARMSTM ".\obj\stm32f10x_it.o" ".\obj\main.o" ".\STM32F10xR.LIB" ".\obj\stm32f10x_vector.o" --library_type=microlib --strict --scatter ".\Obj\STM3210E-EVAL.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\STM3210E-EVAL.map" -o ".\Obj\STM3210E-EVAL.axf"

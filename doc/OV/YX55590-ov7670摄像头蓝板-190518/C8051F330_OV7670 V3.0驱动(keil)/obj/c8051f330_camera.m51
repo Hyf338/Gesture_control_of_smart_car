@@ -1,0 +1,919 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/22/2012  14:17:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE .\obj\STARTUP.obj, .\obj\c8051f330_camera.obj TO .\obj\c8051f330_camera PRINT (.\obj\c8051f330_
+>> camera.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\obj\STARTUP.obj (?C_STARTUP)
+  .\obj\c8051f330_camera.obj (C8051F330_CAMERA)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+
+
+LINK MAP OF MODULE:  .\obj\c8051f330_camera (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0021H     UNIT         _DATA_GROUP_
+            DATA    0029H     0002H     UNIT         ?DT?C8051F330_CAMERA
+            IDATA   002BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     064AH     UNIT         ?CO?C8051F330_CAMERA
+            CODE    0650H     03D8H     UNIT         ?PR?SET_CMOS7670REG?C8051F330_CAMERA
+            CODE    0A28H     0242H     UNIT         ?PR?TFT_INIT?C8051F330_CAMERA
+            CODE    0C6AH     0094H     UNIT         ?PR?MAIN?C8051F330_CAMERA
+            CODE    0CFEH     008DH     UNIT         ?PR?INT0_ISR?C8051F330_CAMERA
+            CODE    0D8BH     008AH     UNIT         ?PR?_TFT_SETBACKGROUND?C8051F330_CAMERA
+            CODE    0E15H     0084H     UNIT         ?PR?_TFTCLEAR?C8051F330_CAMERA
+            CODE    0E99H     006BH     UNIT         ?PR?_TFTWR_STR?C8051F330_CAMERA
+            CODE    0F04H     005AH     UNIT         ?PR?_I2CWRITE?C8051F330_CAMERA
+            CODE    0F5EH     004BH     UNIT         ?PR?_TFTWR_SINGLESTR?C8051F330_CAMERA
+            CODE    0FA9H     0048H     UNIT         ?PR?_TFTWRITE?C8051F330_CAMERA
+            CODE    0FF1H     003DH     UNIT         ?PR?_WRCMOS7670?C8051F330_CAMERA
+            CODE    102EH     002CH     UNIT         ?PR?CMOS7670_INIT?C8051F330_CAMERA
+            CODE    105AH     002AH     UNIT         ?C?LIB_CODE
+            CODE    1084H     0021H     UNIT         ?PR?_TFT_WR_DATA16?C8051F330_CAMERA
+            CODE    10A5H     0021H     UNIT         ?PR?_TFTWRITE16?C8051F330_CAMERA
+            CODE    10C6H     001AH     UNIT         ?PR?_TFT_SETCURSOR?C8051F330_CAMERA
+            CODE    10E0H     0018H     UNIT         ?PR?_DELAY_MS?C8051F330_CAMERA
+            CODE    10F8H     0017H     UNIT         ?PR?PORT_INIT?C8051F330_CAMERA
+            CODE    110FH     0016H     UNIT         ?PR?STARTI2C?C8051F330_CAMERA
+            CODE    1125H     0011H     UNIT         ?PR?STOPI2C?C8051F330_CAMERA
+            CODE    1136H     0011H     UNIT         ?PR?_DELAY_US?C8051F330_CAMERA
+            CODE    1147H     000CH     UNIT         ?C_C51STARTUP
+            CODE    1153H     0009H     UNIT         ?PR?EXT_INTERRUPT_INIT?C8051F330_CAMERA
+            CODE    115CH     0007H     UNIT         ?PR?OSCILLATOR_INIT?C8051F330_CAMERA
+            CODE    1163H     0007H     UNIT         ?PR?INITI2C?C8051F330_CAMERA
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 2
+
+
+
+OVERLAY MAP OF MODULE:   .\obj\c8051f330_camera (?C_STARTUP)
+
+
+SEGMENT                                           DATA_GROUP 
+  +--> CALLED SEGMENT                           START    LENGTH
+---------------------------------------------------------------
+?C_C51STARTUP                                   -----    -----
+  +--> ?PR?MAIN?C8051F330_CAMERA
+
+?PR?MAIN?C8051F330_CAMERA                       -----    -----
+  +--> ?PR?OSCILLATOR_INIT?C8051F330_CAMERA
+  +--> ?PR?PORT_INIT?C8051F330_CAMERA
+  +--> ?PR?EXT_INTERRUPT_INIT?C8051F330_CAMERA
+  +--> ?PR?TFT_INIT?C8051F330_CAMERA
+  +--> ?PR?_TFTCLEAR?C8051F330_CAMERA
+  +--> ?CO?C8051F330_CAMERA
+  +--> ?PR?_TFTWR_STR?C8051F330_CAMERA
+  +--> ?PR?_DELAY_MS?C8051F330_CAMERA
+  +--> ?PR?CMOS7670_INIT?C8051F330_CAMERA
+
+?PR?TFT_INIT?C8051F330_CAMERA                   -----    -----
+  +--> ?PR?_DELAY_MS?C8051F330_CAMERA
+  +--> ?PR?_TFTWRITE?C8051F330_CAMERA
+
+?PR?_DELAY_MS?C8051F330_CAMERA                  -----    -----
+  +--> ?PR?_DELAY_US?C8051F330_CAMERA
+
+?PR?_TFTWRITE?C8051F330_CAMERA                  0023H    0006H
+
+?PR?_TFTCLEAR?C8051F330_CAMERA                  0008H    0004H
+  +--> ?PR?_TFTWRITE?C8051F330_CAMERA
+  +--> ?PR?_TFTWRITE16?C8051F330_CAMERA
+  +--> ?PR?_TFT_WR_DATA16?C8051F330_CAMERA
+
+?PR?_TFT_WR_DATA16?C8051F330_CAMERA             0019H    0002H
+
+?PR?_TFTWR_STR?C8051F330_CAMERA                 0008H    000DH
+  +--> ?PR?_TFT_SETBACKGROUND?C8051F330_CAMERA
+  +--> ?PR?_TFTWR_SINGLESTR?C8051F330_CAMERA
+
+?PR?_TFT_SETBACKGROUND?C8051F330_CAMERA         0015H    0008H
+  +--> ?PR?_TFT_SETCURSOR?C8051F330_CAMERA
+  +--> ?PR?_TFTWRITE?C8051F330_CAMERA
+
+?PR?_TFT_SETCURSOR?C8051F330_CAMERA             -----    -----
+  +--> ?PR?_TFTWRITE?C8051F330_CAMERA
+
+?PR?_TFTWR_SINGLESTR?C8051F330_CAMERA           0015H    0004H
+  +--> ?PR?_TFTWRITE16?C8051F330_CAMERA
+  +--> ?CO?C8051F330_CAMERA
+  +--> ?PR?_TFT_WR_DATA16?C8051F330_CAMERA
+
+?PR?CMOS7670_INIT?C8051F330_CAMERA              0008H    0002H
+  +--> ?PR?INITI2C?C8051F330_CAMERA
+  +--> ?PR?_WRCMOS7670?C8051F330_CAMERA
+  +--> ?PR?_DELAY_MS?C8051F330_CAMERA
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 3
+
+
+  +--> ?PR?SET_CMOS7670REG?C8051F330_CAMERA
+
+?PR?_WRCMOS7670?C8051F330_CAMERA                000AH    0002H
+  +--> ?PR?STARTI2C?C8051F330_CAMERA
+  +--> ?PR?_I2CWRITE?C8051F330_CAMERA
+  +--> ?PR?_DELAY_US?C8051F330_CAMERA
+  +--> ?PR?STOPI2C?C8051F330_CAMERA
+
+?PR?STARTI2C?C8051F330_CAMERA                   -----    -----
+  +--> ?PR?_DELAY_US?C8051F330_CAMERA
+
+?PR?_I2CWRITE?C8051F330_CAMERA                  000CH    0003H
+  +--> ?PR?_DELAY_US?C8051F330_CAMERA
+
+?PR?STOPI2C?C8051F330_CAMERA                    -----    -----
+  +--> ?PR?_DELAY_US?C8051F330_CAMERA
+
+?PR?SET_CMOS7670REG?C8051F330_CAMERA            -----    -----
+  +--> ?PR?_WRCMOS7670?C8051F330_CAMERA
+
+*** NEW ROOT ***************************************************
+
+?PR?INT0_ISR?C8051F330_CAMERA                   -----    -----
+  +--> ?PR?_TFTWRITE?C8051F330_CAMERA
+  +--> ?PR?_TFTWRITE16?C8051F330_CAMERA
+
+
+
+SYMBOL TABLE OF MODULE:  .\obj\c8051f330_camera (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:1147H         SEGMENT       ?C_C51STARTUP
+  I:002BH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:114AH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:1147H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 4
+
+
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:1147H         LINE#         133
+  C:1149H         LINE#         134
+  C:114AH         LINE#         135
+  C:114BH         LINE#         136
+  C:114DH         LINE#         185
+  C:1150H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        C8051F330_CAMERA
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:102EH         PUBLIC        Cmos7670_init
+  D:0090H         PUBLIC        P1
+  B:0080H.1       PUBLIC        I2C_SCL
+  B:0080H.7       PUBLIC        Tft_WR_PIN
+  B:00A8H.7       PUBLIC        EA
+  D:00E4H         PUBLIC        IT01CF
+  D:00A4H         PUBLIC        P0MDOUT
+  D:00A5H         PUBLIC        P1MDOUT
+  D:00A8H         PUBLIC        IE
+  D:00D9H         PUBLIC        PCA0MD
+  C:0E18H         PUBLIC        _TftClear
+  D:0029H         PUBLIC        flag
+  C:1084H         PUBLIC        _Tft_WR_DATA16
+  D:00E1H         PUBLIC        XBR0
+  C:10F8H         PUBLIC        Port_Init
+  D:00E2H         PUBLIC        XBR1
+  C:10A9H         PUBLIC        _TftWrite16
+  C:0A28H         PUBLIC        Tft_Init
+  C:0C6AH         PUBLIC        main
+  D:00F1H         PUBLIC        P0MDIN
+  D:00F2H         PUBLIC        P1MDIN
+  C:0FF1H         PUBLIC        _WrCmos7670
+  D:00D4H         PUBLIC        P0SKIP
+  D:00D5H         PUBLIC        P1SKIP
+  B:0080H.0       PUBLIC        SDA_STATE
+  C:0FAFH         PUBLIC        _TftWrite
+  B:0088H.1       PUBLIC        IE0
+  C:10C6H         PUBLIC        _Tft_SetCursor
+  D:00B2H         PUBLIC        OSCICN
+  C:0D8BH         PUBLIC        _Tft_SetBackground
+  C:0F04H         PUBLIC        _I2CWrite
+  B:0088H.0       PUBLIC        IT0
+  C:110FH         PUBLIC        StartI2C
+  B:0080H.4       PUBLIC        Tft_RST_PIN
+  C:10E4H         PUBLIC        _delay_ms
+  B:0080H.2       PUBLIC        Cmos_CS_PIN
+  C:1163H         PUBLIC        InitI2C
+  C:0650H         PUBLIC        set_Cmos7670reg
+  C:113CH         PUBLIC        _delay_us
+  C:0F5EH         PUBLIC        _TftWR_SingleStr
+  C:1153H         PUBLIC        Ext_Interrupt_Init
+  D:00EFH         PUBLIC        RSTSRC
+  C:1125H         PUBLIC        StopI2C
+  C:0CFEH         PUBLIC        INT0_ISR
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 5
+
+
+  C:0060H         PUBLIC        english
+  C:0E9DH         PUBLIC        _TftWR_Str
+  B:0080H.3       PUBLIC        WR_CONTROL_PIN
+  C:115CH         PUBLIC        OSCILLATOR_Init
+  B:0080H.0       PUBLIC        I2C_SDA
+  B:0080H.6       PUBLIC        Tft_RS_PIN
+  -------         PROC          MAIN
+  C:0C6AH         LINE#         94
+  C:0C6AH         LINE#         95
+  C:0C6AH         LINE#         96
+  C:0C6DH         LINE#         97
+  C:0C70H         LINE#         98
+  C:0C73H         LINE#         99
+  C:0C76H         LINE#         100
+  C:0C78H         LINE#         101
+  C:0C7BH         LINE#         102
+  C:0C7EH         LINE#         103
+  C:0C94H         LINE#         104
+  C:0CAAH         LINE#         105
+  C:0CC0H         LINE#         106
+  C:0CC7H         LINE#         108
+  C:0CCDH         LINE#         109
+  C:0CD4H         LINE#         110
+  C:0CD7H         LINE#         111
+  C:0CEDH         LINE#         112
+  C:0CF4H         LINE#         114
+  C:0CFAH         LINE#         115
+  C:0CFCH         LINE#         116
+  -------         ENDPROC       MAIN
+  -------         PROC          OSCILLATOR_INIT
+  C:115CH         LINE#         123
+  C:115CH         LINE#         124
+  C:115CH         LINE#         125
+  C:115FH         LINE#         126
+  C:1162H         LINE#         127
+  -------         ENDPROC       OSCILLATOR_INIT
+  -------         PROC          PORT_INIT
+  C:10F8H         LINE#         130
+  C:10F8H         LINE#         131
+  C:10F8H         LINE#         133
+  C:10FBH         LINE#         134
+  C:10FEH         LINE#         136
+  C:1101H         LINE#         137
+  C:1104H         LINE#         139
+  C:1107H         LINE#         140
+  C:1109H         LINE#         142
+  C:110BH         LINE#         143
+  C:110EH         LINE#         146
+  -------         ENDPROC       PORT_INIT
+  -------         PROC          EXT_INTERRUPT_INIT
+  C:1153H         LINE#         150
+  C:1153H         LINE#         151
+  C:1153H         LINE#         152
+  C:1156H         LINE#         153
+  C:1158H         LINE#         154
+  C:115BH         LINE#         155
+  -------         ENDPROC       EXT_INTERRUPT_INIT
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 6
+
+
+  -------         PROC          INT0_ISR
+  C:0CFEH         LINE#         158
+  C:0D1BH         LINE#         161
+  C:0D1DH         LINE#         162
+  C:0D1FH         LINE#         164
+  C:0D22H         LINE#         165
+  C:0D24H         LINE#         166
+  C:0D26H         LINE#         168
+  C:0D2BH         LINE#         169
+  C:0D36H         LINE#         170
+  C:0D3FH         LINE#         171
+  C:0D4AH         LINE#         172
+  C:0D4DH         LINE#         173
+  C:0D58H         LINE#         174
+  C:0D63H         LINE#         175
+  C:0D66H         LINE#         178
+  C:0D68H         LINE#         179
+  C:0D6AH         LINE#         182
+  C:0D6CH         LINE#         183
+  C:0D6EH         LINE#         185
+  C:0D70H         LINE#         187
+  -------         ENDPROC       INT0_ISR
+  -------         PROC          TFT_INIT
+  C:0A28H         LINE#         189
+  C:0A28H         LINE#         190
+  C:0A28H         LINE#         192
+  C:0A2AH         LINE#         193
+  C:0A31H         LINE#         194
+  C:0A33H         LINE#         195
+  C:0A3AH         LINE#         196
+  C:0A3CH         LINE#         197
+  C:0A43H         LINE#         200
+  C:0A4EH         LINE#         201
+  C:0A58H         LINE#         202
+  C:0A63H         LINE#         203
+  C:0A6EH         LINE#         207
+  C:0A79H         LINE#         221
+  C:0A82H         LINE#         222
+  C:0A8DH         LINE#         223
+  C:0A96H         LINE#         224
+  C:0A9FH         LINE#         225
+  C:0AA8H         LINE#         226
+  C:0AB1H         LINE#         227
+  C:0ABAH         LINE#         228
+  C:0AC3H         LINE#         229
+  C:0ACEH         LINE#         230
+  C:0AD7H         LINE#         231
+  C:0AE0H         LINE#         232
+  C:0AE3H         LINE#         233
+  C:0AEEH         LINE#         234
+  C:0AF9H         LINE#         235
+  C:0AFCH         LINE#         236
+  C:0B07H         LINE#         237
+  C:0B0AH         LINE#         238
+  C:0B15H         LINE#         239
+  C:0B20H         LINE#         240
+  C:0B23H         LINE#         241
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 7
+
+
+  C:0B2CH         LINE#         242
+  C:0B37H         LINE#         243
+  C:0B42H         LINE#         244
+  C:0B4DH         LINE#         245
+  C:0B58H         LINE#         246
+  C:0B63H         LINE#         247
+  C:0B6EH         LINE#         248
+  C:0B79H         LINE#         249
+  C:0B84H         LINE#         250
+  C:0B8FH         LINE#         251
+  C:0B98H         LINE#         252
+  C:0BA3H         LINE#         253
+  C:0BA6H         LINE#         254
+  C:0BB1H         LINE#         255
+  C:0BBCH         LINE#         256
+  C:0BC7H         LINE#         257
+  C:0BD0H         LINE#         262
+  C:0BDBH         LINE#         263
+  C:0BE6H         LINE#         283
+  C:0BEFH         LINE#         284
+  C:0BF8H         LINE#         285
+  C:0C01H         LINE#         286
+  C:0C0AH         LINE#         287
+  C:0C13H         LINE#         288
+  C:0C1CH         LINE#         289
+  C:0C27H         LINE#         290
+  C:0C30H         LINE#         291
+  C:0C3BH         LINE#         292
+  C:0C46H         LINE#         293
+  C:0C4FH         LINE#         294
+  C:0C58H         LINE#         295
+  C:0C63H         LINE#         296
+  -------         ENDPROC       TFT_INIT
+  -------         PROC          _TFT_WR_DATA16
+  D:0006H         SYMBOL        inputdata
+  -------         DO            
+  D:0006H         SYMBOL        inputdatah
+  D:0004H         SYMBOL        inputdatal
+  D:0019H         SYMBOL        x
+  -------         ENDDO         
+  C:1084H         LINE#         303
+  C:1084H         LINE#         304
+  C:1084H         LINE#         308
+  C:1088H         LINE#         309
+  C:108AH         LINE#         310
+  C:108CH         LINE#         311
+  C:108FH         LINE#         312
+  C:1091H         LINE#         313
+  C:1094H         LINE#         314
+  C:1096H         LINE#         315
+  C:1098H         LINE#         316
+  C:109AH         LINE#         317
+  C:109CH         LINE#         318
+  C:109EH         LINE#         319
+  C:10A0H         LINE#         320
+  C:10A2H         LINE#         321
+  C:10A4H         LINE#         323
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 8
+
+
+  -------         ENDPROC       _TFT_WR_DATA16
+  C:10A5H         SYMBOL        L?0075
+  -------         PROC          L?0074
+  -------         ENDPROC       L?0074
+  C:10A5H         SYMBOL        L?0075
+  -------         PROC          _TFTWRITE16
+  D:0004H         SYMBOL        index
+  -------         DO            
+  D:0006H         SYMBOL        indexh
+  D:0004H         SYMBOL        indexl
+  -------         ENDDO         
+  C:10A9H         LINE#         326
+  C:10ABH         LINE#         327
+  C:10ABH         LINE#         330
+  C:10ADH         LINE#         331
+  C:10ADH         LINE#         332
+  C:10B0H         LINE#         333
+  C:10B2H         LINE#         335
+  C:10B5H         LINE#         336
+  C:10B7H         LINE#         337
+  C:10B9H         LINE#         338
+  C:10BBH         LINE#         340
+  C:10BDH         LINE#         341
+  C:10BFH         LINE#         343
+  C:10C1H         LINE#         344
+  C:10C3H         LINE#         346
+  C:10C5H         LINE#         348
+  -------         ENDPROC       _TFTWRITE16
+  C:0FABH         SYMBOL        L?0066
+  -------         PROC          L?0065
+  -------         ENDPROC       L?0065
+  C:0FABH         SYMBOL        L?0066
+  -------         PROC          _TFTWRITE
+  D:0002H         SYMBOL        index
+  D:0004H         SYMBOL        inputdata
+  -------         DO            
+  D:0023H         SYMBOL        x
+  D:0025H         SYMBOL        y
+  D:0027H         SYMBOL        indexh
+  D:0002H         SYMBOL        indexl
+  D:0006H         SYMBOL        inputdatah
+  D:0004H         SYMBOL        inputdatal
+  -------         ENDDO         
+  C:0FAFH         LINE#         351
+  C:0FB3H         LINE#         352
+  C:0FB3H         LINE#         359
+  C:0FB7H         LINE#         360
+  C:0FBBH         LINE#         361
+  C:0FC1H         LINE#         362
+  C:0FC1H         LINE#         363
+  C:0FC5H         LINE#         364
+  C:0FC5H         LINE#         365
+  C:0FC8H         LINE#         366
+  C:0FCAH         LINE#         368
+  C:0FCDH         LINE#         369
+  C:0FD0H         LINE#         370
+  C:0FD2H         LINE#         371
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 9
+
+
+  C:0FD4H         LINE#         372
+  C:0FD6H         LINE#         373
+  C:0FD8H         LINE#         374
+  C:0FDAH         LINE#         375
+  C:0FDCH         LINE#         377
+  C:0FDEH         LINE#         378
+  C:0FE0H         LINE#         379
+  C:0FE2H         LINE#         380
+  C:0FE4H         LINE#         381
+  C:0FE6H         LINE#         382
+  C:0FE8H         LINE#         383
+  C:0FEAH         LINE#         384
+  C:0FECH         LINE#         385
+  C:0FEEH         LINE#         387
+  C:0FF0H         LINE#         389
+  -------         ENDPROC       _TFTWRITE
+  -------         PROC          L?0076
+  -------         ENDPROC       L?0076
+  -------         PROC          _TFTCLEAR
+  D:0082H         SYMBOL        Color
+  -------         DO            
+  D:0008H         SYMBOL        index
+  -------         ENDDO         
+  C:0E18H         LINE#         391
+  C:0E1CH         LINE#         392
+  C:0E1CH         LINE#         393
+  C:0E25H         LINE#         395
+  C:0E2DH         LINE#         396
+  C:0E36H         LINE#         397
+  C:0E3EH         LINE#         398
+  C:0E48H         LINE#         399
+  C:0E51H         LINE#         400
+  C:0E58H         LINE#         401
+  C:0E5BH         LINE#         403
+  C:0E7AH         LINE#         404
+  C:0E7AH         LINE#         405
+  C:0E81H         LINE#         407
+  C:0E98H         LINE#         409
+  -------         ENDPROC       _TFTCLEAR
+  -------         PROC          _TFTWR_SINGLESTR
+  D:0001H         SYMBOL        inputdata
+  D:0015H         SYMBOL        color
+  D:0017H         SYMBOL        xcolor
+  -------         DO            
+  D:0003H         SYMBOL        avl
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        n
+  -------         ENDDO         
+  C:0F5EH         LINE#         411
+  C:0F68H         LINE#         412
+  C:0F68H         LINE#         415
+  C:0F6BH         LINE#         416
+  C:0F6DH         LINE#         417
+  C:0F6DH         LINE#         418
+  C:0F89H         LINE#         419
+  C:0F8BH         LINE#         420
+  C:0F8BH         LINE#         421
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 10
+
+
+  C:0F95H         LINE#         422
+  C:0F9CH         LINE#         424
+  C:0FA0H         LINE#         425
+  C:0FA4H         LINE#         426
+  C:0FA8H         LINE#         427
+  -------         ENDPROC       _TFTWR_SINGLESTR
+  C:0E99H         SYMBOL        L?0071
+  -------         PROC          L?0070
+  -------         ENDPROC       L?0070
+  C:0E99H         SYMBOL        L?0071
+  -------         PROC          _TFTWR_STR
+  D:0008H         SYMBOL        x
+  D:000AH         SYMBOL        y
+  D:000CH         SYMBOL        s
+  D:000FH         SYMBOL        color
+  D:0011H         SYMBOL        xcolor
+  -------         DO            
+  D:0013H         SYMBOL        k
+  -------         ENDDO         
+  C:0E9DH         LINE#         428
+  C:0EABH         LINE#         429
+  C:0EABH         LINE#         430
+  C:0EB0H         LINE#         431
+  C:0EBBH         LINE#         432
+  C:0EBBH         LINE#         433
+  C:0ED6H         LINE#         434
+  C:0EEBH         LINE#         435
+  C:0EF6H         LINE#         436
+  C:0F01H         LINE#         438
+  C:0F03H         LINE#         440
+  -------         ENDPROC       _TFTWR_STR
+  -------         PROC          _TFT_SETBACKGROUND
+  D:0015H         SYMBOL        StartX
+  D:0017H         SYMBOL        StartY
+  D:0019H         SYMBOL        LongX
+  D:001BH         SYMBOL        LongY
+  C:0D8BH         LINE#         443
+  C:0D97H         LINE#         444
+  C:0D97H         LINE#         450
+  C:0DC1H         LINE#         472
+  C:0DCCH         LINE#         473
+  C:0DE4H         LINE#         474
+  C:0DF6H         LINE#         475
+  -------         ENDPROC       _TFT_SETBACKGROUND
+  -------         PROC          _TFT_SETCURSOR
+  D:0004H         SYMBOL        Xpos
+  D:0082H         SYMBOL        Ypos
+  C:10C6H         LINE#         478
+  C:10CEH         LINE#         479
+  C:10CEH         LINE#         481
+  C:10D5H         LINE#         482
+  -------         ENDPROC       _TFT_SETCURSOR
+  -------         PROC          SET_CMOS7670REG
+  C:0650H         LINE#         487
+  C:0650H         LINE#         488
+  C:0650H         LINE#         490
+  C:0655H         LINE#         491
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 11
+
+
+  C:065CH         LINE#         492
+  C:0663H         LINE#         493
+  C:066AH         LINE#         494
+  C:0671H         LINE#         495
+  C:0678H         LINE#         496
+  C:067FH         LINE#         497
+  C:0686H         LINE#         498
+  C:068DH         LINE#         499
+  C:0694H         LINE#         500
+  C:069BH         LINE#         501
+  C:06A2H         LINE#         502
+  C:06A9H         LINE#         503
+  C:06B0H         LINE#         504
+  C:06B7H         LINE#         505
+  C:06BEH         LINE#         506
+  C:06C5H         LINE#         507
+  C:06CCH         LINE#         509
+  C:06D3H         LINE#         510
+  C:06DAH         LINE#         511
+  C:06E1H         LINE#         512
+  C:06E8H         LINE#         513
+  C:06EFH         LINE#         514
+  C:06F6H         LINE#         515
+  C:06FDH         LINE#         516
+  C:0704H         LINE#         517
+  C:070BH         LINE#         518
+  C:0712H         LINE#         519
+  C:0719H         LINE#         520
+  C:0720H         LINE#         521
+  C:0727H         LINE#         522
+  C:072EH         LINE#         523
+  C:0735H         LINE#         524
+  C:073CH         LINE#         526
+  C:0743H         LINE#         527
+  C:0749H         LINE#         529
+  C:0750H         LINE#         530
+  C:0757H         LINE#         531
+  C:075EH         LINE#         532
+  C:0765H         LINE#         533
+  C:076CH         LINE#         534
+  C:0773H         LINE#         535
+  C:077AH         LINE#         536
+  C:0781H         LINE#         537
+  C:0788H         LINE#         538
+  C:078FH         LINE#         539
+  C:0796H         LINE#         540
+  C:079DH         LINE#         541
+  C:07A4H         LINE#         542
+  C:07ABH         LINE#         543
+  C:07B2H         LINE#         544
+  C:07B9H         LINE#         545
+  C:07C0H         LINE#         547
+  C:07C7H         LINE#         548
+  C:07CEH         LINE#         549
+  C:07D5H         LINE#         550
+  C:07DCH         LINE#         551
+  C:07E3H         LINE#         552
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 12
+
+
+  C:07EAH         LINE#         553
+  C:07F1H         LINE#         554
+  C:07F8H         LINE#         555
+  C:07FFH         LINE#         556
+  C:0806H         LINE#         557
+  C:080DH         LINE#         558
+  C:0814H         LINE#         559
+  C:081BH         LINE#         560
+  C:0822H         LINE#         561
+  C:0829H         LINE#         562
+  C:0830H         LINE#         563
+  C:0837H         LINE#         564
+  C:083EH         LINE#         565
+  C:0845H         LINE#         566
+  C:084CH         LINE#         567
+  C:0853H         LINE#         568
+  C:085AH         LINE#         569
+  C:0861H         LINE#         570
+  C:0868H         LINE#         571
+  C:086FH         LINE#         572
+  C:0876H         LINE#         573
+  C:087DH         LINE#         574
+  C:0884H         LINE#         575
+  C:088BH         LINE#         576
+  C:0892H         LINE#         577
+  C:0899H         LINE#         581
+  C:08A0H         LINE#         582
+  C:08A7H         LINE#         583
+  C:08AEH         LINE#         584
+  C:08B5H         LINE#         585
+  C:08BCH         LINE#         586
+  C:08C3H         LINE#         587
+  C:08CAH         LINE#         588
+  C:08D1H         LINE#         589
+  C:08D8H         LINE#         590
+  C:08DFH         LINE#         591
+  C:08E6H         LINE#         592
+  C:08EDH         LINE#         593
+  C:08F4H         LINE#         594
+  C:08FBH         LINE#         595
+  C:0902H         LINE#         596
+  C:0909H         LINE#         597
+  C:0910H         LINE#         598
+  C:0917H         LINE#         599
+  C:091EH         LINE#         600
+  C:0925H         LINE#         601
+  C:092CH         LINE#         602
+  C:0933H         LINE#         603
+  C:093AH         LINE#         604
+  C:0941H         LINE#         605
+  C:0948H         LINE#         606
+  C:094FH         LINE#         609
+  C:0956H         LINE#         610
+  C:095DH         LINE#         611
+  C:0964H         LINE#         612
+  C:096BH         LINE#         613
+  C:0972H         LINE#         614
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 13
+
+
+  C:0979H         LINE#         615
+  C:0980H         LINE#         617
+  C:0987H         LINE#         618
+  C:098EH         LINE#         619
+  C:0995H         LINE#         620
+  C:099CH         LINE#         621
+  C:09A3H         LINE#         622
+  C:09AAH         LINE#         623
+  C:09B1H         LINE#         624
+  C:09B8H         LINE#         625
+  C:09BFH         LINE#         626
+  C:09C6H         LINE#         627
+  C:09CDH         LINE#         629
+  C:09D4H         LINE#         630
+  C:09DBH         LINE#         632
+  C:09E2H         LINE#         633
+  C:09E9H         LINE#         634
+  C:09F0H         LINE#         635
+  C:09F7H         LINE#         636
+  C:09FEH         LINE#         637
+  C:0A05H         LINE#         638
+  C:0A0CH         LINE#         639
+  C:0A13H         LINE#         640
+  C:0A1AH         LINE#         641
+  C:0A21H         LINE#         642
+  -------         ENDPROC       SET_CMOS7670REG
+  -------         PROC          _WRCMOS7670
+  D:000AH         SYMBOL        regID
+  D:000BH         SYMBOL        regDat
+  C:0FF1H         LINE#         648
+  C:0FF5H         LINE#         649
+  C:0FF5H         LINE#         650
+  C:0FF8H         LINE#         651
+  C:1000H         LINE#         652
+  C:1000H         LINE#         653
+  C:1000H         LINE#         654
+  C:1002H         LINE#         655
+  C:1002H         LINE#         656
+  C:1005H         LINE#         657
+  C:100DH         LINE#         658
+  C:100DH         LINE#         659
+  C:100DH         LINE#         660
+  C:100FH         LINE#         661
+  C:100FH         LINE#         662
+  C:1012H         LINE#         663
+  C:101AH         LINE#         664
+  C:101AH         LINE#         665
+  C:101DH         LINE#         666
+  C:1020H         LINE#         667
+  C:1020H         LINE#         668
+  C:1023H         LINE#         669
+  C:102BH         LINE#         671
+  C:102DH         LINE#         672
+  -------         ENDPROC       _WRCMOS7670
+  -------         PROC          CMOS7670_INIT
+  -------         DO            
+  D:0005H         SYMBOL        mmm
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 14
+
+
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:102EH         LINE#         676
+  C:102EH         LINE#         677
+  C:102EH         LINE#         679
+  C:1033H         LINE#         681
+  C:1036H         LINE#         683
+  C:1038H         LINE#         684
+  C:1040H         LINE#         685
+  C:1040H         LINE#         686
+  C:1042H         LINE#         687
+  C:1042H         LINE#         688
+  C:1049H         LINE#         690
+  C:104CH         LINE#         691
+  C:1054H         LINE#         692
+  C:1057H         LINE#         694
+  C:1059H         LINE#         695
+  -------         ENDPROC       CMOS7670_INIT
+  -------         PROC          INITI2C
+  C:1163H         LINE#         698
+  C:1163H         LINE#         699
+  C:1163H         LINE#         701
+  C:1166H         LINE#         702
+  C:1169H         LINE#         704
+  -------         ENDPROC       INITI2C
+  -------         PROC          STARTI2C
+  C:110FH         LINE#         706
+  C:110FH         LINE#         707
+  C:110FH         LINE#         708
+  C:1111H         LINE#         709
+  C:1114H         LINE#         711
+  C:1114H         LINE#         712
+  C:1117H         LINE#         714
+  C:1119H         LINE#         715
+  C:111CH         LINE#         717
+  C:111EH         LINE#         718
+  -------         ENDPROC       STARTI2C
+  -------         PROC          STOPI2C
+  C:1125H         LINE#         723
+  C:1125H         LINE#         724
+  C:1125H         LINE#         725
+  C:1127H         LINE#         726
+  C:112AH         LINE#         728
+  C:112AH         LINE#         729
+  C:112DH         LINE#         731
+  C:112FH         LINE#         732
+  -------         ENDPROC       STOPI2C
+  -------         PROC          _I2CWRITE
+  D:000CH         SYMBOL        DData
+  -------         DO            
+  D:000DH         SYMBOL        j
+  D:000EH         SYMBOL        tem
+  -------         ENDDO         
+  C:0F04H         LINE#         756
+  C:0F06H         LINE#         757
+  C:0F06H         LINE#         760
+  C:0F09H         LINE#         761
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 15
+
+
+  C:0F09H         LINE#         762
+  C:0F19H         LINE#         763
+  C:0F19H         LINE#         764
+  C:0F1BH         LINE#         765
+  C:0F1DH         LINE#         767
+  C:0F1DH         LINE#         768
+  C:0F1FH         LINE#         769
+  C:0F1FH         LINE#         770
+  C:0F22H         LINE#         771
+  C:0F22H         LINE#         772
+  C:0F25H         LINE#         773
+  C:0F27H         LINE#         774
+  C:0F2AH         LINE#         776
+  C:0F33H         LINE#         777
+  C:0F36H         LINE#         779
+  C:0F39H         LINE#         780
+  C:0F3FH         LINE#         781
+  C:0F41H         LINE#         782
+  C:0F48H         LINE#         783
+  C:0F4BH         LINE#         784
+  C:0F4BH         LINE#         785
+  C:0F4EH         LINE#         786
+  C:0F50H         LINE#         788
+  C:0F50H         LINE#         789
+  C:0F53H         LINE#         790
+  C:0F53H         LINE#         791
+  C:0F55H         LINE#         792
+  C:0F58H         LINE#         793
+  C:0F5BH         LINE#         795
+  C:0F5DH         LINE#         796
+  -------         ENDPROC       _I2CWRITE
+  C:1136H         SYMBOL        L?0068
+  C:1138H         SYMBOL        L?0069
+  -------         PROC          L?0067
+  -------         ENDPROC       L?0067
+  C:1136H         SYMBOL        L?0068
+  C:1138H         SYMBOL        L?0069
+  -------         PROC          _DELAY_US
+  D:0006H         SYMBOL        time
+  C:113CH         LINE#         799
+  C:113CH         LINE#         800
+  C:113CH         LINE#         801
+  C:1146H         LINE#         802
+  -------         ENDPROC       _DELAY_US
+  C:10E0H         SYMBOL        L?0073
+  -------         PROC          L?0072
+  -------         ENDPROC       L?0072
+  C:10E0H         SYMBOL        L?0073
+  -------         PROC          _DELAY_MS
+  D:0002H         SYMBOL        time
+  C:10E4H         LINE#         805
+  C:10E8H         LINE#         806
+  C:10E8H         LINE#         807
+  C:10F7H         LINE#         808
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        C8051F330_CAMERA
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/22/2012  14:17:10  PAGE 16
+
+
+  -------         MODULE        ?C?CLDPTR
+  C:105AH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?ULCMP
+  C:1073H         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+
+Program Size: data=44.0 xdata=0 code=4458
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

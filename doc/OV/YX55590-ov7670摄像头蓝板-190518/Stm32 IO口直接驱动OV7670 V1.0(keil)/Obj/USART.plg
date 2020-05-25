@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+E:\mySTM32\Example\Example6-ADC\ADC.uv2
+Project File Date:  08/21/2009
+
+<h2>Output:</h2>
+Load "E:\\mySTM32\\Example\\Example6-ADC\\Obj\\USART.AXF" 
+No Algorithm found for: 08000000H - 0800111FH
+Erase skipped!
+Build target 'ADC'
+compiling stm32f10x_it.c...
+compiling main.c...
+assembling stm32f10x_vector.s...
+linking...
+Program Size: Code=4000 RO-data=356 RW-data=28 ZI-data=1092  
+FromELF: creating hex file...
+".\Obj\USART.axf" - 0 Error(s), 0 Warning(s).
+Build target 'ADC'
+linking...
+Program Size: Code=4000 RO-data=356 RW-data=28 ZI-data=1092  
+FromELF: creating hex file...
+".\Obj\USART.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\mySTM32\\Example\\Example6-ADC\\Obj\\USART.AXF" 
+No Algorithm found for: 08000000H - 0800111FH
+Erase skipped!
+Build target 'ADC'
+linking...
+Program Size: Code=4000 RO-data=356 RW-data=28 ZI-data=1092  
+FromELF: creating hex file...
+".\Obj\USART.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\mySTM32\\Example\\Example6-ADC\\Obj\\USART.AXF" 
+No Algorithm found for: 08000000H - 0800111FH
+Erase skipped!
+Build target 'ADC'
+compiling stm32f10x_it.c...
+compiling main.c...
+assembling stm32f10x_vector.s...
+linking...
+Program Size: Code=4000 RO-data=356 RW-data=28 ZI-data=1092  
+FromELF: creating hex file...
+".\Obj\USART.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\mySTM32\\Example\\Example6-ADC\\Obj\\USART.AXF" 
+No Algorithm found for: 08000000H - 0800111FH
+Erase skipped!

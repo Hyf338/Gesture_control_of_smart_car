@@ -1,0 +1,22 @@
+*** Creating Trace Output File '.\Obj\USART.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\STM32F10xR.LIB"'
+### List of Objects: adding '".\obj\stm32f10x_vector.o"'
+### ADS-LD Command completed:
+--device DARMSTM ".\obj\stm32f10x_it.o" ".\obj\main.o" ".\STM32F10xR.LIB" ".\obj\stm32f10x_vector.o" --library_type=microlib --strict --scatter ".\Obj\USART.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\USART.map" -o ".\Obj\USART.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\USART.axf'
+### ADS-LD Command File: '.\Obj\USART.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\USART.lnp', Handle=0x0000032C
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\USART.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

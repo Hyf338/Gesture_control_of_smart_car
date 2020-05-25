@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\obj\delay.o" ".\obj\ili9320.o" ".\obj\sccb.o" ".\obj\ov7670.o" ".\obj\main.o" ".\obj\stm32f10x_it.o" ".\source\STM32F10xR.LIB" ".\obj\stm32f10x_vector.o" --library_type=microlib --strict --scatter ".\Obj\ADC.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\ADC.map" -o ".\Obj\ADC.axf"

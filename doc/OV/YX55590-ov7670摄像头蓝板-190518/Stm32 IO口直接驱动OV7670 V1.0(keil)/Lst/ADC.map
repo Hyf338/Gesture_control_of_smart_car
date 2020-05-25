@@ -1,0 +1,908 @@
+ARM Linker, RVCT4.0 [Build 728] [Standard]
+
+==============================================================================
+
+Section Cross References
+
+    delay.o(i.delay) refers to delay.o(.emb_text) for wait
+    delay.o(i.delay_ms) refers to delay.o(i.delay_us) for delay_us
+    ili9320.o(i.LCD_CtrlLinesConfig) refers to stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    ili9320.o(i.LCD_CtrlLinesConfig) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    ili9320.o(i.LCD_CtrlLinesConfig) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    ili9320.o(i.LCD_CtrlLinesConfig) refers to stm32f10x_gpio.o(i.GPIO_WriteBit) for GPIO_WriteBit
+    ili9320.o(i.LCD_FSMCConfig) refers to stm32f10x_fsmc.o(i.FSMC_NORSRAMInit) for FSMC_NORSRAMInit
+    ili9320.o(i.LCD_FSMCConfig) refers to stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd) for FSMC_NORSRAMCmd
+    ili9320.o(i.LCD_SetCursor) refers to ili9320.o(i.LCD_WriteReg) for LCD_WriteReg
+    ili9320.o(i.LCD_X_Init) refers to ili9320.o(i.LCD_CtrlLinesConfig) for LCD_CtrlLinesConfig
+    ili9320.o(i.LCD_X_Init) refers to ili9320.o(i.LCD_FSMCConfig) for LCD_FSMCConfig
+    ili9320.o(i.ili9320_Clear) refers to ili9320.o(i.ili9320_SetCursor) for ili9320_SetCursor
+    ili9320.o(i.ili9320_Clear) refers to ili9320.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    ili9320.o(i.ili9320_DrawPicture) refers to ili9320.o(i.ili9320_SetCursor) for ili9320_SetCursor
+    ili9320.o(i.ili9320_DrawPicture) refers to ili9320.o(i.LCD_WriteReg) for LCD_WriteReg
+    ili9320.o(i.ili9320_DrawPicture) refers to ili9320.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    ili9320.o(i.ili9320_DrawPicture) refers to ili9320.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    ili9320.o(i.ili9320_GetPoint) refers to ili9320.o(i.ili9320_SetCursor) for ili9320_SetCursor
+    ili9320.o(i.ili9320_GetPoint) refers to ili9320.o(i.LCD_ReadRAM) for LCD_ReadRAM
+    ili9320.o(i.ili9320_GetPoint) refers to ili9320.o(i.ili9320_BGR2RGB) for ili9320_BGR2RGB
+    ili9320.o(i.ili9320_GetPoint) refers to ili9320.o(.data) for DeviceCode
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(i.LCD_X_Init) for LCD_X_Init
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(i.Delay) for Delay
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(i.LCD_ReadReg) for LCD_ReadReg
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(i.LCD_WriteReg) for LCD_WriteReg
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(.data) for DeviceCode
+    ili9320.o(i.ili9320_Initializtion) refers to ili9320.o(i.ili9320_Delay) for ili9320_Delay
+    ili9320.o(i.ili9320_PutChar) refers to ili9320.o(i.ili9320_SetPoint) for ili9320_SetPoint
+    ili9320.o(i.ili9320_PutChar) refers to ili9320.o(.constdata) for ascii_8x16
+    ili9320.o(i.ili9320_SetCursor) refers to ili9320.o(i.LCD_WriteReg) for LCD_WriteReg
+    ili9320.o(i.ili9320_SetCursor) refers to ili9320.o(.data) for DeviceCode
+    ili9320.o(i.ili9320_SetPoint) refers to ili9320.o(i.ili9320_SetCursor) for ili9320_SetCursor
+    ili9320.o(i.ili9320_SetPoint) refers to ili9320.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    ili9320.o(i.ili9320_SetPoint) refers to ili9320.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    sccb.o(i.SCCB_GPIO_Config) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    sccb.o(i.SCCB_GPIO_Config) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    sccb.o(i.SCCB_SID_GPIO_INPUT) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    sccb.o(i.SCCB_SID_GPIO_INPUT) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    sccb.o(i.SCCB_SID_GPIO_OUTPUT) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    sccb.o(i.SCCB_SID_GPIO_OUTPUT) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    sccb.o(i.SCCBreadByte) refers to sccb.o(i.SCCB_SID_GPIO_INPUT) for SCCB_SID_GPIO_INPUT
+    sccb.o(i.SCCBreadByte) refers to delay.o(i.delay_us) for delay_us
+    sccb.o(i.SCCBwriteByte) refers to delay.o(i.delay_us) for delay_us
+    sccb.o(i.SCCBwriteByte) refers to sccb.o(i.SCCB_SID_GPIO_INPUT) for SCCB_SID_GPIO_INPUT
+    sccb.o(i.SCCBwriteByte) refers to sccb.o(i.SCCB_SID_GPIO_OUTPUT) for SCCB_SID_GPIO_OUTPUT
+    sccb.o(i.noAck) refers to delay.o(i.delay_us) for delay_us
+    sccb.o(i.startSCCB) refers to delay.o(i.delay_us) for delay_us
+    sccb.o(i.stopSCCB) refers to delay.o(i.delay_us) for delay_us
+    ov7670.o(i.CLK_init_OFF) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    ov7670.o(i.CLK_init_OFF) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    ov7670.o(i.CLK_init_ON) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    ov7670.o(i.CLK_init_ON) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    ov7670.o(i.CLK_init_ON) refers to stm32f10x_rcc.o(i.RCC_MCOConfig) for RCC_MCOConfig
+    ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG) refers to stm32f10x_rcc.o(i.RCC_MCOConfig) for RCC_MCOConfig
+    ov7670.o(i.OV7670_GPIO_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    ov7670.o(i.OV7670_GPIO_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    ov7670.o(i.OV7670_config_window) refers to ov7670.o(i.rdOV7670Reg) for rdOV7670Reg
+    ov7670.o(i.OV7670_config_window) refers to ov7670.o(i.wrOV7670Reg) for wrOV7670Reg
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.OV7670_GPIO_Init) for OV7670_GPIO_Init
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG) for OV7670_GPIO_CONTRL_CONFIG
+    ov7670.o(i.OV7670_init) refers to sccb.o(i.SCCB_GPIO_Config) for SCCB_GPIO_Config
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.CLK_init_ON) for CLK_init_ON
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.wrOV7670Reg) for wrOV7670Reg
+    ov7670.o(i.OV7670_init) refers to delay.o(i.delay_ms) for delay_ms
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.set_OV7670reg) for set_OV7670reg
+    ov7670.o(i.OV7670_init) refers to ov7670.o(i.OV7670_config_window) for OV7670_config_window
+    ov7670.o(i.rdOV7670Reg) refers to sccb.o(i.startSCCB) for startSCCB
+    ov7670.o(i.rdOV7670Reg) refers to sccb.o(i.SCCBwriteByte) for SCCBwriteByte
+    ov7670.o(i.rdOV7670Reg) refers to sccb.o(i.stopSCCB) for stopSCCB
+    ov7670.o(i.rdOV7670Reg) refers to delay.o(i.delay_us) for delay_us
+    ov7670.o(i.rdOV7670Reg) refers to sccb.o(i.SCCBreadByte) for SCCBreadByte
+    ov7670.o(i.rdOV7670Reg) refers to sccb.o(i.noAck) for noAck
+    ov7670.o(i.set_OV7670reg) refers to ov7670.o(i.wrOV7670Reg) for wrOV7670Reg
+    ov7670.o(i.wrOV7670Reg) refers to sccb.o(i.startSCCB) for startSCCB
+    ov7670.o(i.wrOV7670Reg) refers to sccb.o(i.SCCBwriteByte) for SCCBwriteByte
+    ov7670.o(i.wrOV7670Reg) refers to sccb.o(i.stopSCCB) for stopSCCB
+    ov7670.o(i.wrOV7670Reg) refers to delay.o(i.delay_us) for delay_us
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_DeInit) for RCC_DeInit
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_HSEConfig) for RCC_HSEConfig
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) for RCC_WaitForHSEStartUp
+    main.o(i.Demo_Init) refers to stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd) for FLASH_PrefetchBufferCmd
+    main.o(i.Demo_Init) refers to stm32f10x_flash.o(i.FLASH_SetLatency) for FLASH_SetLatency
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_HCLKConfig) for RCC_HCLKConfig
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_PCLK2Config) for RCC_PCLK2Config
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_PCLK1Config) for RCC_PCLK1Config
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_PLLConfig) for RCC_PLLConfig
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_PLLCmd) for RCC_PLLCmd
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_SYSCLKConfig) for RCC_SYSCLKConfig
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_GetSYSCLKSource) for RCC_GetSYSCLKSource
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_ADCCLKConfig) for RCC_ADCCLKConfig
+    main.o(i.Demo_Init) refers to stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    main.o(i.Demo_Init) refers to stm32f10x_nvic.o(i.NVIC_SetSystemHandlerPendingBit) for NVIC_SetSystemHandlerPendingBit
+    main.o(i.Demo_Init) refers to main.o(.data) for HSEStartUpStatus
+    main.o(i.main) refers to main.o(i.Demo_Init) for Demo_Init
+    main.o(i.main) refers to ili9320.o(i.ili9320_Initializtion) for ili9320_Initializtion
+    main.o(i.main) refers to ili9320.o(i.ili9320_Clear) for ili9320_Clear
+    main.o(i.main) refers to delay.o(i.delay_ms) for delay_ms
+    main.o(i.main) refers to ili9320.o(i.ili9320_SetCursor) for ili9320_SetCursor
+    main.o(i.main) refers to ili9320.o(i.LCD_WriteReg) for LCD_WriteReg
+    main.o(i.main) refers to ili9320.o(i.LCD_WriteRAM_Prepare) for LCD_WriteRAM_Prepare
+    main.o(i.main) refers to ov7670.o(i.OV7670_init) for OV7670_init
+    main.o(i.main) refers to ov7670.o(i.CLK_init_ON) for CLK_init_ON
+    main.o(i.main) refers to ov7670.o(i.CLK_init_OFF) for CLK_init_OFF
+    main.o(i.main) refers to ili9320.o(i.ili9320_BGR2RGB) for ili9320_BGR2RGB
+    main.o(i.main) refers to ili9320.o(i.LCD_WriteRAM) for LCD_WriteRAM
+    main.o(i.main) refers to main.o(.data) for .data
+    stm32f10x_vector.o(RESET) refers to stm32f10x_vector.o(.text) for Reset_Handler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.NMIException) for NMIException
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.HardFaultException) for HardFaultException
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.MemManageException) for MemManageException
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.BusFaultException) for BusFaultException
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.UsageFaultException) for UsageFaultException
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SVCHandler) for SVCHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DebugMonitor) for DebugMonitor
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.PendSVC) for PendSVC
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SysTickHandler) for SysTickHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.WWDG_IRQHandler) for WWDG_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.PVD_IRQHandler) for PVD_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TAMPER_IRQHandler) for TAMPER_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.RTC_IRQHandler) for RTC_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.FLASH_IRQHandler) for FLASH_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.RCC_IRQHandler) for RCC_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI0_IRQHandler) for EXTI0_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI1_IRQHandler) for EXTI1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI2_IRQHandler) for EXTI2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI3_IRQHandler) for EXTI3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI4_IRQHandler) for EXTI4_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel1_IRQHandler) for DMA1_Channel1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) for DMA1_Channel2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel3_IRQHandler) for DMA1_Channel3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel4_IRQHandler) for DMA1_Channel4_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel5_IRQHandler) for DMA1_Channel5_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel6_IRQHandler) for DMA1_Channel6_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel7_IRQHandler) for DMA1_Channel7_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.ADC1_2_IRQHandler) for ADC1_2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USB_HP_CAN_TX_IRQHandler) for USB_HP_CAN_TX_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USB_LP_CAN_RX0_IRQHandler) for USB_LP_CAN_RX0_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.CAN_RX1_IRQHandler) for CAN_RX1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.CAN_SCE_IRQHandler) for CAN_SCE_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI9_5_IRQHandler) for EXTI9_5_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM1_BRK_IRQHandler) for TIM1_BRK_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM1_UP_IRQHandler) for TIM1_UP_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler) for TIM1_TRG_COM_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM1_CC_IRQHandler) for TIM1_CC_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM2_IRQHandler) for TIM2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM3_IRQHandler) for TIM3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM4_IRQHandler) for TIM4_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.I2C1_EV_IRQHandler) for I2C1_EV_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.I2C1_ER_IRQHandler) for I2C1_ER_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.I2C2_EV_IRQHandler) for I2C2_EV_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.I2C2_ER_IRQHandler) for I2C2_ER_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SPI1_IRQHandler) for SPI1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SPI2_IRQHandler) for SPI2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USART2_IRQHandler) for USART2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USART3_IRQHandler) for USART3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.EXTI15_10_IRQHandler) for EXTI15_10_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.RTCAlarm_IRQHandler) for RTCAlarm_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.USBWakeUp_IRQHandler) for USBWakeUp_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM8_BRK_IRQHandler) for TIM8_BRK_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM8_UP_IRQHandler) for TIM8_UP_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler) for TIM8_TRG_COM_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM8_CC_IRQHandler) for TIM8_CC_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.ADC3_IRQHandler) for ADC3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.FSMC_IRQHandler) for FSMC_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SDIO_IRQHandler) for SDIO_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM5_IRQHandler) for TIM5_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.SPI3_IRQHandler) for SPI3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.UART4_IRQHandler) for UART4_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.UART5_IRQHandler) for UART5_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM6_IRQHandler) for TIM6_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.TIM7_IRQHandler) for TIM7_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel1_IRQHandler) for DMA2_Channel1_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel2_IRQHandler) for DMA2_Channel2_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel3_IRQHandler) for DMA2_Channel3_IRQHandler
+    stm32f10x_vector.o(RESET) refers to stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler) for DMA2_Channel4_5_IRQHandler
+    stm32f10x_vector.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    stm32f10x_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f10x_flash.o(i.FLASH_GetStatus) for FLASH_GetStatus
+    stm32f10x_flash.o(i.FLASH_ErasePage) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_EraseAllPages) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_EraseOptionBytes) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramWord) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramHalfWord) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramOptionByteData) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_EnableWriteProtection) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ReadOutProtection) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_UserOptionByteConfig) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_nvic.o(i.NVIC_SETPRIMASK) refers to cortexm3_macro.o(.text) for __SETPRIMASK
+    stm32f10x_nvic.o(i.NVIC_RESETPRIMASK) refers to cortexm3_macro.o(.text) for __RESETPRIMASK
+    stm32f10x_nvic.o(i.NVIC_SETFAULTMASK) refers to cortexm3_macro.o(.text) for __SETFAULTMASK
+    stm32f10x_nvic.o(i.NVIC_RESETFAULTMASK) refers to cortexm3_macro.o(.text) for __RESETFAULTMASK
+    stm32f10x_nvic.o(i.NVIC_BASEPRICONFIG) refers to cortexm3_macro.o(.text) for __BASEPRICONFIG
+    stm32f10x_nvic.o(i.NVIC_GetBASEPRI) refers to cortexm3_macro.o(.text) for __GetBASEPRI
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(.data) for .data
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.constdata) for .constdata
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7.o(.ARM.Collect$$$$00000007) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry7.o(.ARM.Collect$$$$00000007) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing delay.o(.emb_text), (12 bytes).
+    Removing delay.o(i.delay), (8 bytes).
+    Removing ili9320.o(i.LCD_ReadRAM), (16 bytes).
+    Removing ili9320.o(i.LCD_SetCursor), (40 bytes).
+    Removing ili9320.o(i.ili9320_BackLight), (28 bytes).
+    Removing ili9320.o(i.ili9320_DrawPicture), (104 bytes).
+    Removing ili9320.o(i.ili9320_GetPoint), (48 bytes).
+    Removing ili9320.o(i.ili9320_PutChar), (136 bytes).
+    Removing ili9320.o(i.ili9320_SetPoint), (40 bytes).
+    Removing ili9320.o(.constdata), (1536 bytes).
+    Removing stm32f10x_vector.o(STACK), (1024 bytes).
+    Removing stm32f10x_vector.o(HEAP), (1024 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_HalfCycleAccessCmd), (24 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_Unlock), (24 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_Lock), (16 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetStatus), (40 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_WaitForLastOperation), (40 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ErasePage), (64 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EraseAllPages), (60 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EraseOptionBytes), (116 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramWord), (68 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramHalfWord), (56 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramOptionByteData), (72 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EnableWriteProtection), (168 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ReadOutProtection), (136 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_UserOptionByteConfig), (88 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetUserOptionByte), (12 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetWriteProtectionOptionByte), (12 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetReadOutProtectionStatus), (20 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetPrefetchBufferStatus), (20 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ITConfig), (24 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetFlagStatus), (32 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ClearFlag), (12 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMDeInit), (36 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDDeInit), (40 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDDeInit), (28 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDInit), (104 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDInit), (100 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NORSRAMStructInit), (98 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDStructInit), (56 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDStructInit), (62 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDCmd), (56 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_PCCARDCmd), (32 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_NANDECCCmd), (56 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_GetECC), (18 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_ITConfig), (68 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_GetFlagStatus), (40 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_ClearFlag), (36 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_GetITStatus), (48 bytes).
+    Removing stm32f10x_fsmc.o(i.FSMC_ClearITPendingBit), (40 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_DeInit), (160 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (22 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_StructInit), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputDataBit), (14 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (6 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (14 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (6 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_SetBits), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ResetBits), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Write), (4 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (28 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (12 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinRemapConfig), (72 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EXTILineConfig), (40 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_DeInit), (44 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SCBDeInit), (68 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_PriorityGroupConfig), (20 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_Init), (116 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_StructInit), (12 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SETPRIMASK), (4 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_RESETPRIMASK), (4 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SETFAULTMASK), (4 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_RESETFAULTMASK), (4 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_BASEPRICONFIG), (6 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetBASEPRI), (4 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetCurrentPendingIRQChannel), (16 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetIRQChannelPendingBitStatus), (34 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SetIRQChannelPendingBit), (12 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_ClearIRQChannelPendingBit), (24 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetCurrentActiveHandler), (16 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetIRQChannelActiveBitStatus), (34 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetCPUID), (12 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SetVectorTable), (20 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GenerateSystemReset), (16 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GenerateCoreReset), (16 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SystemLPConfig), (24 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SystemHandlerConfig), (32 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_SystemHandlerPriorityConfig), (76 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetSystemHandlerPendingBitStatus), (32 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_ClearSystemHandlerPendingBit), (24 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetSystemHandlerActiveBitStatus), (32 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetFaultHandlerSources), (54 bytes).
+    Removing stm32f10x_nvic.o(i.NVIC_GetFaultAddress), (22 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_USBCLKConfig), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (32 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSICmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (148 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd), (24 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (12 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (20 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (12 bytes).
+    Removing stm32f10x_rcc.o(.constdata), (20 bytes).
+    Removing cortexm3_macro.o(.text), (122 bytes).
+
+113 unused section(s) (total 7812 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry7.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry5.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry2.o ABSOLUTE
+    ../../microlib/init/entry.s              0x00000000   Number         0  entry.o ABSOLUTE
+    cortexm3_macro.s                         0x00000000   Number         0  cortexm3_macro.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    source\SCCB.c                            0x00000000   Number         0  sccb.o ABSOLUTE
+    source\\delay.c                          0x00000000   Number         0  delay.o ABSOLUTE
+    source\delay.c                           0x00000000   Number         0  delay.o ABSOLUTE
+    source\ili9320.c                         0x00000000   Number         0  ili9320.o ABSOLUTE
+    source\main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    source\ov7670.c                          0x00000000   Number         0  ov7670.o ABSOLUTE
+    source\stm32f10x_it.c                    0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    stm32f10x_flash.c                        0x00000000   Number         0  stm32f10x_flash.o ABSOLUTE
+    stm32f10x_fsmc.c                         0x00000000   Number         0  stm32f10x_fsmc.o ABSOLUTE
+    stm32f10x_gpio.c                         0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    stm32f10x_nvic.c                         0x00000000   Number         0  stm32f10x_nvic.o ABSOLUTE
+    stm32f10x_rcc.c                          0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    stm32f10x_vector.s                       0x00000000   Number         0  stm32f10x_vector.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  stm32f10x_vector.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000130   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x08000134   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000007                 0x08000138   Section        8  entry7.o(.ARM.Collect$$$$00000007)
+    .ARM.Collect$$$$00002712                 0x08000140   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000140   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000144   Section      160  stm32f10x_vector.o(.text)
+    .text                                    0x080001e4   Section       36  init.o(.text)
+    i.ADC1_2_IRQHandler                      0x08000208   Section        0  stm32f10x_it.o(i.ADC1_2_IRQHandler)
+    i.ADC3_IRQHandler                        0x0800020a   Section        0  stm32f10x_it.o(i.ADC3_IRQHandler)
+    i.BusFaultException                      0x0800020c   Section        0  stm32f10x_it.o(i.BusFaultException)
+    i.CAN_RX1_IRQHandler                     0x08000210   Section        0  stm32f10x_it.o(i.CAN_RX1_IRQHandler)
+    i.CAN_SCE_IRQHandler                     0x08000212   Section        0  stm32f10x_it.o(i.CAN_SCE_IRQHandler)
+    i.CLK_init_OFF                           0x08000214   Section        0  ov7670.o(i.CLK_init_OFF)
+    i.CLK_init_ON                            0x08000240   Section        0  ov7670.o(i.CLK_init_ON)
+    i.DMA1_Channel1_IRQHandler               0x08000274   Section        0  stm32f10x_it.o(i.DMA1_Channel1_IRQHandler)
+    i.DMA1_Channel2_IRQHandler               0x08000276   Section        0  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    i.DMA1_Channel3_IRQHandler               0x08000278   Section        0  stm32f10x_it.o(i.DMA1_Channel3_IRQHandler)
+    i.DMA1_Channel4_IRQHandler               0x0800027a   Section        0  stm32f10x_it.o(i.DMA1_Channel4_IRQHandler)
+    i.DMA1_Channel5_IRQHandler               0x0800027c   Section        0  stm32f10x_it.o(i.DMA1_Channel5_IRQHandler)
+    i.DMA1_Channel6_IRQHandler               0x0800027e   Section        0  stm32f10x_it.o(i.DMA1_Channel6_IRQHandler)
+    i.DMA1_Channel7_IRQHandler               0x08000280   Section        0  stm32f10x_it.o(i.DMA1_Channel7_IRQHandler)
+    i.DMA2_Channel1_IRQHandler               0x08000282   Section        0  stm32f10x_it.o(i.DMA2_Channel1_IRQHandler)
+    i.DMA2_Channel2_IRQHandler               0x08000284   Section        0  stm32f10x_it.o(i.DMA2_Channel2_IRQHandler)
+    i.DMA2_Channel3_IRQHandler               0x08000286   Section        0  stm32f10x_it.o(i.DMA2_Channel3_IRQHandler)
+    i.DMA2_Channel4_5_IRQHandler             0x08000288   Section        0  stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler)
+    i.DebugMonitor                           0x0800028a   Section        0  stm32f10x_it.o(i.DebugMonitor)
+    i.Delay                                  0x0800028c   Section        0  ili9320.o(i.Delay)
+    i.Demo_Init                              0x080002a8   Section        0  main.o(i.Demo_Init)
+    i.EXTI0_IRQHandler                       0x08000354   Section        0  stm32f10x_it.o(i.EXTI0_IRQHandler)
+    i.EXTI15_10_IRQHandler                   0x08000356   Section        0  stm32f10x_it.o(i.EXTI15_10_IRQHandler)
+    i.EXTI1_IRQHandler                       0x08000358   Section        0  stm32f10x_it.o(i.EXTI1_IRQHandler)
+    i.EXTI2_IRQHandler                       0x0800035a   Section        0  stm32f10x_it.o(i.EXTI2_IRQHandler)
+    i.EXTI3_IRQHandler                       0x0800035c   Section        0  stm32f10x_it.o(i.EXTI3_IRQHandler)
+    i.EXTI4_IRQHandler                       0x0800035e   Section        0  stm32f10x_it.o(i.EXTI4_IRQHandler)
+    i.EXTI9_5_IRQHandler                     0x08000360   Section        0  stm32f10x_it.o(i.EXTI9_5_IRQHandler)
+    i.FLASH_IRQHandler                       0x08000362   Section        0  stm32f10x_it.o(i.FLASH_IRQHandler)
+    i.FLASH_PrefetchBufferCmd                0x08000364   Section        0  stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd)
+    i.FLASH_SetLatency                       0x0800037c   Section        0  stm32f10x_flash.o(i.FLASH_SetLatency)
+    i.FSMC_IRQHandler                        0x08000394   Section        0  stm32f10x_it.o(i.FSMC_IRQHandler)
+    i.FSMC_NORSRAMCmd                        0x08000398   Section        0  stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd)
+    i.FSMC_NORSRAMInit                       0x080003b8   Section        0  stm32f10x_fsmc.o(i.FSMC_NORSRAMInit)
+    i.GPIO_Init                              0x08000478   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_WriteBit                          0x08000518   Section        0  stm32f10x_gpio.o(i.GPIO_WriteBit)
+    i.HardFaultException                     0x08000522   Section        0  stm32f10x_it.o(i.HardFaultException)
+    i.I2C1_ER_IRQHandler                     0x08000526   Section        0  stm32f10x_it.o(i.I2C1_ER_IRQHandler)
+    i.I2C1_EV_IRQHandler                     0x08000528   Section        0  stm32f10x_it.o(i.I2C1_EV_IRQHandler)
+    i.I2C2_ER_IRQHandler                     0x0800052a   Section        0  stm32f10x_it.o(i.I2C2_ER_IRQHandler)
+    i.I2C2_EV_IRQHandler                     0x0800052c   Section        0  stm32f10x_it.o(i.I2C2_EV_IRQHandler)
+    i.LCD_CtrlLinesConfig                    0x08000530   Section        0  ili9320.o(i.LCD_CtrlLinesConfig)
+    i.LCD_FSMCConfig                         0x080005ac   Section        0  ili9320.o(i.LCD_FSMCConfig)
+    i.LCD_ReadReg                            0x08000604   Section        0  ili9320.o(i.LCD_ReadReg)
+    i.LCD_WriteRAM                           0x08000610   Section        0  ili9320.o(i.LCD_WriteRAM)
+    i.LCD_WriteRAM_Prepare                   0x08000618   Section        0  ili9320.o(i.LCD_WriteRAM_Prepare)
+    i.LCD_WriteReg                           0x08000622   Section        0  ili9320.o(i.LCD_WriteReg)
+    i.LCD_X_Init                             0x0800062c   Section        0  ili9320.o(i.LCD_X_Init)
+    i.MemManageException                     0x08000638   Section        0  stm32f10x_it.o(i.MemManageException)
+    i.NMIException                           0x0800063c   Section        0  stm32f10x_it.o(i.NMIException)
+    i.NVIC_SetSystemHandlerPendingBit        0x08000640   Section        0  stm32f10x_nvic.o(i.NVIC_SetSystemHandlerPendingBit)
+    i.OV7670_GPIO_CONTRL_CONFIG              0x08000658   Section        0  ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG)
+    i.OV7670_GPIO_Init                       0x08000684   Section        0  ov7670.o(i.OV7670_GPIO_Init)
+    i.OV7670_config_window                   0x080006ac   Section        0  ov7670.o(i.OV7670_config_window)
+    i.OV7670_init                            0x08000756   Section        0  ov7670.o(i.OV7670_init)
+    i.PVD_IRQHandler                         0x08000798   Section        0  stm32f10x_it.o(i.PVD_IRQHandler)
+    i.PendSVC                                0x0800079a   Section        0  stm32f10x_it.o(i.PendSVC)
+    i.RCC_ADCCLKConfig                       0x0800079c   Section        0  stm32f10x_rcc.o(i.RCC_ADCCLKConfig)
+    i.RCC_AHBPeriphClockCmd                  0x080007b0   Section        0  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    i.RCC_APB2PeriphClockCmd                 0x080007c8   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_DeInit                             0x080007e0   Section        0  stm32f10x_rcc.o(i.RCC_DeInit)
+    i.RCC_GetFlagStatus                      0x0800081c   Section        0  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    i.RCC_GetSYSCLKSource                    0x0800084c   Section        0  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    i.RCC_HCLKConfig                         0x0800085c   Section        0  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    i.RCC_HSEConfig                          0x08000870   Section        0  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    i.RCC_IRQHandler                         0x080008a4   Section        0  stm32f10x_it.o(i.RCC_IRQHandler)
+    i.RCC_MCOConfig                          0x080008a8   Section        0  stm32f10x_rcc.o(i.RCC_MCOConfig)
+    i.RCC_PCLK1Config                        0x080008b4   Section        0  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    i.RCC_PCLK2Config                        0x080008c8   Section        0  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    i.RCC_PLLCmd                             0x080008dc   Section        0  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    i.RCC_PLLConfig                          0x080008e8   Section        0  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    i.RCC_SYSCLKConfig                       0x080008fc   Section        0  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    i.RCC_WaitForHSEStartUp                  0x08000910   Section        0  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    i.RTCAlarm_IRQHandler                    0x08000944   Section        0  stm32f10x_it.o(i.RTCAlarm_IRQHandler)
+    i.RTC_IRQHandler                         0x08000946   Section        0  stm32f10x_it.o(i.RTC_IRQHandler)
+    i.SCCB_GPIO_Config                       0x08000948   Section        0  sccb.o(i.SCCB_GPIO_Config)
+    i.SCCB_SID_GPIO_INPUT                    0x08000974   Section        0  sccb.o(i.SCCB_SID_GPIO_INPUT)
+    i.SCCB_SID_GPIO_OUTPUT                   0x08000998   Section        0  sccb.o(i.SCCB_SID_GPIO_OUTPUT)
+    i.SCCBreadByte                           0x080009c4   Section        0  sccb.o(i.SCCBreadByte)
+    i.SCCBwriteByte                          0x08000a28   Section        0  sccb.o(i.SCCBwriteByte)
+    i.SDIO_IRQHandler                        0x08000acc   Section        0  stm32f10x_it.o(i.SDIO_IRQHandler)
+    i.SPI1_IRQHandler                        0x08000ace   Section        0  stm32f10x_it.o(i.SPI1_IRQHandler)
+    i.SPI2_IRQHandler                        0x08000ad0   Section        0  stm32f10x_it.o(i.SPI2_IRQHandler)
+    i.SPI3_IRQHandler                        0x08000ad2   Section        0  stm32f10x_it.o(i.SPI3_IRQHandler)
+    i.SVCHandler                             0x08000ad4   Section        0  stm32f10x_it.o(i.SVCHandler)
+    i.SysTickHandler                         0x08000ad6   Section        0  stm32f10x_it.o(i.SysTickHandler)
+    i.TAMPER_IRQHandler                      0x08000ad8   Section        0  stm32f10x_it.o(i.TAMPER_IRQHandler)
+    i.TIM1_BRK_IRQHandler                    0x08000ada   Section        0  stm32f10x_it.o(i.TIM1_BRK_IRQHandler)
+    i.TIM1_CC_IRQHandler                     0x08000adc   Section        0  stm32f10x_it.o(i.TIM1_CC_IRQHandler)
+    i.TIM1_TRG_COM_IRQHandler                0x08000ade   Section        0  stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler)
+    i.TIM1_UP_IRQHandler                     0x08000ae0   Section        0  stm32f10x_it.o(i.TIM1_UP_IRQHandler)
+    i.TIM2_IRQHandler                        0x08000ae2   Section        0  stm32f10x_it.o(i.TIM2_IRQHandler)
+    i.TIM3_IRQHandler                        0x08000ae4   Section        0  stm32f10x_it.o(i.TIM3_IRQHandler)
+    i.TIM4_IRQHandler                        0x08000ae6   Section        0  stm32f10x_it.o(i.TIM4_IRQHandler)
+    i.TIM5_IRQHandler                        0x08000ae8   Section        0  stm32f10x_it.o(i.TIM5_IRQHandler)
+    i.TIM6_IRQHandler                        0x08000aea   Section        0  stm32f10x_it.o(i.TIM6_IRQHandler)
+    i.TIM7_IRQHandler                        0x08000aec   Section        0  stm32f10x_it.o(i.TIM7_IRQHandler)
+    i.TIM8_BRK_IRQHandler                    0x08000aee   Section        0  stm32f10x_it.o(i.TIM8_BRK_IRQHandler)
+    i.TIM8_CC_IRQHandler                     0x08000af0   Section        0  stm32f10x_it.o(i.TIM8_CC_IRQHandler)
+    i.TIM8_TRG_COM_IRQHandler                0x08000af2   Section        0  stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler)
+    i.TIM8_UP_IRQHandler                     0x08000af4   Section        0  stm32f10x_it.o(i.TIM8_UP_IRQHandler)
+    i.UART4_IRQHandler                       0x08000af6   Section        0  stm32f10x_it.o(i.UART4_IRQHandler)
+    i.UART5_IRQHandler                       0x08000af8   Section        0  stm32f10x_it.o(i.UART5_IRQHandler)
+    i.USART1_IRQHandler                      0x08000afa   Section        0  stm32f10x_it.o(i.USART1_IRQHandler)
+    i.USART2_IRQHandler                      0x08000afc   Section        0  stm32f10x_it.o(i.USART2_IRQHandler)
+    i.USART3_IRQHandler                      0x08000afe   Section        0  stm32f10x_it.o(i.USART3_IRQHandler)
+    i.USBWakeUp_IRQHandler                   0x08000b00   Section        0  stm32f10x_it.o(i.USBWakeUp_IRQHandler)
+    i.USB_HP_CAN_TX_IRQHandler               0x08000b02   Section        0  stm32f10x_it.o(i.USB_HP_CAN_TX_IRQHandler)
+    i.USB_LP_CAN_RX0_IRQHandler              0x08000b04   Section        0  stm32f10x_it.o(i.USB_LP_CAN_RX0_IRQHandler)
+    i.UsageFaultException                    0x08000b06   Section        0  stm32f10x_it.o(i.UsageFaultException)
+    i.WWDG_IRQHandler                        0x08000b0a   Section        0  stm32f10x_it.o(i.WWDG_IRQHandler)
+    i.__scatterload_copy                     0x08000b0c   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000b1a   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000b1c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.delay_ms                               0x08000b2a   Section        0  delay.o(i.delay_ms)
+    i.delay_us                               0x08000b42   Section        0  delay.o(i.delay_us)
+    i.ili9320_BGR2RGB                        0x08000b4e   Section        0  ili9320.o(i.ili9320_BGR2RGB)
+    i.ili9320_Clear                          0x08000b68   Section        0  ili9320.o(i.ili9320_Clear)
+    i.ili9320_Delay                          0x08000b8e   Section        0  ili9320.o(i.ili9320_Delay)
+    i.ili9320_Initializtion                  0x08000b98   Section        0  ili9320.o(i.ili9320_Initializtion)
+    i.ili9320_SetCursor                      0x080019b4   Section        0  ili9320.o(i.ili9320_SetCursor)
+    i.main                                   0x08001a38   Section        0  main.o(i.main)
+    i.noAck                                  0x08001b3c   Section        0  sccb.o(i.noAck)
+    i.rdOV7670Reg                            0x08001b88   Section        0  ov7670.o(i.rdOV7670Reg)
+    i.set_OV7670reg                          0x08001bee   Section        0  ov7670.o(i.set_OV7670reg)
+    i.startSCCB                              0x08002054   Section        0  sccb.o(i.startSCCB)
+    i.stopSCCB                               0x080020a0   Section        0  sccb.o(i.stopSCCB)
+    i.wrOV7670Reg                            0x080020dc   Section        0  ov7670.o(i.wrOV7670Reg)
+    .data                                    0x68000000   Section        2  ili9320.o(.data)
+    .data                                    0x68000004   Section        9  main.o(.data)
+    TimerCnt                                 0x68000004   Data           4  main.o(.data)
+    temp7670                                 0x68000008   Data           4  main.o(.data)
+    .data                                    0x68000010   Section        8  stm32f10x_rcc.o(.data)
+    HSEStatus                                0x68000010   Data           1  stm32f10x_rcc.o(.data)
+    StartUpCounter                           0x68000014   Data           4  stm32f10x_rcc.o(.data)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __decompress                              - Undefined Weak Reference
+    __Vectors                                0x08000000   Data           4  stm32f10x_vector.o(RESET)
+    __main                                   0x08000131   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000131   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x08000135   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000139   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_init                               0x08000139   Thumb Code     0  entry7.o(.ARM.Collect$$$$00000007)
+    Reset_Handler                            0x08000145   Thumb Code    88  stm32f10x_vector.o(.text)
+    __scatterload                            0x080001e5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080001e5   Thumb Code     0  init.o(.text)
+    ADC1_2_IRQHandler                        0x08000209   Thumb Code     2  stm32f10x_it.o(i.ADC1_2_IRQHandler)
+    ADC3_IRQHandler                          0x0800020b   Thumb Code     2  stm32f10x_it.o(i.ADC3_IRQHandler)
+    BusFaultException                        0x0800020d   Thumb Code     4  stm32f10x_it.o(i.BusFaultException)
+    CAN_RX1_IRQHandler                       0x08000211   Thumb Code     2  stm32f10x_it.o(i.CAN_RX1_IRQHandler)
+    CAN_SCE_IRQHandler                       0x08000213   Thumb Code     2  stm32f10x_it.o(i.CAN_SCE_IRQHandler)
+    CLK_init_OFF                             0x08000215   Thumb Code    40  ov7670.o(i.CLK_init_OFF)
+    CLK_init_ON                              0x08000241   Thumb Code    46  ov7670.o(i.CLK_init_ON)
+    DMA1_Channel1_IRQHandler                 0x08000275   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel1_IRQHandler)
+    DMA1_Channel2_IRQHandler                 0x08000277   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    DMA1_Channel3_IRQHandler                 0x08000279   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel3_IRQHandler)
+    DMA1_Channel4_IRQHandler                 0x0800027b   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel4_IRQHandler)
+    DMA1_Channel5_IRQHandler                 0x0800027d   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel5_IRQHandler)
+    DMA1_Channel6_IRQHandler                 0x0800027f   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel6_IRQHandler)
+    DMA1_Channel7_IRQHandler                 0x08000281   Thumb Code     2  stm32f10x_it.o(i.DMA1_Channel7_IRQHandler)
+    DMA2_Channel1_IRQHandler                 0x08000283   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel1_IRQHandler)
+    DMA2_Channel2_IRQHandler                 0x08000285   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel2_IRQHandler)
+    DMA2_Channel3_IRQHandler                 0x08000287   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel3_IRQHandler)
+    DMA2_Channel4_5_IRQHandler               0x08000289   Thumb Code     2  stm32f10x_it.o(i.DMA2_Channel4_5_IRQHandler)
+    DebugMonitor                             0x0800028b   Thumb Code     2  stm32f10x_it.o(i.DebugMonitor)
+    Delay                                    0x0800028d   Thumb Code    26  ili9320.o(i.Delay)
+    Demo_Init                                0x080002a9   Thumb Code   168  main.o(i.Demo_Init)
+    EXTI0_IRQHandler                         0x08000355   Thumb Code     2  stm32f10x_it.o(i.EXTI0_IRQHandler)
+    EXTI15_10_IRQHandler                     0x08000357   Thumb Code     2  stm32f10x_it.o(i.EXTI15_10_IRQHandler)
+    EXTI1_IRQHandler                         0x08000359   Thumb Code     2  stm32f10x_it.o(i.EXTI1_IRQHandler)
+    EXTI2_IRQHandler                         0x0800035b   Thumb Code     2  stm32f10x_it.o(i.EXTI2_IRQHandler)
+    EXTI3_IRQHandler                         0x0800035d   Thumb Code     2  stm32f10x_it.o(i.EXTI3_IRQHandler)
+    EXTI4_IRQHandler                         0x0800035f   Thumb Code     2  stm32f10x_it.o(i.EXTI4_IRQHandler)
+    EXTI9_5_IRQHandler                       0x08000361   Thumb Code     2  stm32f10x_it.o(i.EXTI9_5_IRQHandler)
+    FLASH_IRQHandler                         0x08000363   Thumb Code     2  stm32f10x_it.o(i.FLASH_IRQHandler)
+    FLASH_PrefetchBufferCmd                  0x08000365   Thumb Code    18  stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd)
+    FLASH_SetLatency                         0x0800037d   Thumb Code    18  stm32f10x_flash.o(i.FLASH_SetLatency)
+    FSMC_IRQHandler                          0x08000395   Thumb Code     2  stm32f10x_it.o(i.FSMC_IRQHandler)
+    FSMC_NORSRAMCmd                          0x08000399   Thumb Code    28  stm32f10x_fsmc.o(i.FSMC_NORSRAMCmd)
+    FSMC_NORSRAMInit                         0x080003b9   Thumb Code   190  stm32f10x_fsmc.o(i.FSMC_NORSRAMInit)
+    GPIO_Init                                0x08000479   Thumb Code   160  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_WriteBit                            0x08000519   Thumb Code    10  stm32f10x_gpio.o(i.GPIO_WriteBit)
+    HardFaultException                       0x08000523   Thumb Code     4  stm32f10x_it.o(i.HardFaultException)
+    I2C1_ER_IRQHandler                       0x08000527   Thumb Code     2  stm32f10x_it.o(i.I2C1_ER_IRQHandler)
+    I2C1_EV_IRQHandler                       0x08000529   Thumb Code     2  stm32f10x_it.o(i.I2C1_EV_IRQHandler)
+    I2C2_ER_IRQHandler                       0x0800052b   Thumb Code     2  stm32f10x_it.o(i.I2C2_ER_IRQHandler)
+    I2C2_EV_IRQHandler                       0x0800052d   Thumb Code     2  stm32f10x_it.o(i.I2C2_EV_IRQHandler)
+    LCD_CtrlLinesConfig                      0x08000531   Thumb Code   106  ili9320.o(i.LCD_CtrlLinesConfig)
+    LCD_FSMCConfig                           0x080005ad   Thumb Code    88  ili9320.o(i.LCD_FSMCConfig)
+    LCD_ReadReg                              0x08000605   Thumb Code    12  ili9320.o(i.LCD_ReadReg)
+    LCD_WriteRAM                             0x08000611   Thumb Code     8  ili9320.o(i.LCD_WriteRAM)
+    LCD_WriteRAM_Prepare                     0x08000619   Thumb Code    10  ili9320.o(i.LCD_WriteRAM_Prepare)
+    LCD_WriteReg                             0x08000623   Thumb Code    10  ili9320.o(i.LCD_WriteReg)
+    LCD_X_Init                               0x0800062d   Thumb Code    12  ili9320.o(i.LCD_X_Init)
+    MemManageException                       0x08000639   Thumb Code     4  stm32f10x_it.o(i.MemManageException)
+    NMIException                             0x0800063d   Thumb Code     2  stm32f10x_it.o(i.NMIException)
+    NVIC_SetSystemHandlerPendingBit          0x08000641   Thumb Code    18  stm32f10x_nvic.o(i.NVIC_SetSystemHandlerPendingBit)
+    OV7670_GPIO_CONTRL_CONFIG                0x08000659   Thumb Code    40  ov7670.o(i.OV7670_GPIO_CONTRL_CONFIG)
+    OV7670_GPIO_Init                         0x08000685   Thumb Code    34  ov7670.o(i.OV7670_GPIO_Init)
+    OV7670_config_window                     0x080006ad   Thumb Code   170  ov7670.o(i.OV7670_config_window)
+    OV7670_init                              0x08000757   Thumb Code    66  ov7670.o(i.OV7670_init)
+    PVD_IRQHandler                           0x08000799   Thumb Code     2  stm32f10x_it.o(i.PVD_IRQHandler)
+    PendSVC                                  0x0800079b   Thumb Code     2  stm32f10x_it.o(i.PendSVC)
+    RCC_ADCCLKConfig                         0x0800079d   Thumb Code    14  stm32f10x_rcc.o(i.RCC_ADCCLKConfig)
+    RCC_AHBPeriphClockCmd                    0x080007b1   Thumb Code    18  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    RCC_APB2PeriphClockCmd                   0x080007c9   Thumb Code    18  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_DeInit                               0x080007e1   Thumb Code    48  stm32f10x_rcc.o(i.RCC_DeInit)
+    RCC_GetFlagStatus                        0x0800081d   Thumb Code    42  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    RCC_GetSYSCLKSource                      0x0800084d   Thumb Code    10  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    RCC_HCLKConfig                           0x0800085d   Thumb Code    14  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    RCC_HSEConfig                            0x08000871   Thumb Code    48  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    RCC_IRQHandler                           0x080008a5   Thumb Code     2  stm32f10x_it.o(i.RCC_IRQHandler)
+    RCC_MCOConfig                            0x080008a9   Thumb Code     6  stm32f10x_rcc.o(i.RCC_MCOConfig)
+    RCC_PCLK1Config                          0x080008b5   Thumb Code    14  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    RCC_PCLK2Config                          0x080008c9   Thumb Code    16  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    RCC_PLLCmd                               0x080008dd   Thumb Code     6  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    RCC_PLLConfig                            0x080008e9   Thumb Code    16  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    RCC_SYSCLKConfig                         0x080008fd   Thumb Code    14  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    RCC_WaitForHSEStartUp                    0x08000911   Thumb Code    46  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    RTCAlarm_IRQHandler                      0x08000945   Thumb Code     2  stm32f10x_it.o(i.RTCAlarm_IRQHandler)
+    RTC_IRQHandler                           0x08000947   Thumb Code     2  stm32f10x_it.o(i.RTC_IRQHandler)
+    SCCB_GPIO_Config                         0x08000949   Thumb Code    38  sccb.o(i.SCCB_GPIO_Config)
+    SCCB_SID_GPIO_INPUT                      0x08000975   Thumb Code    32  sccb.o(i.SCCB_SID_GPIO_INPUT)
+    SCCB_SID_GPIO_OUTPUT                     0x08000999   Thumb Code    38  sccb.o(i.SCCB_SID_GPIO_OUTPUT)
+    SCCBreadByte                             0x080009c5   Thumb Code    88  sccb.o(i.SCCBreadByte)
+    SCCBwriteByte                            0x08000a29   Thumb Code   150  sccb.o(i.SCCBwriteByte)
+    SDIO_IRQHandler                          0x08000acd   Thumb Code     2  stm32f10x_it.o(i.SDIO_IRQHandler)
+    SPI1_IRQHandler                          0x08000acf   Thumb Code     2  stm32f10x_it.o(i.SPI1_IRQHandler)
+    SPI2_IRQHandler                          0x08000ad1   Thumb Code     2  stm32f10x_it.o(i.SPI2_IRQHandler)
+    SPI3_IRQHandler                          0x08000ad3   Thumb Code     2  stm32f10x_it.o(i.SPI3_IRQHandler)
+    SVCHandler                               0x08000ad5   Thumb Code     2  stm32f10x_it.o(i.SVCHandler)
+    SysTickHandler                           0x08000ad7   Thumb Code     2  stm32f10x_it.o(i.SysTickHandler)
+    TAMPER_IRQHandler                        0x08000ad9   Thumb Code     2  stm32f10x_it.o(i.TAMPER_IRQHandler)
+    TIM1_BRK_IRQHandler                      0x08000adb   Thumb Code     2  stm32f10x_it.o(i.TIM1_BRK_IRQHandler)
+    TIM1_CC_IRQHandler                       0x08000add   Thumb Code     2  stm32f10x_it.o(i.TIM1_CC_IRQHandler)
+    TIM1_TRG_COM_IRQHandler                  0x08000adf   Thumb Code     2  stm32f10x_it.o(i.TIM1_TRG_COM_IRQHandler)
+    TIM1_UP_IRQHandler                       0x08000ae1   Thumb Code     2  stm32f10x_it.o(i.TIM1_UP_IRQHandler)
+    TIM2_IRQHandler                          0x08000ae3   Thumb Code     2  stm32f10x_it.o(i.TIM2_IRQHandler)
+    TIM3_IRQHandler                          0x08000ae5   Thumb Code     2  stm32f10x_it.o(i.TIM3_IRQHandler)
+    TIM4_IRQHandler                          0x08000ae7   Thumb Code     2  stm32f10x_it.o(i.TIM4_IRQHandler)
+    TIM5_IRQHandler                          0x08000ae9   Thumb Code     2  stm32f10x_it.o(i.TIM5_IRQHandler)
+    TIM6_IRQHandler                          0x08000aeb   Thumb Code     2  stm32f10x_it.o(i.TIM6_IRQHandler)
+    TIM7_IRQHandler                          0x08000aed   Thumb Code     2  stm32f10x_it.o(i.TIM7_IRQHandler)
+    TIM8_BRK_IRQHandler                      0x08000aef   Thumb Code     2  stm32f10x_it.o(i.TIM8_BRK_IRQHandler)
+    TIM8_CC_IRQHandler                       0x08000af1   Thumb Code     2  stm32f10x_it.o(i.TIM8_CC_IRQHandler)
+    TIM8_TRG_COM_IRQHandler                  0x08000af3   Thumb Code     2  stm32f10x_it.o(i.TIM8_TRG_COM_IRQHandler)
+    TIM8_UP_IRQHandler                       0x08000af5   Thumb Code     2  stm32f10x_it.o(i.TIM8_UP_IRQHandler)
+    UART4_IRQHandler                         0x08000af7   Thumb Code     2  stm32f10x_it.o(i.UART4_IRQHandler)
+    UART5_IRQHandler                         0x08000af9   Thumb Code     2  stm32f10x_it.o(i.UART5_IRQHandler)
+    USART1_IRQHandler                        0x08000afb   Thumb Code     2  stm32f10x_it.o(i.USART1_IRQHandler)
+    USART2_IRQHandler                        0x08000afd   Thumb Code     2  stm32f10x_it.o(i.USART2_IRQHandler)
+    USART3_IRQHandler                        0x08000aff   Thumb Code     2  stm32f10x_it.o(i.USART3_IRQHandler)
+    USBWakeUp_IRQHandler                     0x08000b01   Thumb Code     2  stm32f10x_it.o(i.USBWakeUp_IRQHandler)
+    USB_HP_CAN_TX_IRQHandler                 0x08000b03   Thumb Code     2  stm32f10x_it.o(i.USB_HP_CAN_TX_IRQHandler)
+    USB_LP_CAN_RX0_IRQHandler                0x08000b05   Thumb Code     2  stm32f10x_it.o(i.USB_LP_CAN_RX0_IRQHandler)
+    UsageFaultException                      0x08000b07   Thumb Code     4  stm32f10x_it.o(i.UsageFaultException)
+    WWDG_IRQHandler                          0x08000b0b   Thumb Code     2  stm32f10x_it.o(i.WWDG_IRQHandler)
+    __scatterload_copy                       0x08000b0d   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000b1b   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000b1d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    delay_ms                                 0x08000b2b   Thumb Code    24  delay.o(i.delay_ms)
+    delay_us                                 0x08000b43   Thumb Code    12  delay.o(i.delay_us)
+    ili9320_BGR2RGB                          0x08000b4f   Thumb Code    26  ili9320.o(i.ili9320_BGR2RGB)
+    ili9320_Clear                            0x08000b69   Thumb Code    38  ili9320.o(i.ili9320_Clear)
+    ili9320_Delay                            0x08000b8f   Thumb Code    10  ili9320.o(i.ili9320_Delay)
+    ili9320_Initializtion                    0x08000b99   Thumb Code  3612  ili9320.o(i.ili9320_Initializtion)
+    ili9320_SetCursor                        0x080019b5   Thumb Code   126  ili9320.o(i.ili9320_SetCursor)
+    main                                     0x08001a39   Thumb Code   242  main.o(i.main)
+    noAck                                    0x08001b3d   Thumb Code    64  sccb.o(i.noAck)
+    rdOV7670Reg                              0x08001b89   Thumb Code   102  ov7670.o(i.rdOV7670Reg)
+    set_OV7670reg                            0x08001bef   Thumb Code  1124  ov7670.o(i.set_OV7670reg)
+    startSCCB                                0x08002055   Thumb Code    64  sccb.o(i.startSCCB)
+    stopSCCB                                 0x080020a1   Thumb Code    48  sccb.o(i.stopSCCB)
+    wrOV7670Reg                              0x080020dd   Thumb Code    78  ov7670.o(i.wrOV7670Reg)
+    Region$$Table$$Base                      0x0800212c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800213c   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20000400   Number         0  stm32f10x_vector.o ABSOLUTE
+    DeviceCode                               0x68000000   Data           2  ili9320.o(.data)
+    HSEStartUpStatus                         0x6800000c   Data           1  main.o(.data)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000131
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002154, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000213c, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x00000130   Data   RO          825    RESET               stm32f10x_vector.o
+    0x08000130   0x00000000   Code   RO         1622  * .ARM.Collect$$$$00000000  entry.o(mc_w.l)
+    0x08000130   0x00000004   Code   RO         1625    .ARM.Collect$$$$00000001  entry2.o(mc_w.l)
+    0x08000134   0x00000004   Code   RO         1628    .ARM.Collect$$$$00000004  entry5.o(mc_w.l)
+    0x08000138   0x00000008   Code   RO         1629    .ARM.Collect$$$$00000007  entry7.o(mc_w.l)
+    0x08000140   0x00000004   Code   RO         1626    .ARM.Collect$$$$00002712  entry2.o(mc_w.l)
+    0x08000144   0x000000a0   Code   RO          826    .text               stm32f10x_vector.o
+    0x080001e4   0x00000024   Code   RO         1630    .text               init.o(mc_w.l)
+    0x08000208   0x00000002   Code   RO          400    i.ADC1_2_IRQHandler  stm32f10x_it.o
+    0x0800020a   0x00000002   Code   RO          401    i.ADC3_IRQHandler   stm32f10x_it.o
+    0x0800020c   0x00000004   Code   RO          402    i.BusFaultException  stm32f10x_it.o
+    0x08000210   0x00000002   Code   RO          403    i.CAN_RX1_IRQHandler  stm32f10x_it.o
+    0x08000212   0x00000002   Code   RO          404    i.CAN_SCE_IRQHandler  stm32f10x_it.o
+    0x08000214   0x0000002c   Code   RO          312    i.CLK_init_OFF      ov7670.o
+    0x08000240   0x00000034   Code   RO          313    i.CLK_init_ON       ov7670.o
+    0x08000274   0x00000002   Code   RO          405    i.DMA1_Channel1_IRQHandler  stm32f10x_it.o
+    0x08000276   0x00000002   Code   RO          406    i.DMA1_Channel2_IRQHandler  stm32f10x_it.o
+    0x08000278   0x00000002   Code   RO          407    i.DMA1_Channel3_IRQHandler  stm32f10x_it.o
+    0x0800027a   0x00000002   Code   RO          408    i.DMA1_Channel4_IRQHandler  stm32f10x_it.o
+    0x0800027c   0x00000002   Code   RO          409    i.DMA1_Channel5_IRQHandler  stm32f10x_it.o
+    0x0800027e   0x00000002   Code   RO          410    i.DMA1_Channel6_IRQHandler  stm32f10x_it.o
+    0x08000280   0x00000002   Code   RO          411    i.DMA1_Channel7_IRQHandler  stm32f10x_it.o
+    0x08000282   0x00000002   Code   RO          412    i.DMA2_Channel1_IRQHandler  stm32f10x_it.o
+    0x08000284   0x00000002   Code   RO          413    i.DMA2_Channel2_IRQHandler  stm32f10x_it.o
+    0x08000286   0x00000002   Code   RO          414    i.DMA2_Channel3_IRQHandler  stm32f10x_it.o
+    0x08000288   0x00000002   Code   RO          415    i.DMA2_Channel4_5_IRQHandler  stm32f10x_it.o
+    0x0800028a   0x00000002   Code   RO          416    i.DebugMonitor      stm32f10x_it.o
+    0x0800028c   0x0000001a   Code   RO           32    i.Delay             ili9320.o
+    0x080002a6   0x00000002   PAD
+    0x080002a8   0x000000ac   Code   RO          375    i.Demo_Init         main.o
+    0x08000354   0x00000002   Code   RO          417    i.EXTI0_IRQHandler  stm32f10x_it.o
+    0x08000356   0x00000002   Code   RO          418    i.EXTI15_10_IRQHandler  stm32f10x_it.o
+    0x08000358   0x00000002   Code   RO          419    i.EXTI1_IRQHandler  stm32f10x_it.o
+    0x0800035a   0x00000002   Code   RO          420    i.EXTI2_IRQHandler  stm32f10x_it.o
+    0x0800035c   0x00000002   Code   RO          421    i.EXTI3_IRQHandler  stm32f10x_it.o
+    0x0800035e   0x00000002   Code   RO          422    i.EXTI4_IRQHandler  stm32f10x_it.o
+    0x08000360   0x00000002   Code   RO          423    i.EXTI9_5_IRQHandler  stm32f10x_it.o
+    0x08000362   0x00000002   Code   RO          424    i.FLASH_IRQHandler  stm32f10x_it.o
+    0x08000364   0x00000018   Code   RO          832    i.FLASH_PrefetchBufferCmd  stm32f10x_flash.o(STM32F10xR.LIB)
+    0x0800037c   0x00000018   Code   RO          830    i.FLASH_SetLatency  stm32f10x_flash.o(STM32F10xR.LIB)
+    0x08000394   0x00000002   Code   RO          425    i.FSMC_IRQHandler   stm32f10x_it.o
+    0x08000396   0x00000002   PAD
+    0x08000398   0x00000020   Code   RO         1001    i.FSMC_NORSRAMCmd   stm32f10x_fsmc.o(STM32F10xR.LIB)
+    0x080003b8   0x000000be   Code   RO          995    i.FSMC_NORSRAMInit  stm32f10x_fsmc.o(STM32F10xR.LIB)
+    0x08000476   0x00000002   PAD
+    0x08000478   0x000000a0   Code   RO         1120    i.GPIO_Init         stm32f10x_gpio.o(STM32F10xR.LIB)
+    0x08000518   0x0000000a   Code   RO         1128    i.GPIO_WriteBit     stm32f10x_gpio.o(STM32F10xR.LIB)
+    0x08000522   0x00000004   Code   RO          426    i.HardFaultException  stm32f10x_it.o
+    0x08000526   0x00000002   Code   RO          427    i.I2C1_ER_IRQHandler  stm32f10x_it.o
+    0x08000528   0x00000002   Code   RO          428    i.I2C1_EV_IRQHandler  stm32f10x_it.o
+    0x0800052a   0x00000002   Code   RO          429    i.I2C2_ER_IRQHandler  stm32f10x_it.o
+    0x0800052c   0x00000002   Code   RO          430    i.I2C2_EV_IRQHandler  stm32f10x_it.o
+    0x0800052e   0x00000002   PAD
+    0x08000530   0x0000007c   Code   RO           33    i.LCD_CtrlLinesConfig  ili9320.o
+    0x080005ac   0x00000058   Code   RO           34    i.LCD_FSMCConfig    ili9320.o
+    0x08000604   0x0000000c   Code   RO           36    i.LCD_ReadReg       ili9320.o
+    0x08000610   0x00000008   Code   RO           38    i.LCD_WriteRAM      ili9320.o
+    0x08000618   0x0000000a   Code   RO           39    i.LCD_WriteRAM_Prepare  ili9320.o
+    0x08000622   0x0000000a   Code   RO           40    i.LCD_WriteReg      ili9320.o
+    0x0800062c   0x0000000c   Code   RO           41    i.LCD_X_Init        ili9320.o
+    0x08000638   0x00000004   Code   RO          431    i.MemManageException  stm32f10x_it.o
+    0x0800063c   0x00000002   Code   RO          432    i.NMIException      stm32f10x_it.o
+    0x0800063e   0x00000002   PAD
+    0x08000640   0x00000018   Code   RO         1254    i.NVIC_SetSystemHandlerPendingBit  stm32f10x_nvic.o(STM32F10xR.LIB)
+    0x08000658   0x0000002c   Code   RO          314    i.OV7670_GPIO_CONTRL_CONFIG  ov7670.o
+    0x08000684   0x00000028   Code   RO          315    i.OV7670_GPIO_Init  ov7670.o
+    0x080006ac   0x000000aa   Code   RO          316    i.OV7670_config_window  ov7670.o
+    0x08000756   0x00000042   Code   RO          317    i.OV7670_init       ov7670.o
+    0x08000798   0x00000002   Code   RO          433    i.PVD_IRQHandler    stm32f10x_it.o
+    0x0800079a   0x00000002   Code   RO          434    i.PendSVC           stm32f10x_it.o
+    0x0800079c   0x00000014   Code   RO         1433    i.RCC_ADCCLKConfig  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080007b0   0x00000018   Code   RO         1439    i.RCC_AHBPeriphClockCmd  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080007c8   0x00000018   Code   RO         1440    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080007e0   0x0000003c   Code   RO         1418    i.RCC_DeInit        stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x0800081c   0x00000030   Code   RO         1420    i.RCC_GetFlagStatus  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x0800084c   0x00000010   Code   RO         1427    i.RCC_GetSYSCLKSource  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x0800085c   0x00000014   Code   RO         1428    i.RCC_HCLKConfig    stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x08000870   0x00000034   Code   RO         1419    i.RCC_HSEConfig     stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008a4   0x00000002   Code   RO          435    i.RCC_IRQHandler    stm32f10x_it.o
+    0x080008a6   0x00000002   PAD
+    0x080008a8   0x0000000c   Code   RO         1446    i.RCC_MCOConfig     stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008b4   0x00000014   Code   RO         1429    i.RCC_PCLK1Config   stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008c8   0x00000014   Code   RO         1430    i.RCC_PCLK2Config   stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008dc   0x0000000c   Code   RO         1425    i.RCC_PLLCmd        stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008e8   0x00000014   Code   RO         1424    i.RCC_PLLConfig     stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x080008fc   0x00000014   Code   RO         1426    i.RCC_SYSCLKConfig  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x08000910   0x00000034   Code   RO         1421    i.RCC_WaitForHSEStartUp  stm32f10x_rcc.o(STM32F10xR.LIB)
+    0x08000944   0x00000002   Code   RO          436    i.RTCAlarm_IRQHandler  stm32f10x_it.o
+    0x08000946   0x00000002   Code   RO          437    i.RTC_IRQHandler    stm32f10x_it.o
+    0x08000948   0x0000002c   Code   RO          255    i.SCCB_GPIO_Config  sccb.o
+    0x08000974   0x00000024   Code   RO          256    i.SCCB_SID_GPIO_INPUT  sccb.o
+    0x08000998   0x0000002c   Code   RO          257    i.SCCB_SID_GPIO_OUTPUT  sccb.o
+    0x080009c4   0x00000064   Code   RO          258    i.SCCBreadByte      sccb.o
+    0x08000a28   0x000000a4   Code   RO          259    i.SCCBwriteByte     sccb.o
+    0x08000acc   0x00000002   Code   RO          438    i.SDIO_IRQHandler   stm32f10x_it.o
+    0x08000ace   0x00000002   Code   RO          439    i.SPI1_IRQHandler   stm32f10x_it.o
+    0x08000ad0   0x00000002   Code   RO          440    i.SPI2_IRQHandler   stm32f10x_it.o
+    0x08000ad2   0x00000002   Code   RO          441    i.SPI3_IRQHandler   stm32f10x_it.o
+    0x08000ad4   0x00000002   Code   RO          442    i.SVCHandler        stm32f10x_it.o
+    0x08000ad6   0x00000002   Code   RO          443    i.SysTickHandler    stm32f10x_it.o
+    0x08000ad8   0x00000002   Code   RO          444    i.TAMPER_IRQHandler  stm32f10x_it.o
+    0x08000ada   0x00000002   Code   RO          445    i.TIM1_BRK_IRQHandler  stm32f10x_it.o
+    0x08000adc   0x00000002   Code   RO          446    i.TIM1_CC_IRQHandler  stm32f10x_it.o
+    0x08000ade   0x00000002   Code   RO          447    i.TIM1_TRG_COM_IRQHandler  stm32f10x_it.o
+    0x08000ae0   0x00000002   Code   RO          448    i.TIM1_UP_IRQHandler  stm32f10x_it.o
+    0x08000ae2   0x00000002   Code   RO          449    i.TIM2_IRQHandler   stm32f10x_it.o
+    0x08000ae4   0x00000002   Code   RO          450    i.TIM3_IRQHandler   stm32f10x_it.o
+    0x08000ae6   0x00000002   Code   RO          451    i.TIM4_IRQHandler   stm32f10x_it.o
+    0x08000ae8   0x00000002   Code   RO          452    i.TIM5_IRQHandler   stm32f10x_it.o
+    0x08000aea   0x00000002   Code   RO          453    i.TIM6_IRQHandler   stm32f10x_it.o
+    0x08000aec   0x00000002   Code   RO          454    i.TIM7_IRQHandler   stm32f10x_it.o
+    0x08000aee   0x00000002   Code   RO          455    i.TIM8_BRK_IRQHandler  stm32f10x_it.o
+    0x08000af0   0x00000002   Code   RO          456    i.TIM8_CC_IRQHandler  stm32f10x_it.o
+    0x08000af2   0x00000002   Code   RO          457    i.TIM8_TRG_COM_IRQHandler  stm32f10x_it.o
+    0x08000af4   0x00000002   Code   RO          458    i.TIM8_UP_IRQHandler  stm32f10x_it.o
+    0x08000af6   0x00000002   Code   RO          459    i.UART4_IRQHandler  stm32f10x_it.o
+    0x08000af8   0x00000002   Code   RO          460    i.UART5_IRQHandler  stm32f10x_it.o
+    0x08000afa   0x00000002   Code   RO          461    i.USART1_IRQHandler  stm32f10x_it.o
+    0x08000afc   0x00000002   Code   RO          462    i.USART2_IRQHandler  stm32f10x_it.o
+    0x08000afe   0x00000002   Code   RO          463    i.USART3_IRQHandler  stm32f10x_it.o
+    0x08000b00   0x00000002   Code   RO          464    i.USBWakeUp_IRQHandler  stm32f10x_it.o
+    0x08000b02   0x00000002   Code   RO          465    i.USB_HP_CAN_TX_IRQHandler  stm32f10x_it.o
+    0x08000b04   0x00000002   Code   RO          466    i.USB_LP_CAN_RX0_IRQHandler  stm32f10x_it.o
+    0x08000b06   0x00000004   Code   RO          467    i.UsageFaultException  stm32f10x_it.o
+    0x08000b0a   0x00000002   Code   RO          468    i.WWDG_IRQHandler   stm32f10x_it.o
+    0x08000b0c   0x0000000e   Code   RO         1634    i.__scatterload_copy  handlers.o(mc_w.l)
+    0x08000b1a   0x00000002   Code   RO         1635    i.__scatterload_null  handlers.o(mc_w.l)
+    0x08000b1c   0x0000000e   Code   RO         1636    i.__scatterload_zeroinit  handlers.o(mc_w.l)
+    0x08000b2a   0x00000018   Code   RO            3    i.delay_ms          delay.o
+    0x08000b42   0x0000000c   Code   RO            4    i.delay_us          delay.o
+    0x08000b4e   0x0000001a   Code   RO           42    i.ili9320_BGR2RGB   ili9320.o
+    0x08000b68   0x00000026   Code   RO           44    i.ili9320_Clear     ili9320.o
+    0x08000b8e   0x0000000a   Code   RO           45    i.ili9320_Delay     ili9320.o
+    0x08000b98   0x00000e1c   Code   RO           48    i.ili9320_Initializtion  ili9320.o
+    0x080019b4   0x00000084   Code   RO           50    i.ili9320_SetCursor  ili9320.o
+    0x08001a38   0x00000104   Code   RO          376    i.main              main.o
+    0x08001b3c   0x0000004c   Code   RO          260    i.noAck             sccb.o
+    0x08001b88   0x00000066   Code   RO          318    i.rdOV7670Reg       ov7670.o
+    0x08001bee   0x00000464   Code   RO          319    i.set_OV7670reg     ov7670.o
+    0x08002052   0x00000002   PAD
+    0x08002054   0x0000004c   Code   RO          261    i.startSCCB         sccb.o
+    0x080020a0   0x0000003c   Code   RO          262    i.stopSCCB          sccb.o
+    0x080020dc   0x0000004e   Code   RO          320    i.wrOV7670Reg       ov7670.o
+    0x0800212a   0x00000002   PAD
+    0x0800212c   0x00000010   Data   RO         1632    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_RAM1 (Base: 0x68000000, Size: 0x00000018, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x68000000   0x00000002   Data   RW           53    .data               ili9320.o
+    0x68000002   0x00000002   PAD
+    0x68000004   0x00000009   Data   RW          377    .data               main.o
+    0x6800000d   0x00000003   PAD
+    0x68000010   0x00000008   Data   RW         1450    .data               stm32f10x_rcc.o(STM32F10xR.LIB)
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000000, Max: 0x00010000, ABSOLUTE)
+
+    **** No section assigned to this execution region ****
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        36          0          0          0          0       2414   delay.o
+      4108         38          0          2          0      24865   ili9320.o
+       432         22          0          9          0       1574   main.o
+      1720         20          0          0          0       5733   ov7670.o
+       600         78          0          0          0       4026   sccb.o
+       146          0          0          0          0      29964   stm32f10x_it.o
+       160         72        304          0          0        356   stm32f10x_vector.o
+
+    ----------------------------------------------------------------------
+      7216        230        320         16          0      68932   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+        14          0          0          5          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         8          4          0          0          0          0   entry7.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        48         12          0          0          0      17005   stm32f10x_flash.o
+       222          4          0          0          0      17353   stm32f10x_fsmc.o
+       170          0          0          0          0       8428   stm32f10x_gpio.o
+        24          6          0          0          0        478   stm32f10x_nvic.o
+       420         90          0          8          0       9216   stm32f10x_rcc.o
+
+    ----------------------------------------------------------------------
+       972        128          0          8          0      52548   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       884        112          0          8          0      52480   STM32F10xR.LIB
+        86         16          0          0          0         68   mc_w.l
+
+    ----------------------------------------------------------------------
+       972        128          0          8          0      52548   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      8188        358        320         24          0     115580   Grand Totals
+      8188        358        320         24          0     115580   ELF Image Totals
+      8188        358        320         24          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8508 (   8.31kB)
+    Total RW  Size (RW Data + ZI Data)                24 (   0.02kB)
+    Total ROM Size (Code + RO Data + RW Data)       8532 (   8.33kB)
+
+==============================================================================
+

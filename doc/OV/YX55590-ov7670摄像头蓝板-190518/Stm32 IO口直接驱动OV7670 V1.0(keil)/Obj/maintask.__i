@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\source -I.\include -I "D:\Keil\ARM\INC\ST\STM32F10x" -o ".\Obj\maintask.o" --omf_browse ".\Obj\maintask.crf" --depend ".\Obj\maintask.d" "source\MainTask.c"
