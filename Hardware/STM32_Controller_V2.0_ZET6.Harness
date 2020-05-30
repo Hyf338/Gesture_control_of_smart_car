@@ -1,13 +1,12 @@
-BEEP=
 download=
-IIC=
 KEY=
+mpu9250=
 NRF=
 OLED=
 OSC_Inside=
 OSC_Outside=
 OV7725=
-RGB=
+RGB&BEEP=
 TIM1=
 TIM4=
 UASRT1=
