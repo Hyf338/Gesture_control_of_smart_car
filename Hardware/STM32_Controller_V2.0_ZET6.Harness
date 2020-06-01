@@ -1,6 +1,7 @@
 download=
 KEY=
-mpu9250=
+mp9250=
+mpu6050=
 NRF=
 OLED=
 OSC_Inside=
