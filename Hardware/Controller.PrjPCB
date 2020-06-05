@@ -123,6 +123,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DPQMIHNC
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Controller\Board Information - STM32_Controller_V2.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
@@ -1302,6 +1306,9 @@ ComponentDesignItemID38=接线端子-2PIN
 ComponentSymbolReference38=接线端子-2PIN
 ComponentUpdate38=1
 ComponentIsDeviceSheet38=0
+
+[NetInfos]
+Net1=NetName=TIM1_CH1N|NetColor=$00FF6E6E
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
