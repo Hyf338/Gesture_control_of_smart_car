@@ -1309,6 +1309,7 @@ ComponentIsDeviceSheet38=0
 
 [NetInfos]
 Net1=NetName=TIM1_CH1N|NetColor=$00FF6E6E
+Net2=NetName=TYPE-C_VUSB|NetColor=$006EFF6E
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
