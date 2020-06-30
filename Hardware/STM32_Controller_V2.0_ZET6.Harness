@@ -1,11 +1,10 @@
 download=
+HSE=
 KEY=
 mp9250=
-mpu6050=
 NRF=
 OLED=
 OSC_Inside=
-OSC_Outside=
 OV7725=
 RGB&BEEP=
 TIM1=
