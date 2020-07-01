@@ -1,0 +1,251 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\淘宝相关\camera发布版\摄像头资料\OV7670资料\OV7670模块资料\C8051F330_OV7670 V3.0驱动(keil)\c8051f330_camera.uvproj
+Project File Date:  09/22/2012
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+SOURCE\C8051F330_CAMERA.C(649): warning C235: parameter 1: different types
+SOURCE\C8051F330_CAMERA.C(649): warning C235: parameter 2: different types
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?NOACK?C8051F330_CAMERA
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?C8051F330_CAMERA
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=48.0 xdata=0 code=5074
+".\obj\c8051f330_camera" - 0 Error(s), 6 Warning(s).
+compiling c8051f330_camera.c...
+SOURCE\C8051F330_CAMERA.C(491): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(492): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(493): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(494): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(495): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(496): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(497): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(498): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(499): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(500): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(501): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(502): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(503): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(504): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(505): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(506): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(507): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(509): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(510): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(511): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(512): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(513): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(514): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(515): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(516): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(517): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(518): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(519): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(520): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(521): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(522): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(523): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(524): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(526): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(527): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(529): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(530): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(531): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(532): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(533): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(534): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(535): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(536): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(537): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(538): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(539): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(540): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(541): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(542): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(543): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(544): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(545): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(547): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(548): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(549): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(550): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(551): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(552): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(553): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(554): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(555): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(556): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(557): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(558): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(559): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(560): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(561): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(562): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(563): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(564): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(565): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(566): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(567): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(568): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(569): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(570): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(571): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(572): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(573): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(574): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(575): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(576): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(577): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(581): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(582): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(583): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(584): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(585): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(586): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(587): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(588): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(589): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(590): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(591): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(592): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(593): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(594): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(595): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(596): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(597): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(598): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(599): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(600): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(601): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(602): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(603): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(604): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(605): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(606): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(609): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(610): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(611): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(612): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(613): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(614): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(615): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(617): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(618): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(619): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(620): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(621): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(622): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(623): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(624): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(625): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(626): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(627): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(629): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(630): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(632): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(633): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(634): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(635): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(636): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(637): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(638): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(639): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(640): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(641): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(642): error C208: '_WrCmos7670': too many actual parameters
+SOURCE\C8051F330_CAMERA.C(649): error C236: '_WrCmos7670': different length of parameter lists
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 141 Error(s), 1 Warning(s).
+compiling c8051f330_camera.c...
+SOURCE\C8051F330_CAMERA.C(649): warning C235: parameter 1: different types
+SOURCE\C8051F330_CAMERA.C(649): warning C235: parameter 2: different types
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 0 Error(s), 3 Warning(s).
+compiling c8051f330_camera.c...
+SOURCE\C8051F330_CAMERA.C(649): warning C235: parameter 2: different types
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?NOACK?C8051F330_CAMERA
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?C8051F330_CAMERA
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=48.0 xdata=0 code=4556
+".\obj\c8051f330_camera" - 0 Error(s), 4 Warning(s).
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(821): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 0 Error(s), 1 Warning(s).
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?NOACK?C8051F330_CAMERA
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=44.0 xdata=0 code=4480
+".\obj\c8051f330_camera" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?NOACK?C8051F330_CAMERA
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=44.0 xdata=0 code=4480
+".\obj\c8051f330_camera" - 0 Error(s), 3 Warning(s).
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+source\c8051f330_camera.c - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+linking...
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=44.0 xdata=0 code=4458
+".\obj\c8051f330_camera" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(809): warning C316: unterminated conditionals
+linking...
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=44.0 xdata=0 code=4458
+".\obj\c8051f330_camera" - 0 Error(s), 2 Warning(s).

@@ -1,0 +1,875 @@
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE C8051F330_CAMERA
+OBJECT MODULE PLACED IN .\obj\c8051f330_camera.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE source\c8051f330_camera.c BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT(.\o
+                    -bj\c8051f330_camera.lst) OBJECT(.\obj\c8051f330_camera.obj)
+
+line level    source
+
+   1          /*******************************************************************************
+   2          *  Copyright (C) 2012 All Rights Reserved
+   3          *               
+   4          * 软件作者:     骑飞家族
+   5          * 版权所有: 骑飞电子    
+   6          * 创建日期:     2010年6月10日 
+   7          * 软件历史:     2010年11月2日修改
+   8                                  2012年09月10日修改
+   9          * Version:  3.0 
+  10          * Demo 淘宝地址：http://qifeidz.taobao.com
+  11          **********************************************************************************************************
+             -************************************
+  12          懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒
+             -懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒
+  13          懒懒懒懒懒懒懒懒懒懒懒一懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒困一懒懒懒懒懒懒懒懒懒懒
+             -懒懒懒懒一一一一一一一懒懒懒懒懒懒懒
+  14          懒懒困一一一一懒一一一一一一二懒懒懒懒困一一一一一一一一懒懒懒懒懒懒懒懒懒四厲懒懒一一懒懒懒一懒懒懒懒懒懒
+             -懒懒懒一一一一四四一一一懒懒懒懒懒懒
+  15          懒懒懒懒懒懒一懒懒懒一二一懒懒懒懒懒懒一一一一四厲二一四懒一一懒懒懒懒懒四一一一一一一一一一一一懒懒懒懒懒
+             -懒懒懒四懒懒四一一一一厲懒懒懒懒懒懒
+  16          懒懒懒四厲厲一懒懒厲懒懒懒四懒懒懒懒懒懒懒懒懒懒懒困一懒一一懒懒懒懒懒懒懒一一厲厲一一厲厲厲一一懒懒懒懒懒
+             -懒厲厲厲厲厲厲一一厲厲厲懒懒懒懒懒懒
+  17          懒懒懒一懒二一一一一一一一一一一一懒懒懒懒懒懒懒懒二一一困懒懒懒懒懒懒懒懒一一一一一一一一一一四懒懒懒懒懒
+             -一一一一一一一一一一一一一一一懒懒懒
+  18          懒懒懒一一一一一厲二一一厲一懒厲懒懒懒懒懒懒懒懒懒一一一一一懒懒懒懒懒懒懒一一懒懒一一懒懒懒一困懒懒懒懒懒
+             -一一四懒懒懒懒一一懒懒困一一四懒懒懒
+  19          懒懒懒懒懒懒懒一困一懒一厲一懒懒懒懒懒懒懒懒懒懒懒困一懒懒一一懒懒懒懒懒懒一一一一一一一一一一厲懒懒懒懒懒
+             -懒懒懒懒懒懒懒一一厲懒懒懒懒懒懒懒懒
+  20          懒二一一一懒四困厲一一一厲一懒懒懒懒懒懒懒懒懒懒懒懒一一懒懒懒懒懒懒懒懒懒懒懒懒懒四一厲懒懒懒懒懒懒一懒懒
+             -懒懒懒懒懒懒懒一一厲懒懒懒懒懒懒懒懒
+  21          懒懒懒懒懒懒一懒懒懒懒懒一一懒懒懒懒懒懒懒懒懒懒懒懒厲一一一一一一困懒懒懒懒懒懒懒懒一一一一一一一一一懒懒
+             -懒懒懒困懒懒厲一一懒懒懒懒懒懒懒懒懒
+  22          懒懒懒懒一一一懒懒困一一一一懒懒懒懒懒懒懒懒懒懒懒懒懒懒一一一一一懒懒懒懒懒懒懒懒懒懒一一一一一一一懒懒懒
+             -懒懒懒懒一一一一四懒懒懒懒懒懒懒懒懒
+  23          懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒
+             -懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒懒
+  24          **********************************************************************************************************
+             -************************************/
+  25          #include <c8051f330.h>
+  26          #include <english_16x8.h>
+  27          
+  28          ///////////////////////////////////////////////////////
+  29          #define BLACK   0x0000
+  30          #define BLUE    0x001F
+  31          #define RED     0xF800
+  32          #define GREEN   0x07E0
+  33          #define CYAN    0x07FF
+  34          #define MAGENTA 0xF81F
+  35          #define YELLOW  0xFFE0
+  36          #define WHITE   0xFFFF          
+  37          
+  38          #define AM          001
+  39          #define TIME               100
+  40          
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 2   
+
+  41          #define SDA_IN()                {P0MDOUT= 0X00;}
+  42          #define SDA_OUT()               {P0MDOUT= 0XFF;}
+  43          
+  44          
+  45          //Tft control lines
+  46          sbit Tft_RS_PIN=P0^6;
+  47          sbit Tft_WR_PIN=P0^7;
+  48          sbit Tft_RST_PIN=P0^4;
+  49          
+  50          //camera control lines
+  51          sbit I2C_SCL=P0^1;
+  52          sbit I2C_SDA=P0^0;
+  53          sbit Cmos_VSYNC=P0^5;
+  54          sbit SDA_STATE=P0^0;
+  55          
+  56          //sn74lvc245 control lines
+  57          sbit Cmos_CS_PIN=P0^2;
+  58          
+  59          //SN74LVC1G125 CONTROL LINES
+  60          sbit WR_CONTROL_PIN=P0^3;
+  61          
+  62          void OSCILLATOR_Init (void);
+  63          void Port_Init(void);
+  64          void Ext_Interrupt_Init (void);
+  65          
+  66          void Tft_Init(void);
+  67          void TftClear(unsigned int Color);
+  68          void Tft_WR_DATA16(unsigned int inputdata);
+  69          void TftWrite16(unsigned int index);
+  70          void TftWrite(unsigned int index,unsigned int inputdata);
+  71          void TftWR_Str(unsigned int x,unsigned int y,unsigned char *s,unsigned int color,unsigned int xcolor);
+  72          void TftWR_SingleStr(unsigned char inputdata,unsigned int color,unsigned int xcolor);
+  73          void Tft_SetBackground(unsigned int StartX,unsigned int StartY,unsigned int LongX,unsigned int LongY);
+  74          void Tft_SetCursor(unsigned int Xpos, unsigned int Ypos);
+  75          
+  76          unsigned char WrCmos7670(unsigned char regID, unsigned char regDat);
+  77          unsigned char Cmos7670_init(void);
+  78          void set_Cmos7670reg(void);
+  79          
+  80          void delay_us(unsigned int time);
+  81          void delay_ms(unsigned int time);
+  82          void delay( unsigned long cnt);
+  83          
+  84          ///////////////////////////////////////////
+  85          void DelayI2C(void);
+  86          void InitI2C(void);
+  87          void StartI2C(void);
+  88          void StopI2C(void);
+  89          void NoAck(void);
+  90          unsigned char I2CWrite(unsigned char DData);
+  91          ////////////////////////////////////////////
+  92          unsigned int flag;
+  93          ///////////////////////////////////////////
+  94          
+  95          void main(void)
+  96          {
+  97   1              PCA0MD &= ~0x40;                       
+  98   1              OSCILLATOR_Init ();
+  99   1              Port_Init();
+ 100   1              Ext_Interrupt_Init( );
+ 101   1              WR_CONTROL_PIN=1;
+ 102   1              Tft_Init( );    
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 3   
+
+ 103   1              TftClear(BLACK);
+ 104   1              TftWR_Str(60,70,"C8051F330 Camera",RED,BLACK);
+ 105   1              TftWR_Str(60,100,"QI FEI DIAN ZI VER1.0",RED,BLACK);    
+ 106   1              TftWR_Str(60,130,"OV7670 Initializing......",RED,BLACK);
+ 107   1              delay_ms(3000);
+ 108   1      
+ 109   1              while(1!=Cmos7670_init());
+ 110   1              delay_ms(3000);
+ 111   1              TftClear(BLACK);
+ 112   1              TftWR_Str(60,110,"OV7670  Init  SUCCESS!  ",RED,BLACK);
+ 113   1              delay_ms(5000);
+ 114   1      
+ 115   1              TftClear(BLACK); 
+ 116   1              EA = 1;
+ 117   1              while(1);
+ 118   1              
+ 119   1        
+ 120   1      }
+ 121          
+ 122          
+ 123          
+ 124          void OSCILLATOR_Init (void)
+ 125          {
+ 126   1          OSCICN  = 0x83; 
+ 127   1              RSTSRC =        0x04;                
+ 128   1      }
+ 129          
+ 130          
+ 131          void Port_Init(void)
+ 132          {
+ 133   1              
+ 134   1              P0MDIN = 0xFF;
+ 135   1              P1MDIN = 0XFF;
+ 136   1      
+ 137   1              P0MDOUT= 0XFF;
+ 138   1              P1MDOUT= 0XFF;
+ 139   1       
+ 140   1              P0SKIP = 0X00;
+ 141   1              P1SKIP = 0X00;
+ 142   1      
+ 143   1          XBR0   = 0x00;
+ 144   1          XBR1   = 0x40;
+ 145   1      
+ 146   1      
+ 147   1      }
+ 148          
+ 149          
+ 150          
+ 151          void Ext_Interrupt_Init (void)    
+ 152          {
+ 153   1          IT01CF    = 0x0d;
+ 154   1              IT0=1;
+ 155   1          IE        = 0x01;
+ 156   1      }
+ 157          
+ 158          
+ 159          void INT0_ISR (void) interrupt 0  
+ 160          {
+ 161   1      
+ 162   1              EA=0;
+ 163   1              IE0=0; 
+ 164   1      
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 4   
+
+ 165   1              P0MDOUT= 0xff;
+ 166   1              WR_CONTROL_PIN=1;
+ 167   1              Cmos_CS_PIN=1;
+ 168   1      
+ 169   1              TftWrite(0x0020,0x0000);
+ 170   1              TftWrite(0x0021,0x013f); 
+ 171   1              TftWrite(0x0050,0x00);
+ 172   1              TftWrite(0x0051,239);
+ 173   1              TftWrite(0x0052,0x00);
+ 174   1              TftWrite(0x0053,319);
+ 175   1              TftWrite(0x0003,0x1018);
+ 176   1              TftWrite16(0x0022);
+ 177   1      
+ 178   1      
+ 179   1              Tft_RS_PIN=1;
+ 180   1              Tft_WR_PIN=0;
+ 181   1      
+ 182   1      
+ 183   1              WR_CONTROL_PIN=0;
+ 184   1              Cmos_CS_PIN=0;
+ 185   1       
+ 186   1              EA=1;
+ 187   1      
+ 188   1      }
+ 189          
+ 190          void Tft_Init(void)
+ 191          {
+ 192   1                      
+ 193   1              Tft_RST_PIN=1;
+ 194   1              delay_ms(10);; 
+ 195   1              Tft_RST_PIN=0;
+ 196   1              delay_ms(10);
+ 197   1              Tft_RST_PIN=1;
+ 198   1              delay_ms(150);
+ 199   1      
+ 200   1      
+ 201   1                      TftWrite(0x00e5, 0x8000);       
+ 202   1                      TftWrite(0x0000, 0x0001);       
+ 203   1                      TftWrite(0x0001, 0x0100);
+ 204   1                      TftWrite(0x0002, 0x0700);
+ 205   1              #if AM==000       
+                              TftWrite(0x0003,0x1000);
+                      #elif AM==001        
+ 208   1                      TftWrite(0x0003,0x1008);      
+ 209   1              #elif AM==010  
+                          TftWrite(0x0003,0x1010);        
+                      #elif AM==011
+                              TftWrite(0x0003,0x1018);
+                      #elif AM==100  
+                              TftWrite(0x0003,0x1020);      
+                      #elif AM==101  
+                              TftWrite(0x0003,0x1028);      
+                      #elif AM==110  
+                              TftWrite(0x0003,0x1030);      
+                      #elif AM==111  
+                              TftWrite(0x0003,0x1038);
+                      #endif
+ 222   1                      TftWrite(0x0004, 0x0000);
+ 223   1                      TftWrite(0x0008, 0x0202);       
+ 224   1                      TftWrite(0x0009, 0x0000);       
+ 225   1                      TftWrite(0x000A, 0x0000);
+ 226   1                      TftWrite(0x000C, 0x0000);       
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 5   
+
+ 227   1                      TftWrite(0x000D, 0x0000);       
+ 228   1                      TftWrite(0x000F, 0x0000);       
+ 229   1                      TftWrite(0x0010, 0x0000);       
+ 230   1                      TftWrite(0x0011, 0x0007);       
+ 231   1                      TftWrite(0x0012, 0x0000);       
+ 232   1                      TftWrite(0x0013, 0x0000);       
+ 233   1                      delay_ms(1000);
+ 234   1                      TftWrite(0x0010, 0x17B0);       
+ 235   1                      TftWrite(0x0011, 0x0007);       
+ 236   1                      delay_ms(1000);
+ 237   1                      TftWrite(0x0012, 0x013A);       
+ 238   1                      delay_ms(1000);
+ 239   1                      TftWrite(0x0013, 0x1A00);       
+ 240   1                      TftWrite(0x0029, 0x000c);               
+ 241   1                      delay_ms(1000);
+ 242   1                      TftWrite(0x0030, 0x0000);       
+ 243   1                      TftWrite(0x0031, 0x0505);       
+ 244   1                      TftWrite(0x0032, 0x0004);       
+ 245   1                      TftWrite(0x0035, 0x0006);       
+ 246   1                      TftWrite(0x0036, 0x0707);       
+ 247   1                      TftWrite(0x0037, 0x0105);       
+ 248   1                      TftWrite(0x0038, 0x0002);       
+ 249   1                      TftWrite(0x0039, 0x0707);       
+ 250   1                      TftWrite(0x003C, 0x0704);       
+ 251   1                      TftWrite(0x003D, 0x0807);       
+ 252   1                      TftWrite(0x0050, 0x0000);
+ 253   1                      TftWrite(0x0051, 0x00EF);
+ 254   1                      TftWrite(0x0052, 0x0000);
+ 255   1                      TftWrite(0x0053, 0x013F);
+ 256   1                      TftWrite(0x0060, 0x2700);
+ 257   1                      TftWrite(0x0061, 0x0001);
+ 258   1                      TftWrite(0x006A, 0x0000);
+ 259   1              #if AM==000         
+                              TftWrite(0x0020,0x00ef);
+                              TftWrite(0x0021,0x013f);      
+                      #elif AM==001
+ 263   1                      TftWrite(0x0020,0x00ef);
+ 264   1                      TftWrite(0x0021,0x013f);      
+ 265   1              #elif AM==010
+                              TftWrite(0x0020,0x0000);
+                              TftWrite(0x0021,0x013f);      
+                      #elif AM==011
+                              TftWrite(0x0020,0x0000);
+                              TftWrite(0x0021,0x013f);       
+                      #elif AM==100
+                              TftWrite(0x0020,0x00ef);
+                              TftWrite(0x0021,0x0000);      
+                      #elif AM==101  
+                              TftWrite(0x0020,0x00ef);
+                              TftWrite(0x0021,0x0000);      
+                      #elif AM==110
+                              TftWrite(0x0020,0x0000);
+                              TftWrite(0x0021,0x0000);      
+                      #elif AM==111
+                              TftWrite(0x0020,0x0000);
+                              TftWrite(0x0021,0x0000);         
+                      #endif          
+ 284   1                      TftWrite(0x0080, 0x0000);       
+ 285   1                      TftWrite(0x0081, 0x0000);
+ 286   1                      TftWrite(0x0082, 0x0000);
+ 287   1                      TftWrite(0x0083, 0x0000);
+ 288   1                      TftWrite(0x0084, 0x0000);       
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 6   
+
+ 289   1                      TftWrite(0x0085, 0x0000);
+ 290   1                      TftWrite(0x0090, 0x0010);       
+ 291   1                      TftWrite(0x0092, 0x0000);
+ 292   1                      TftWrite(0x0093, 0x0003);
+ 293   1                      TftWrite(0x0095, 0x0110);
+ 294   1                      TftWrite(0x0097, 0x0000);       
+ 295   1                      TftWrite(0x0098, 0x0000);       
+ 296   1                      TftWrite(0x0007, 0x0173);       
+ 297   1                      delay_ms(1000);
+ 298   1      
+ 299   1      
+ 300   1        
+ 301   1      }
+ 302          
+ 303          
+ 304          void Tft_WR_DATA16(unsigned int inputdata)
+ 305          {
+ 306   1           unsigned int inputdatah;
+ 307   1               unsigned int inputdatal;
+ 308   1               unsigned int x;
+ 309   1               x=inputdata;
+ 310   1               inputdatal=inputdata&0x00ff;
+ 311   1               inputdatah=(inputdata&0xff00)>>8;
+ 312   1               P1MDOUT= 0XFF;
+ 313   1               Tft_RS_PIN=1;
+ 314   1               P1=0x00;
+ 315   1               P1=inputdatah; 
+ 316   1           Tft_WR_PIN=0;
+ 317   1           Tft_WR_PIN=1;
+ 318   1               P1=0x00;
+ 319   1               P1=inputdatal;
+ 320   1           Tft_WR_PIN=0;
+ 321   1           Tft_WR_PIN=1;       
+ 322   1               P1MDOUT= 0X00;
+ 323   1        
+ 324   1      }
+ 325          
+ 326          
+ 327          void TftWrite16(unsigned int index)
+ 328          {   
+ 329   1           unsigned int indexh;
+ 330   1               unsigned int indexl;
+ 331   1               indexh=(index&0xff00)>>8;
+ 332   1               indexl=index&0x00ff;
+ 333   1               P1MDOUT= 0XFF;
+ 334   1               Tft_RS_PIN=0;
+ 335   1      
+ 336   1               P1=0x00;
+ 337   1           P1=indexh; 
+ 338   1               Tft_WR_PIN=0;
+ 339   1           Tft_WR_PIN=1;
+ 340   1      
+ 341   1           P1=0x00;
+ 342   1               P1=indexl;
+ 343   1      
+ 344   1               Tft_WR_PIN=0;
+ 345   1           Tft_WR_PIN=1;
+ 346   1      
+ 347   1               P1MDOUT= 0X00;
+ 348   1      
+ 349   1      }
+ 350          
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 7   
+
+ 351          
+ 352          void TftWrite(unsigned int index,unsigned int inputdata)
+ 353          {
+ 354   1          unsigned int x;
+ 355   1              unsigned int y;
+ 356   1          unsigned int indexh;
+ 357   1              unsigned int indexl;
+ 358   1              unsigned int inputdatah;
+ 359   1              unsigned int inputdatal;
+ 360   1              x=index;
+ 361   1              y=inputdata;
+ 362   1          indexh=(index&0xff00)>>8;
+ 363   1              indexl=index&0x00ff;
+ 364   1              inputdatah=(inputdata&0xff00)>>8;
+ 365   1              inputdatal=inputdata&0x00ff;
+ 366   1              P1MDOUT= 0XFF;
+ 367   1              Tft_RS_PIN= 0;
+ 368   1      
+ 369   1              P1=0;   
+ 370   1              P1=indexh;
+ 371   1              Tft_WR_PIN=0;   
+ 372   1              Tft_WR_PIN=1;
+ 373   1              P1=0;
+ 374   1              P1=indexl; 
+ 375   1              Tft_WR_PIN=0;   
+ 376   1              Tft_WR_PIN=1;
+ 377   1      
+ 378   1              Tft_RS_PIN=1; 
+ 379   1              P1=0;
+ 380   1              P1=inputdatah;
+ 381   1          Tft_WR_PIN=0;       
+ 382   1          Tft_WR_PIN=1;
+ 383   1              P1=0;
+ 384   1              P1=inputdatal; 
+ 385   1          Tft_WR_PIN=0;       
+ 386   1          Tft_WR_PIN=1;
+ 387   1      
+ 388   1              P1MDOUT= 0X00;
+ 389   1      
+ 390   1      }
+ 391          
+ 392          void TftClear(unsigned int Color)
+ 393          {
+ 394   1        unsigned long index = 0;
+ 395   1      
+ 396   1              TftWrite(0x0050,0x00);
+ 397   1              TftWrite(0x0051,239);
+ 398   1              TftWrite(0x0052,0x00);
+ 399   1              TftWrite(0x0053,319);
+ 400   1              TftWrite(0x0020,0x0000);
+ 401   1              TftWrite(0x0021,0x0000);  
+ 402   1              TftWrite16(0x0022);    
+ 403   1      
+ 404   1        for(index = 0; index < 76800; index++)
+ 405   1        {
+ 406   2          Tft_WR_DATA16(Color);
+ 407   2         
+ 408   2        } 
+ 409   1       
+ 410   1      }
+ 411          
+ 412          void TftWR_SingleStr(unsigned char inputdata,unsigned int color,unsigned int xcolor)
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 8   
+
+ 413          {
+ 414   1      
+ 415   1        unsigned char avl,i,n;
+ 416   1        TftWrite16(0x0022);  
+ 417   1        for (i=0;i<16;i++)
+ 418   1        { 
+ 419   2            avl=(english[inputdata-32][i]);
+ 420   2                for (n=0;n<8;n++)
+ 421   2                 {
+ 422   3                   if(avl&0x80) Tft_WR_DATA16(color);
+ 423   3                   else Tft_WR_DATA16(xcolor);
+ 424   3                 
+ 425   3                   avl<<=1;
+ 426   3                 }
+ 427   2              }
+ 428   1      }
+ 429          void TftWR_Str(unsigned int x,unsigned int y,unsigned char *s,unsigned int color,unsigned int xcolor)
+ 430          {
+ 431   1       unsigned int k=0;
+ 432   1       while (*s) 
+ 433   1        {
+ 434   2           Tft_SetBackground(y,x+k,15,8);
+ 435   2           TftWR_SingleStr( *s,color,xcolor);
+ 436   2           k=k+8;
+ 437   2           s++;
+ 438   2        
+ 439   2        }
+ 440   1      
+ 441   1      }  
+ 442          
+ 443          
+ 444          void Tft_SetBackground(unsigned int StartX,unsigned int StartY,unsigned int LongX,unsigned int LongY)
+ 445          {
+ 446   1        
+ 447   1      #if AM==000    
+                      Tft_SetCursor(StartX+LongX-1,312-StartY+LongY-1);
+              
+              #elif AM==001
+ 451   1              Tft_SetCursor(StartX+LongX-1,312-StartY+LongY-1);
+ 452   1           
+ 453   1      #elif AM==010
+                      Tft_SetCursor(StartX,312-StartY+LongY-1);
+                   
+              #elif AM==011 
+                      Tft_SetCursor(StartX,312-StartY+LongY-1);
+                   
+              #elif AM==100
+                      Tft_SetCursor(StartX+LongX-1,312-StartY);     
+                   
+              #elif AM==101
+                      Tft_SetCursor(StartX+LongX-1,312-StartY);     
+                   
+              #elif AM==110
+                      Tft_SetCursor(StartX,312-StartY); 
+                   
+              #elif AM==111
+                      Tft_SetCursor(StartX,312-StartY);  
+                   
+              #endif
+ 472   1           
+ 473   1              TftWrite(0x0050,StartX);
+ 474   1              TftWrite(0x0051,StartX+LongX-1);
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 9   
+
+ 475   1              TftWrite(0x0052,312-StartY);
+ 476   1              TftWrite(0x0053,312-StartY+LongY-1);
+ 477   1      }
+ 478          
+ 479          void Tft_SetCursor(unsigned int Xpos, unsigned int Ypos)
+ 480          {
+ 481   1       
+ 482   1        TftWrite(0x20, Xpos);
+ 483   1        TftWrite(0x21, Ypos);
+ 484   1      }
+ 485          
+ 486          
+ 487          
+ 488          void set_Cmos7670reg(void)
+ 489          {
+ 490   1      
+ 491   1              flag=0;
+ 492   1              WrCmos7670(0x3a, 0x04);
+ 493   1              WrCmos7670(0x40, 0xd0);
+ 494   1              WrCmos7670(0x12, 0x14);
+ 495   1              WrCmos7670(0x32, 0x80);
+ 496   1              WrCmos7670(0x17, 0x16);
+ 497   1              WrCmos7670(0x18, 0x04);
+ 498   1              WrCmos7670(0x19, 0x02);
+ 499   1              WrCmos7670(0x1a, 0x7b);
+ 500   1              WrCmos7670(0x03, 0x06);
+ 501   1              WrCmos7670(0x0c, 0x04);
+ 502   1              WrCmos7670(0x3e, 0x00);
+ 503   1              WrCmos7670(0x70, 0x3a);
+ 504   1              WrCmos7670(0x71, 0x35);
+ 505   1              WrCmos7670(0x72, 0x11);
+ 506   1              WrCmos7670(0x73, 0x00);
+ 507   1              WrCmos7670(0xa2, 0x02);
+ 508   1              WrCmos7670(0x11, 0x81);
+ 509   1              
+ 510   1              WrCmos7670(0x7a, 0x20);
+ 511   1              WrCmos7670(0x7b, 0x1c);
+ 512   1              WrCmos7670(0x7c, 0x28);
+ 513   1              WrCmos7670(0x7d, 0x3c);
+ 514   1              WrCmos7670(0x7e, 0x55);
+ 515   1              WrCmos7670(0x7f, 0x68);
+ 516   1              WrCmos7670(0x80, 0x76);
+ 517   1              WrCmos7670(0x81, 0x80);
+ 518   1              WrCmos7670(0x82, 0x88);
+ 519   1              WrCmos7670(0x83, 0x8f);
+ 520   1              WrCmos7670(0x84, 0x96);
+ 521   1              WrCmos7670(0x85, 0xa3);
+ 522   1              WrCmos7670(0x86, 0xaf);
+ 523   1              WrCmos7670(0x87, 0xc4);
+ 524   1              WrCmos7670(0x88, 0xd7);
+ 525   1              WrCmos7670(0x89, 0xe8);
+ 526   1              
+ 527   1              WrCmos7670(0x13, 0xe0);
+ 528   1              WrCmos7670(0x00, 0x00);
+ 529   1              
+ 530   1              WrCmos7670(0x10, 0x00);
+ 531   1              WrCmos7670(0x0d, 0x00);
+ 532   1              WrCmos7670(0x14, 0x28);
+ 533   1              WrCmos7670(0xa5, 0x05);
+ 534   1              WrCmos7670(0xab, 0x07);
+ 535   1              WrCmos7670(0x24, 0x75);
+ 536   1              WrCmos7670(0x25, 0x63);
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 10  
+
+ 537   1              WrCmos7670(0x26, 0xA5);
+ 538   1              WrCmos7670(0x9f, 0x78);
+ 539   1              WrCmos7670(0xa0, 0x68);
+ 540   1              WrCmos7670(0xa1, 0x03);
+ 541   1              WrCmos7670(0xa6, 0xdf);
+ 542   1              WrCmos7670(0xa7, 0xdf);
+ 543   1              WrCmos7670(0xa8, 0xf0);
+ 544   1              WrCmos7670(0xa9, 0x90);
+ 545   1              WrCmos7670(0xaa, 0x94);
+ 546   1              WrCmos7670(0x13, 0xe5);
+ 547   1      
+ 548   1              WrCmos7670(0x0e, 0x61);
+ 549   1              WrCmos7670(0x0f, 0x4b);
+ 550   1              WrCmos7670(0x16, 0x02);
+ 551   1              WrCmos7670(0x1e, 0x27);
+ 552   1              WrCmos7670(0x21, 0x02);
+ 553   1              WrCmos7670(0x22, 0x91);
+ 554   1              WrCmos7670(0x29, 0x07);
+ 555   1              WrCmos7670(0x33, 0x0b);
+ 556   1              WrCmos7670(0x35, 0x0b);
+ 557   1              WrCmos7670(0x37, 0x1d);
+ 558   1              WrCmos7670(0x38, 0x71);
+ 559   1              WrCmos7670(0x39, 0x2a);
+ 560   1              WrCmos7670(0x3c, 0x78);
+ 561   1              WrCmos7670(0x4d, 0x40);
+ 562   1              WrCmos7670(0x4e, 0x20);
+ 563   1              WrCmos7670(0x69, 0x00);
+ 564   1              WrCmos7670(0x6b, 0x60);
+ 565   1              WrCmos7670(0x74, 0x19);
+ 566   1              WrCmos7670(0x8d, 0x4f);
+ 567   1              WrCmos7670(0x8e, 0x00);
+ 568   1              WrCmos7670(0x8f, 0x00);
+ 569   1              WrCmos7670(0x90, 0x00);
+ 570   1              WrCmos7670(0x91, 0x00);
+ 571   1              WrCmos7670(0x92, 0x00);
+ 572   1              WrCmos7670(0x96, 0x00);
+ 573   1              WrCmos7670(0x9a, 0x80);
+ 574   1              WrCmos7670(0xb0, 0x84);
+ 575   1              WrCmos7670(0xb1, 0x0c);
+ 576   1              WrCmos7670(0xb2, 0x0e);
+ 577   1              WrCmos7670(0xb3, 0x82);
+ 578   1              WrCmos7670(0xb8, 0x0a);
+ 579   1      
+ 580   1      
+ 581   1      
+ 582   1              WrCmos7670(0x43, 0x14);
+ 583   1              WrCmos7670(0x44, 0xf0);
+ 584   1              WrCmos7670(0x45, 0x34);
+ 585   1              WrCmos7670(0x46, 0x58);
+ 586   1              WrCmos7670(0x47, 0x28);
+ 587   1              WrCmos7670(0x48, 0x3a);
+ 588   1              WrCmos7670(0x59, 0x88);
+ 589   1              WrCmos7670(0x5a, 0x88);
+ 590   1              WrCmos7670(0x5b, 0x44);
+ 591   1              WrCmos7670(0x5c, 0x67);
+ 592   1              WrCmos7670(0x5d, 0x49);
+ 593   1              WrCmos7670(0x5e, 0x0e);
+ 594   1              WrCmos7670(0x64, 0x04);
+ 595   1              WrCmos7670(0x65, 0x20);
+ 596   1              WrCmos7670(0x66, 0x05);
+ 597   1              WrCmos7670(0x94, 0x04);
+ 598   1              WrCmos7670(0x95, 0x08);
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 11  
+
+ 599   1              WrCmos7670(0x6c, 0x0a);
+ 600   1              WrCmos7670(0x6d, 0x55);
+ 601   1              WrCmos7670(0x6e, 0x11);
+ 602   1              WrCmos7670(0x6f, 0x9f);
+ 603   1              WrCmos7670(0x6a, 0x40);
+ 604   1              WrCmos7670(0x01, 0x40);
+ 605   1              WrCmos7670(0x02, 0x40);
+ 606   1              WrCmos7670(0x13, 0xe7);
+ 607   1              WrCmos7670(0x15, 0x00);  
+ 608   1              
+ 609   1              
+ 610   1              WrCmos7670(0x4f, 0x80);
+ 611   1              WrCmos7670(0x50, 0x80);
+ 612   1              WrCmos7670(0x51, 0x00);
+ 613   1              WrCmos7670(0x52, 0x22);
+ 614   1              WrCmos7670(0x53, 0x5e);
+ 615   1              WrCmos7670(0x54, 0x80);
+ 616   1              WrCmos7670(0x58, 0x9e);
+ 617   1              
+ 618   1              WrCmos7670(0x41, 0x08);
+ 619   1              WrCmos7670(0x3f, 0x00);
+ 620   1              WrCmos7670(0x75, 0x05);
+ 621   1              WrCmos7670(0x76, 0xe1);
+ 622   1              WrCmos7670(0x4c, 0x00);
+ 623   1              WrCmos7670(0x77, 0x01);
+ 624   1              WrCmos7670(0x3d, 0xc2); 
+ 625   1              WrCmos7670(0x4b, 0x09);
+ 626   1              WrCmos7670(0xc9, 0x60);
+ 627   1              WrCmos7670(0x41, 0x38);
+ 628   1              WrCmos7670(0x56, 0x40);
+ 629   1              
+ 630   1              WrCmos7670(0x34, 0x11);
+ 631   1              WrCmos7670(0x3b, 0x02); 
+ 632   1                                                                      
+ 633   1              WrCmos7670(0xa4, 0x89);
+ 634   1              WrCmos7670(0x96, 0x00);
+ 635   1              WrCmos7670(0x97, 0x30);
+ 636   1              WrCmos7670(0x98, 0x20);
+ 637   1              WrCmos7670(0x99, 0x30);
+ 638   1              WrCmos7670(0x9a, 0x84);
+ 639   1              WrCmos7670(0x9b, 0x29);
+ 640   1              WrCmos7670(0x9c, 0x03);
+ 641   1              WrCmos7670(0x9d, 0x4c);
+ 642   1              WrCmos7670(0x9e, 0x3f);
+ 643   1              WrCmos7670(0x78, 0x04);
+ 644   1              
+ 645   1      }
+ 646          
+ 647          
+ 648          
+ 649          unsigned char WrCmos7670(unsigned char regID, unsigned char regDat)
+ 650          {
+ 651   1              StartI2C();
+ 652   1              if(0==I2CWrite(0x42))
+ 653   1              {
+ 654   2                      StopI2C();
+ 655   2                      return(0);
+ 656   2              }
+ 657   1              delay_us(100);
+ 658   1              if(0==I2CWrite(regID))
+ 659   1              {
+ 660   2                      StopI2C();
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 12  
+
+ 661   2                      return(0);
+ 662   2              }
+ 663   1              delay_us(100);
+ 664   1              if(0==I2CWrite(regDat))
+ 665   1              {
+ 666   2                      StopI2C();
+ 667   2                      return(0);
+ 668   2              }
+ 669   1              StopI2C();
+ 670   1              flag++;
+ 671   1              
+ 672   1              return(1);
+ 673   1      }
+ 674          
+ 675          
+ 676          
+ 677          unsigned char Cmos7670_init(void)
+ 678          {
+ 679   1              unsigned char mmm;      
+ 680   1              unsigned int i=0;
+ 681   1              
+ 682   1              InitI2C();
+ 683   1      
+ 684   1              mmm=0x80;
+ 685   1              if(0==WrCmos7670(0x12, mmm)) 
+ 686   1              {
+ 687   2                      return 0 ;
+ 688   2              }
+ 689   1              delay_ms(10);
+ 690   1      
+ 691   1              set_Cmos7670reg();
+ 692   1              if(flag!=164)
+ 693   1              return 0;
+ 694   1      
+ 695   1              return 1; 
+ 696   1      } 
+ 697          
+ 698          
+ 699          void InitI2C(void)
+ 700          {
+ 701   1      
+ 702   1              P1MDIN = 0XFF;
+ 703   1              P1MDOUT= 0XFF;
+ 704   1      
+ 705   1      }
+ 706          
+ 707          void StartI2C(void)
+ 708          {
+ 709   1              I2C_SDA=1;    
+ 710   1          delay_us(100);
+ 711   1      
+ 712   1          I2C_SCL=1;     
+ 713   1          delay_us(100);
+ 714   1       
+ 715   1          I2C_SDA=0;
+ 716   1          delay_us(100);
+ 717   1      
+ 718   1          I2C_SCL=0;   
+ 719   1          delay_us(100);
+ 720   1      
+ 721   1      
+ 722   1      }
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 13  
+
+ 723          
+ 724          void StopI2C(void)
+ 725          {
+ 726   1              I2C_SDA=0;
+ 727   1          delay_us(100);
+ 728   1       
+ 729   1          I2C_SCL=1;
+ 730   1          delay_us(100);  
+ 731   1      
+ 732   1          I2C_SDA=1;
+ 733   1          delay_us(100);
+ 734   1       
+ 735   1      
+ 736   1      }
+ 737          
+ 738          
+ 739          /*void NoAck(void)
+ 740          {
+ 741                  
+ 742                  I2C_SDA=1;
+ 743                  delay_us(100);
+ 744                  
+ 745                  I2C_SCL=1;
+ 746                  delay_us(100);
+ 747                  
+ 748                  I2C_SCL=0;
+ 749                  delay_us(100);
+ 750                  
+ 751                  I2C_SDA=0;
+ 752                  delay_us(100);
+ 753          
+ 754          } */
+ 755          
+ 756          
+ 757          unsigned char I2CWrite(unsigned char DData)
+ 758          {
+ 759   1              unsigned char j,tem;
+ 760   1      
+ 761   1              for(j=0;j<8;j++) 
+ 762   1              {
+ 763   2                      if((DData<<j)&0x80)
+ 764   2                      {
+ 765   3                              I2C_SDA=1;
+ 766   3                      }
+ 767   2                      else
+ 768   2                      {
+ 769   3                              I2C_SDA=0;
+ 770   3                      }
+ 771   2                      delay_us(100);
+ 772   2                      I2C_SCL=1;
+ 773   2                      delay_us(100);
+ 774   2                      I2C_SCL=0;;
+ 775   2                      delay_us(100);
+ 776   2      
+ 777   2              }
+ 778   1              delay_us(100);
+ 779   1              
+ 780   1              SDA_IN();
+ 781   1              delay_us(100);
+ 782   1              I2C_SCL=1;
+ 783   1              delay_us(1000);
+ 784   1              if(SDA_STATE==1)
+C51 COMPILER V9.00   C8051F330_CAMERA                                                      09/22/2012 16:30:50 PAGE 14  
+
+ 785   1              {
+ 786   2                      tem=0;  
+ 787   2              }
+ 788   1              else
+ 789   1              {
+ 790   2                      tem=1;   
+ 791   2              }
+ 792   1              I2C_SCL=0;
+ 793   1              delay_us(100);  
+ 794   1          SDA_OUT();
+ 795   1      
+ 796   1              return(tem);  
+ 797   1      }
+ 798          
+ 799          
+ 800          void delay_us(unsigned int time)
+ 801           {     
+ 802   1         while (time--);
+ 803   1       }                
+ 804          
+ 805          /*          毫秒级延时函数      */       
+ 806          void delay_ms(unsigned int time)
+ 807                   {
+ 808   1                while(time--) delay_us(100);                   
+ 809   1               }
+ 810                   
+*** WARNING C316 IN LINE 810 OF source\c8051f330_camera.c: unterminated conditionals
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   2788    ----
+   CONSTANT SIZE    =   1610    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2      44
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

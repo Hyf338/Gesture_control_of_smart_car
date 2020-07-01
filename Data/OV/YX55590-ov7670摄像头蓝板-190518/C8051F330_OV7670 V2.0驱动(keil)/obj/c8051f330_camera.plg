@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\淘宝相关\camera发布版\摄像头资料\OV7670资料\OV7670模块资料\C8051F330_OV7670 V2.0驱动(keil)\c8051f330_camera.uvproj
+Project File Date:  09/22/2012
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling c8051f330_camera.c...
+source\c8051f330_camera.c(941): warning C316: unterminated conditionals
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SMB_WRITE?C8051F330_CAMERA
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SMB_READ?C8051F330_CAMERA
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?C8051F330_CAMERA
+*** WARNING L15: MULTIPLE CALL TO SEGMENT
+    SEGMENT: ?PR?_TFTWRITE?C8051F330_CAMERA
+    CALLER1: ?C_C51STARTUP
+    CALLER2: ?PR?INT0_ISR?C8051F330_CAMERA
+Program Size: data=62.6 xdata=0 code=4880
+".\obj\c8051f330_camera" - 0 Error(s), 5 Warning(s).

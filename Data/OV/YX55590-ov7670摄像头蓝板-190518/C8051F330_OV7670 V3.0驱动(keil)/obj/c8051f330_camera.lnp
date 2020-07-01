@@ -1,0 +1,4 @@
+".\obj\STARTUP.obj",
+".\obj\c8051f330_camera.obj" 
+TO ".\obj\c8051f330_camera" 
+PRINT(".\obj\c8051f330_camera.m51") RAMSIZE(256) 

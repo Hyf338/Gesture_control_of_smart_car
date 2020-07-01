@@ -1,0 +1,26 @@
+*** Creating Trace Output File '.\Obj\ADC.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\delay.o"'
+### List of Objects: adding '".\obj\ili9320.o"'
+### List of Objects: adding '".\obj\sccb.o"'
+### List of Objects: adding '".\obj\ov7670.o"'
+### List of Objects: adding '".\obj\main.o"'
+### List of Objects: adding '".\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\source\STM32F10xR.LIB"'
+### List of Objects: adding '".\obj\stm32f10x_vector.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\delay.o" ".\obj\ili9320.o" ".\obj\sccb.o" ".\obj\ov7670.o" ".\obj\main.o" ".\obj\stm32f10x_it.o" ".\source\STM32F10xR.LIB" ".\obj\stm32f10x_vector.o" --library_type=microlib --strict --scatter ".\Obj\ADC.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\ADC.map" -o ".\Obj\ADC.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\ADC.axf'
+### ADS-LD Command File: '.\Obj\ADC.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\ADC.lnp', Handle=0x00000380
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\ADC.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I.\source -I.\include -I "D:\Keil\ARM\INC\ST\STM32F10x" -o ".\Obj\gui.o" --omf_browse ".\Obj\gui.crf" --depend ".\Obj\gui.d" "source\gui.c"
