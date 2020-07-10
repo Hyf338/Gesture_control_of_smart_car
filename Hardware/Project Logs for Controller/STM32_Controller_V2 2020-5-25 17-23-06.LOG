@@ -1,0 +1,15 @@
+Change Component Designator: OldDesignator=B? NewDesignator=B1
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=D? NewDesignator=D2
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Added Component: Designator=C2(0603C)
+Added Component: Designator=C3(0603C)
+Added Pin To Net: NetName=POWER_GND Pin=C2-1
+Added Pin To Net: NetName=5V Pin=C2-2
+Added Pin To Net: NetName=POWER_GND Pin=C3-1
+Added Pin To Net: NetName=3.3V Pin=C3-2
+Change Net Name : Old Net Name=NetB?_1 New Net Name=NetB1_1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C2 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C3 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D1 D
+Added Room: Name=STM32_Controller_V2.0_ZET6

@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=OSC32_OUT Pin=C35-1
+Removed Pin From Net: NetName=GND Pin=C35-2
+Removed Pin From Net: NetName=OSC32_IN Pin=C45-1
+Removed Pin From Net: NetName=GND Pin=C45-2
+Removed Pin From Net: NetName=OSC32_IN Pin=Y2-1
+Removed Pin From Net: NetName=OSC32_OUT Pin=Y2-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C35
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C45
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Y2
+Added Component: Designator=XTAL3(Èý½ÅÌùÆ¬8M¾§Õñ)
+Added Pin To Net: NetName=OSC32_OUT Pin=XTAL3-1
+Added Pin To Net: NetName=OSC32_IN Pin=XTAL3-2
+Added Pin To Net: NetName=GND Pin=XTAL3-3
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component XTAL3 8M

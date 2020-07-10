@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=LED_R Pin=U2-87
+Removed Pin From Net: NetName=LED_B Pin=U2-88
+Added Component: Designator=P1(定位孔)
+Added Component: Designator=P15(定位孔)
+Added Component: Designator=P16(定位孔)
+Added Component: Designator=P17(定位孔)
+Added Pin To Net: NetName=LED_B Pin=U2-87
+Added Pin To Net: NetName=LED_R Pin=U2-88
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P1 测试点
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P15 测试点
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P16 测试点
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P17 测试点

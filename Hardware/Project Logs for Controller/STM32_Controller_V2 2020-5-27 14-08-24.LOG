@@ -1,0 +1,4 @@
+Added Component: Designator=S1(钮子开关(小))
+Added Pin To Net: NetName=VCC_PROWER Pin=S1-2
+Added Pin To Net: NetName=ADC_PROWER Pin=S1-3
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component S1 钮子开关

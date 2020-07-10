@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=LED_R Pin=R14-2
+Removed Pin From Net: NetName=LED_B Pin=R14-4
+Removed Pin From Net: NetName=NetR14_3 Pin=U8-1
+Removed Pin From Net: NetName=NetR14_5 Pin=U8-3
+Added Pin To Net: NetName=LED_B Pin=R14-2
+Added Pin To Net: NetName=LED_R Pin=R14-4
+Added Pin To Net: NetName=NetR14_5 Pin=U8-1
+Added Pin To Net: NetName=NetR14_3 Pin=U8-3
+Added Room: Name=STM32_Controller_V2.0_ZET6

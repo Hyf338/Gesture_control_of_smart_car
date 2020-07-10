@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=LED3-2
+Removed Pin From Net: NetName=NetC12_2 Pin=R9-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=LED3
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R9
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U7 Zigbee

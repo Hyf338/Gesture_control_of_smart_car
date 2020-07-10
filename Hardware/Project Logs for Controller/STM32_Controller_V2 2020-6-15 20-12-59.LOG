@@ -1,0 +1,10 @@
+Change Component Comment : Designator=LED4 Old Comment=LED New Comment=Powre
+Change Component Comment : Designator=LED1 Old Comment=LED New Comment=Rx
+Change Component Comment : Designator=LED2 Old Comment=LED New Comment=Tx
+Change Component Comment : Designator=LED3 Old Comment=LED New Comment=uart
+Added Pin To Net: NetName=POWER_GND Pin=J1-SH1
+Added Pin To Net: NetName=POWER_GND Pin=J1-SH2
+Added Pin To Net: NetName=POWER_GND Pin=J1-SH3
+Added Pin To Net: NetName=POWER_GND Pin=J1-SH4
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C19 104
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C20 104

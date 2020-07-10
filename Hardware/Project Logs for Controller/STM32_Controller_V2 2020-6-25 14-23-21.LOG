@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=3.3V Pin=P7-1
+Removed Pin From Net: NetName=GND Pin=P7-2
+Removed Pin From Net: NetName=IIC_SCL Pin=P7-3
+Removed Pin From Net: NetName=IIC_SDA Pin=P7-4
+Removed Pin From Net: NetName=GND Pin=P7-7
+Removed Pin From Net: NetName=GND Pin=P7-8
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P7

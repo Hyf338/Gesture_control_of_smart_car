@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=TYPE-C_DM Pin=U5-4
+Removed Pin From Net: NetName=TYPE-C_DP Pin=U5-5
+Added Pin To Net: NetName=TYPE-C_DP Pin=U5-4
+Added Pin To Net: NetName=TYPE-C_DM Pin=U5-5

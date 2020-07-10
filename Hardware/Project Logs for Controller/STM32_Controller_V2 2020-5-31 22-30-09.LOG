@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=BEEP Pin=P22-1
+Added Pin To Net: NetName=NetQ4_1 Pin=P22-1
+Added Pin To Net: NetName=BEEP Pin=P22-8
+Added Pin To Net: NetName=BEEP Pin=R29-7
+Change Net Name : Old Net Name=NetQ4_1 New Net Name=BO_BEEP

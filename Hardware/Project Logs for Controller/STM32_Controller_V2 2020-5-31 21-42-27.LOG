@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=TIM4_CH3 Pin=*3-1
+Removed Pin From Net: NetName=TIM4_CH4 Pin=*3-2
+Added Pin To Net: NetName=TIM4_CH4 Pin=*3-1
+Added Pin To Net: NetName=TIM4_CH3 Pin=*3-2
+Added Pin To Net: NetName=NetC1_1 Pin=U9-34
+Change Net Name : Old Net Name=NetC1_1 New Net Name=WKUP_KEY

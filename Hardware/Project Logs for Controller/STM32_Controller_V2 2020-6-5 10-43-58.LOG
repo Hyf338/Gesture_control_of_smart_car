@@ -1,0 +1,2 @@
+Change Net Name : Old Net Name=BOOT1 New Net Name=SYS_GND
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=RGB(110, 110, 255)

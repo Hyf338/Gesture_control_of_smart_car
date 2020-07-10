@@ -1,0 +1,2 @@
+Change Component Comment : Designator=K1 Old Comment=wakeup New Comment=reset
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P2 DC-005

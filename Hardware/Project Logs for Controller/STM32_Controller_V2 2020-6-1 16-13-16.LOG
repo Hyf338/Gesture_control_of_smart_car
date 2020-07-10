@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=AD0 Pin=R33-5
+Removed Pin From Net: NetName=FSYNC Pin=R33-7
+Added Pin To Net: NetName=FSYNC Pin=R33-5
+Added Pin To Net: NetName=AD0 Pin=R33-7

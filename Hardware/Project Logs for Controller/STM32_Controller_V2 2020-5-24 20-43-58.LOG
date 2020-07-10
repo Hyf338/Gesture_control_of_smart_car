@@ -1,0 +1,4 @@
+Change Component Comment : Designator=P1 Old Comment=Header 5 New Comment=TIM1
+Change Component Comment : Designator=P28 Old Comment=Header 7 New Comment=oled
+Change Component Comment : Designator=P27 Old Comment=Header 8 New Comment=mpu6050
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D

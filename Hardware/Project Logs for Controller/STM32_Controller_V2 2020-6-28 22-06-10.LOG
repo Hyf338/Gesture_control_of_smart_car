@@ -1,0 +1,4 @@
+Added Component: Designator=C12(0603C)
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=NetC12_2 Pin=C12-2
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C12 104

@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : F:\ADÀ¬»øÎÄµµ\Hardware\STM32_Controller_V2.0_ZET6.PcbDoc
+Date         : 2020/6/26
+Time         : 0:41:22
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 317
+    Connections routed, 317
+    Connections remaining, 0
+count : 4

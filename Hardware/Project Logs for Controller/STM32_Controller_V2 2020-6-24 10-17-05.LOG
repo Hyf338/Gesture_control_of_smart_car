@@ -1,0 +1,8 @@
+Added Component: Designator=P1(HEADER 1)
+Added Component: Designator=P15(HEADER 1)
+Added Component: Designator=P16(HEADER 1)
+Added Component: Designator=P17(HEADER 1)
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P1 ≤‚ ‘µ„
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P15 ≤‚ ‘µ„
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P16 ≤‚ ‘µ„
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P17 ≤‚ ‘µ„

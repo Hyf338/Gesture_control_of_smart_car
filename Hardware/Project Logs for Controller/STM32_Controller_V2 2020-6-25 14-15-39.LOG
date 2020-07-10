@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=SYS_3.3V Pin=R9-1
+Added Component: Designator=P?(Header 2X2)
+Added Component: Designator=R10(0603R)
+Added Pin To Net: NetName=3.3V Pin=R9-1
+Added Pin To Net: NetName=SYS_3.3V Pin=R10-1
+Added Pin To Net: NetName=BO Pin=R10-2
+Added Pin To Net: NetName=BO Pin=U2-123
+Added Net: Name=BO
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component K1 Reset
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P6 OV7725
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P? Header 2X2
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R10 1K
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U7 Zigbee

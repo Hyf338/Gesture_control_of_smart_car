@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=POWER_GND Pin=P15-1
+Removed Pin From Net: NetName=NetP15_2 Pin=P15-2
+Added Pin To Net: NetName=NetP15_2 Pin=P15-1
+Added Pin To Net: NetName=POWER_GND Pin=P15-2
+Change Net Name : Old Net Name=NetP15_2 New Net Name=NetP15_1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component T1 TÐÍÍ·

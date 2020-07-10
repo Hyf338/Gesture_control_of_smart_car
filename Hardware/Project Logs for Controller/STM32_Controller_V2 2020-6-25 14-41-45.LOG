@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=GND Pin=R16-2
+Added Pin To Net: NetName=SYS_GND Pin=R16-2

@@ -1,0 +1,84 @@
+Change Component Designator: OldDesignator=C43 NewDesignator=C26
+Change Component Designator: OldDesignator=C44 NewDesignator=C27
+Change Component Designator: OldDesignator=C46 NewDesignator=C29
+Change Component Designator: OldDesignator=C47 NewDesignator=C30
+Change Component Designator: OldDesignator=C48 NewDesignator=C32
+Change Component Designator: OldDesignator=C49 NewDesignator=C33
+Change Component Designator: OldDesignator=C50 NewDesignator=C34
+Change Component Designator: OldDesignator=D1 NewDesignator=D4
+Change Component Designator: OldDesignator=D2 NewDesignator=D5
+Change Component Designator: OldDesignator=D4 NewDesignator=D1
+Change Component Designator: OldDesignator=D5 NewDesignator=D2
+Change Component Designator: OldDesignator=D6 NewDesignator=D3
+Change Component Designator: OldDesignator=K1 NewDesignator=K2
+Change Component Designator: OldDesignator=K2 NewDesignator=K1
+Change Component Designator: OldDesignator=LED1 NewDesignator=LED4
+Change Component Designator: OldDesignator=LED2 NewDesignator=LED1
+Change Component Designator: OldDesignator=LED3 NewDesignator=LED2
+Change Component Designator: OldDesignator=LED4 NewDesignator=LED3
+Change Component Designator: OldDesignator=P1 NewDesignator=P13
+Change Component Designator: OldDesignator=P2 NewDesignator=P14
+Change Component Designator: OldDesignator=P3 NewDesignator=P15
+Change Component Designator: OldDesignator=P4 NewDesignator=P16
+Change Component Designator: OldDesignator=P5 NewDesignator=P10
+Change Component Designator: OldDesignator=P15 NewDesignator=P1
+Change Component Designator: OldDesignator=P17 NewDesignator=P2
+Change Component Designator: OldDesignator=P20 NewDesignator=P6
+Change Component Designator: OldDesignator=P21 NewDesignator=P7
+Change Component Designator: OldDesignator=P22 NewDesignator=P5
+Change Component Designator: OldDesignator=P23 NewDesignator=P3
+Change Component Designator: OldDesignator=P24 NewDesignator=P4
+Change Component Designator: OldDesignator=P26 NewDesignator=P8
+Change Component Designator: OldDesignator=P27 NewDesignator=P9
+Change Component Designator: OldDesignator=P29 NewDesignator=P11
+Change Component Designator: OldDesignator=P30 NewDesignator=P12
+Change Component Designator: OldDesignator=Q4 NewDesignator=Q1
+Change Component Designator: OldDesignator=R1 NewDesignator=R5
+Change Component Designator: OldDesignator=R2 NewDesignator=R6
+Change Component Designator: OldDesignator=R3 NewDesignator=R21
+Change Component Designator: OldDesignator=R4 NewDesignator=R13
+Change Component Designator: OldDesignator=R5 NewDesignator=R14
+Change Component Designator: OldDesignator=R6 NewDesignator=R23
+Change Component Designator: OldDesignator=R10 NewDesignator=R1
+Change Component Designator: OldDesignator=R11 NewDesignator=R2
+Change Component Designator: OldDesignator=R12 NewDesignator=R3
+Change Component Designator: OldDesignator=R13 NewDesignator=R4
+Change Component Designator: OldDesignator=R14 NewDesignator=R7
+Change Component Designator: OldDesignator=R15 NewDesignator=R8
+Change Component Designator: OldDesignator=R17 NewDesignator=R9
+Change Component Designator: OldDesignator=R19 NewDesignator=R10
+Change Component Designator: OldDesignator=R21 NewDesignator=R12
+Change Component Designator: OldDesignator=R25 NewDesignator=R11
+Change Component Designator: OldDesignator=R26 NewDesignator=R15
+Change Component Designator: OldDesignator=R28 NewDesignator=R16
+Change Component Designator: OldDesignator=R29 NewDesignator=R17
+Change Component Designator: OldDesignator=R30 NewDesignator=R18
+Change Component Designator: OldDesignator=R31 NewDesignator=R19
+Change Component Designator: OldDesignator=R32 NewDesignator=R20
+Change Component Designator: OldDesignator=R33 NewDesignator=R22
+Change Component Designator: OldDesignator=S4 NewDesignator=S2
+Change Component Designator: OldDesignator=U1 NewDesignator=U9
+Change Component Designator: OldDesignator=U2 NewDesignator=U10
+Change Component Designator: OldDesignator=U9 NewDesignator=U2
+Change Component Designator: OldDesignator=U10 NewDesignator=U3
+Change Component Designator: OldDesignator=U11 NewDesignator=U4
+Change Component Designator: OldDesignator=U12 NewDesignator=U1
+Change Component Designator: OldDesignator=U13 NewDesignator=U5
+Change Component Designator: OldDesignator=U14 NewDesignator=U6
+Change Component Designator: OldDesignator=U15 NewDesignator=U7
+Change Component Designator: OldDesignator=U16 NewDesignator=U8
+Change Component Designator: OldDesignator=U17 NewDesignator=U11
+Change Component Designator: OldDesignator=XTAL2 NewDesignator=XTAL1
+Change Component Designator: OldDesignator=XTAL3 NewDesignator=XTAL2
+Added Pin To Net: NetName=TYPE-C_VUSB Pin=J1-A9
+Added Pin To Net: NetName=TYPE-C_VUSB Pin=J1-B9
+Change Net Name : Old Net Name=TYPE-C_VUSB New Net Name=TYPE-C_VBUS
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C28 104
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C31 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P10 OLED
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P13 TIM1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P14 TIM1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P16 ´®¿ÚÆÁ
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R14 10k
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R23 1K
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U10 W25Q128

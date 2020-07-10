@@ -1,0 +1,7 @@
+Change Component Comment : Designator=XTAL1 Old Comment=8M New Comment=LSE
+Change Component Comment : Designator=XTAL2 Old Comment=LSE New Comment=8M
+Change Net Name : Old Net Name=OSC32_IN New Net Name=OSC_IN
+Change Net Name : Old Net Name=OSC32_OUT New Net Name=OSC_OUT
+Change Net Name : Old Net Name=OSC_IN New Net Name=OSC32_IN
+Change Net Name : Old Net Name=OSC_OUT New Net Name=OSC32_OUT
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U5 CP2102

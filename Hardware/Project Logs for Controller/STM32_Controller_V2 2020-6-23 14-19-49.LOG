@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=E?-1
+Removed Pin From Net: NetName=5V Pin=E?-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=E?
+Change Component Designator: OldDesignator=E? NewDesignator=E1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component E1 10uF

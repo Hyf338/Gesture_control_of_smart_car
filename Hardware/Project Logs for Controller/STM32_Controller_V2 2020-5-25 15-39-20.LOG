@@ -1,0 +1,12 @@
+Change Component Comment : Designator=J2 Old Comment=Type_C New Comment=Type_C-24P-UJ31-CH-G2-SMT-TR
+Added Component: Designator=R33(ÅÅ×è(4Î»ÌùÆ¬))
+Added Pin To Net: NetName=IIC_SDA Pin=R33-1
+Added Pin To Net: NetName=SYS_3.3V Pin=R33-2
+Added Pin To Net: NetName=IIC_SCL Pin=R33-3
+Added Pin To Net: NetName=SYS_3.3V Pin=R33-4
+Added Pin To Net: NetName=FSYNC Pin=R33-5
+Added Pin To Net: NetName=GND Pin=R33-6
+Added Pin To Net: NetName=AD0 Pin=R33-7
+Added Pin To Net: NetName=GND Pin=R33-8
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R33 Res-4

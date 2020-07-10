@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=POWER_GND Pin=C1-1
+Removed Pin From Net: NetName=5V Pin=C1-2
+Removed Pin From Net: NetName=POWER_GND Pin=C2-1
+Removed Pin From Net: NetName=3.3V Pin=C2-2
+Removed Pin From Net: NetName=TYPE-C_DM Pin=J1-B6
+Removed Pin From Net: NetName=TYPE-C_DP Pin=J1-B7
+Removed Pin From Net: NetName=POWER_GND Pin=U1-1
+Removed Pin From Net: NetName=3.3V Pin=U1-2
+Removed Pin From Net: NetName=5V Pin=U1-3
+Removed Pin From Net: NetName=3.3V Pin=U1-4
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=U1
+Change Component Comment : Designator=LED3 Old Comment=Powre New Comment=3.3V
+Change Component Comment : Designator=LED4 Old Comment=Powre New Comment=5V
+Added Component: Designator=U?(SOP-8)
+Added Pin To Net: NetName=TYPE-C_DP Pin=J1-B6
+Added Pin To Net: NetName=TYPE-C_DM Pin=J1-B7
+Added Pin To Net: NetName=POWER_GND Pin=U?-1
+Added Pin To Net: NetName=POWER_GND Pin=U?-2
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=RGB(110, 110, 255)
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U? TPS7333

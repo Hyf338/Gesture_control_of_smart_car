@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=IMU_SCL Pin=P27-3
+Removed Pin From Net: NetName=IMU_SDA Pin=P27-4
+Removed Pin From Net: NetName=IIC_SDA Pin=R33-1
+Removed Pin From Net: NetName=IIC_SCL Pin=R33-3
+Removed Pin From Net: NetName=IIC_SCL Pin=U17-23
+Removed Pin From Net: NetName=IIC_SDA Pin=U17-24
+Added Pin To Net: NetName=IIC_SCL Pin=P27-3
+Added Pin To Net: NetName=IIC_SDA Pin=P27-4
+Added Pin To Net: NetName=IMU_SDA Pin=R33-1
+Added Pin To Net: NetName=IMU_SCL Pin=R33-3
+Added Pin To Net: NetName=IMU_SDA Pin=U9-103
+Added Pin To Net: NetName=IMU_SCL Pin=U9-104
+Added Pin To Net: NetName=IMU_SCL Pin=U17-23
+Added Pin To Net: NetName=IMU_SDA Pin=U17-24

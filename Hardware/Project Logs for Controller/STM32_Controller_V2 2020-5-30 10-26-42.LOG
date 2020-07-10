@@ -1,0 +1,16 @@
+Added Component: Designator=C?(0603C)
+Added Component: Designator=U?(SOW-8)
+Added Pin To Net: NetName=3.3V Pin=C?-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=SPI2_MISO Pin=U?-2
+Added Pin To Net: NetName=3.3V Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=SPI2_MOSI Pin=U?-5
+Added Pin To Net: NetName=SPI2_SCK Pin=U?-6
+Added Pin To Net: NetName=3.3V Pin=U?-7
+Added Pin To Net: NetName=3.3V Pin=U?-8
+Added Pin To Net: NetName=SPI2_NSS Pin=U9-73
+Added Pin To Net: NetName=SPI2_NSS Pin=U?-1
+Added Net: Name=SPI2_NSS
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C? 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U? W25Q128

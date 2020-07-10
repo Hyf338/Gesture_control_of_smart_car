@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=USART3_TX Pin=P18-1
+Removed Pin From Net: NetName=USART3_RX Pin=P18-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P18
+Change Component Comment : Designator=J2 Old Comment=Type_C-24P-UJ31-CH-G2-SMT-TR New Comment=Type_C
+Added Pin To Net: NetName=USART3_RX Pin=U13-25
+Added Pin To Net: NetName=USART3_TX Pin=U13-26
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D

@@ -1,0 +1,69 @@
+Removed Pin From Net: NetName=POWER_GND Pin=J2-A1
+Removed Pin From Net: NetName=TYPE-C_VUSB Pin=J2-A4
+Removed Pin From Net: NetName=TYPE-C_DP Pin=J2-A6
+Removed Pin From Net: NetName=TYPE-C_DM Pin=J2-A7
+Removed Pin From Net: NetName=POWER_GND Pin=J2-A12
+Removed Pin From Net: NetName=POWER_GND Pin=J2-B1
+Removed Pin From Net: NetName=TYPE-C_VUSB Pin=J2-B4
+Removed Pin From Net: NetName=TYPE-C_DM Pin=J2-B6
+Removed Pin From Net: NetName=TYPE-C_DP Pin=J2-B7
+Removed Pin From Net: NetName=POWER_GND Pin=J2-B12
+Removed Pin From Net: NetName=POWER_GND Pin=J2-SH1
+Removed Pin From Net: NetName=POWER_GND Pin=J2-SH2
+Removed Pin From Net: NetName=POWER_GND Pin=J2-SH3
+Removed Pin From Net: NetName=POWER_GND Pin=J2-SH4
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C36
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C37
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=J2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P17
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P22
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P23
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P24
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R25
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R31
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=U12
+Change Component Comment : Designator=LED1 Old Comment=Power New Comment=LED
+Change Component Comment : Designator=K2 Old Comment=reset New Comment=Key
+Change Component Comment : Designator=LED3 Old Comment=RX New Comment=LED
+Change Component Comment : Designator=LED2 Old Comment=TX New Comment=LED
+Change Component Comment : Designator=K1 Old Comment=wakeup New Comment=Key
+Added Component: Designator=J1(Type_C-16P)
+Added Pin To Net: NetName=POWER_GND Pin=J1-A1
+Added Pin To Net: NetName=TYPE-C_VUSB Pin=J1-A4
+Added Pin To Net: NetName=TYPE-C_DP Pin=J1-A6
+Added Pin To Net: NetName=TYPE-C_DM Pin=J1-A7
+Added Pin To Net: NetName=POWER_GND Pin=J1-A12
+Added Pin To Net: NetName=POWER_GND Pin=J1-B1
+Added Pin To Net: NetName=TYPE-C_VUSB Pin=J1-B4
+Added Pin To Net: NetName=TYPE-C_DM Pin=J1-B6
+Added Pin To Net: NetName=TYPE-C_DP Pin=J1-B7
+Added Pin To Net: NetName=POWER_GND Pin=J1-B12
+Change Net Name : Old Net Name=NetC28_2 New Net Name=NetC12_2
+Change Net Name : Old Net Name=NetC30_1 New Net Name=NetC13_1
+Change Net Name : Old Net Name=NetC31_1 New Net Name=NetC14_1
+Change Net Name : Old Net Name=NetC32_1 New Net Name=NetC15_1
+Change Net Name : Old Net Name=NetC50_2 New Net Name=NetC34_2
+Change Net Name : Old Net Name=NetD4_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetD5_1 New Net Name=NetD2_1
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD3_1
+Change Net Name : Old Net Name=NetLED1_1 New Net Name=NetLED4_1
+Change Net Name : Old Net Name=NetLED2_1 New Net Name=NetLED1_1
+Change Net Name : Old Net Name=NetLED3_1 New Net Name=NetLED2_1
+Change Net Name : Old Net Name=NetLED4_1 New Net Name=NetLED3_1
+Change Net Name : Old Net Name=NetP15_2 New Net Name=NetP1_2
+Change Net Name : Old Net Name=NetP22_4 New Net Name=NetP5_4
+Change Net Name : Old Net Name=NetQ4_3 New Net Name=NetQ1_3
+Change Net Name : Old Net Name=NetR5_5 New Net Name=NetR14_5
+Change Net Name : Old Net Name=NetR5_7 New Net Name=NetR14_7
+Change Net Name : Old Net Name=NetR13_1 New Net Name=NetR4_1
+Change Net Name : Old Net Name=NetR19_2 New Net Name=NetR10_2
+Change Net Name : Old Net Name=NetR21_2 New Net Name=NetR12_2
+Change Net Name : Old Net Name=NetR28_1 New Net Name=NetR16_1
+Change Net Name : Old Net Name=NetR29_1 New Net Name=NetR17_1
+Change Net Name : Old Net Name=NetR29_3 New Net Name=NetR17_3
+Change Net Name : Old Net Name=NetR29_5 New Net Name=NetR17_5
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C28 104
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component C31 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component J1 Type_C-16P
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R14 10k
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U10 W25Q128

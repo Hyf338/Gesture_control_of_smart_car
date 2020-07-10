@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=BO_BEEP Pin=P22-1
+Removed Pin From Net: NetName=BOO_BEEP Pin=P22-8
+Added Pin To Net: NetName=BOO_BEEP Pin=P22-1
+Added Pin To Net: NetName=BO_BEEP Pin=P22-8

@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=SYS_3.3V Pin=P6-1
+Added Pin To Net: NetName=3.3V Pin=P6-1

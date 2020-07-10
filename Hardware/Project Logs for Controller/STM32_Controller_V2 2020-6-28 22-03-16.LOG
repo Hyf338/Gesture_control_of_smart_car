@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=C12-1
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C12
+Added Pin To Net: NetName=GND Pin=U5-6

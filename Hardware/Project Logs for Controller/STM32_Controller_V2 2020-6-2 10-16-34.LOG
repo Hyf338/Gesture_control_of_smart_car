@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=LED_R Pin=R29-1
+Removed Pin From Net: NetName=NetR29_2 Pin=R29-2
+Removed Pin From Net: NetName=LED_G Pin=R29-3
+Removed Pin From Net: NetName=NetR29_4 Pin=R29-4
+Removed Pin From Net: NetName=LED_B Pin=R29-5
+Removed Pin From Net: NetName=NetR29_6 Pin=R29-6
+Removed Pin From Net: NetName=BEEP Pin=R29-7
+Removed Pin From Net: NetName=BO_BEEP Pin=R29-8
+Added Pin To Net: NetName=NetR29_2 Pin=R29-1
+Added Pin To Net: NetName=LED_R Pin=R29-2
+Added Pin To Net: NetName=NetR29_4 Pin=R29-3
+Added Pin To Net: NetName=LED_G Pin=R29-4
+Added Pin To Net: NetName=NetR29_6 Pin=R29-5
+Added Pin To Net: NetName=LED_B Pin=R29-6
+Added Pin To Net: NetName=BO_BEEP Pin=R29-7
+Added Pin To Net: NetName=BEEP Pin=R29-8
+Change Net Name : Old Net Name=NetR29_2 New Net Name=NetR29_1
+Change Net Name : Old Net Name=NetR29_4 New Net Name=NetR29_3
+Change Net Name : Old Net Name=NetR29_6 New Net Name=NetR29_5

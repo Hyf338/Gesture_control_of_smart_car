@@ -1,0 +1,74 @@
+Removed Pin From Net: NetName=GND Pin=C17-1
+Removed Pin From Net: NetName=3.3V Pin=C17-2
+Removed Pin From Net: NetName=5V Pin=P5-1
+Removed Pin From Net: NetName=USART3_RX Pin=P5-2
+Removed Pin From Net: NetName=USART3_TX Pin=P5-3
+Removed Pin From Net: NetName=GND Pin=P5-4
+Removed Pin From Net: NetName=GND Pin=P5-6
+Removed Pin From Net: NetName=BO Pin=P6-2
+Removed Pin From Net: NetName=3.3V Pin=P6-5
+Removed Pin From Net: NetName=GND Pin=P6-6
+Removed Pin From Net: NetName=GND Pin=P6-7
+Removed Pin From Net: NetName=5V Pin=P8-1
+Removed Pin From Net: NetName=USART1_RX Pin=P8-2
+Removed Pin From Net: NetName=USART1_TX Pin=P8-3
+Removed Pin From Net: NetName=GND Pin=P8-4
+Removed Pin From Net: NetName=GND Pin=P8-6
+Removed Pin From Net: NetName=3.3V Pin=R12-1
+Removed Pin From Net: NetName=3.3V Pin=R14-2
+Removed Pin From Net: NetName=3.3V Pin=R14-6
+Removed Pin From Net: NetName=GND Pin=R14-8
+Removed Pin From Net: NetName=3.3V Pin=U6-8
+Removed Pin From Net: NetName=3.3V Pin=U6-8
+Removed Pin From Net: NetName=GND Pin=U6-15
+Removed Pin From Net: NetName=GND Pin=U6-15
+Removed Pin From Net: NetName=USART2_TX Pin=U6-21
+Removed Pin From Net: NetName=USART2_TX Pin=U6-21
+Removed Pin From Net: NetName=USART2_RX Pin=U6-22
+Removed Pin From Net: NetName=USART2_RX Pin=U6-22
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C17
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P5
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P16
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P17
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R12
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R14
+Change Component Footprint: Designator=P4 Old Footprint=Header 6 New Footprint=Header 6(еед╦)
+Change Component Footprint: Designator=U6 Old Footprint=SMD-22 New Footprint=zigbee
+Change Component Comment : Designator=U6 Old Comment=ESP-12F New Comment=Zigbee
+Change Component Comment : Designator=P4 Old Comment=HC-05 New Comment=Header 6
+Change Component Comment : Designator=P7 Old Comment=HC-05 New Comment=Header 6
+Change Component Designator: OldDesignator=P7 NewDesignator=P6
+Change Component Designator: OldDesignator=P9 NewDesignator=P7
+Change Component Designator: OldDesignator=P10 NewDesignator=P8
+Change Component Designator: OldDesignator=P11 NewDesignator=P9
+Change Component Designator: OldDesignator=P12 NewDesignator=P10
+Change Component Designator: OldDesignator=P13 NewDesignator=P11
+Change Component Designator: OldDesignator=P14 NewDesignator=P12
+Change Component Designator: OldDesignator=P15 NewDesignator=P13
+Change Component Designator: OldDesignator=P16 NewDesignator=P14
+Change Component Designator: OldDesignator=P17 NewDesignator=P15
+Change Component Designator: OldDesignator=U7 NewDesignator=U9
+Change Component Designator: OldDesignator=U8 NewDesignator=U10
+Change Component Designator: OldDesignator=U9 NewDesignator=U11
+Change Component Designator: OldDesignator=U10 NewDesignator=U12
+Added Component: Designator=M?(esp01)
+Added Component: Designator=U7(zigbee)
+Added Pin To Net: NetName=USART2_TX Pin=M?-1
+Added Pin To Net: NetName=GND Pin=M?-4
+Added Pin To Net: NetName=3.3V Pin=M?-5
+Added Pin To Net: NetName=3.3V Pin=M?-7
+Added Pin To Net: NetName=USART2_RX Pin=M?-8
+Added Pin To Net: NetName=5V Pin=U6-1
+Added Pin To Net: NetName=USART3_RX Pin=U6-2
+Added Pin To Net: NetName=USART3_TX Pin=U6-3
+Added Pin To Net: NetName=GND Pin=U6-4
+Added Pin To Net: NetName=5V Pin=U7-1
+Added Pin To Net: NetName=USART1_RX Pin=U7-2
+Added Pin To Net: NetName=USART1_TX Pin=U7-3
+Added Pin To Net: NetName=GND Pin=U7-4
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=R17-7
+Added Pin To Net: NetName=NetQ1_1 Pin=R20-2
+Added Net: Name=NetQ1_1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component M? ESP-01&01S Module
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U11 W25Q128

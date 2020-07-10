@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=GND Pin=P28-1
+Removed Pin From Net: NetName=3.3V Pin=P28-2
+Removed Pin From Net: NetName=OLED_D0 Pin=P28-3
+Removed Pin From Net: NetName=OLED_D1 Pin=P28-4
+Removed Pin From Net: NetName=OLED_RES Pin=P28-5
+Removed Pin From Net: NetName=OLED_DC Pin=P28-6
+Removed Pin From Net: NetName=GND Pin=P28-7
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P28
+Added Component: Designator=P?(12864-0.96´ç)
+Added Pin To Net: NetName=GND Pin=P?-1
+Added Pin To Net: NetName=3.3V Pin=P?-2
+Added Pin To Net: NetName=OLED_D0 Pin=P?-3
+Added Pin To Net: NetName=OLED_D1 Pin=P?-4
+Added Pin To Net: NetName=OLED_RES Pin=P?-5
+Added Pin To Net: NetName=OLED_DC Pin=P?-6
+Added Pin To Net: NetName=GND Pin=P?-7
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P? OLED

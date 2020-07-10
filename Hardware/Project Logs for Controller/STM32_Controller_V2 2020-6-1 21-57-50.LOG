@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=LED_R Pin=U9-125
+Added Pin To Net: NetName=LED_G Pin=U9-126
+Added Pin To Net: NetName=LED_B Pin=U9-127
+Added Pin To Net: NetName=BEEP Pin=U9-128

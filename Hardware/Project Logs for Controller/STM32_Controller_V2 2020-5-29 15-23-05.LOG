@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=LED_B Pin=U9-53
+Removed Pin From Net: NetName=LED_G Pin=U9-54
+Removed Pin From Net: NetName=LED_R Pin=U9-55
+Removed Pin From Net: NetName=BEEP Pin=U9-57
+Added Pin To Net: NetName=LED_G Pin=U9-79
+Added Pin To Net: NetName=LED_R Pin=U9-80
+Added Pin To Net: NetName=LED_B Pin=U9-92
+Added Pin To Net: NetName=BEEP Pin=U9-93

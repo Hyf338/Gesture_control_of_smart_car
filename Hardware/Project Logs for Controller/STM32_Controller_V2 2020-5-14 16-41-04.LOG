@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=BOOT1 Pin=P19-2
+Removed Pin From Net: NetName=SYS_GND Pin=P19-3
+Removed Pin From Net: NetName=SYS_3.3V Pin=P19-4
+Removed Pin From Net: NetName=BOOT0 Pin=P25-2
+Removed Pin From Net: NetName=SYS_GND Pin=P25-3
+Removed Pin From Net: NetName=SYS_3.3V Pin=P25-4
+Removed Pin From Net: NetName=NRST Pin=Q2-3
+Removed Pin From Net: NetName=BOOT0 Pin=Q3-3
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P19
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P25
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Q2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Q3
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R16
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R18
+Added Component: Designator=P?(拨码开关4-DIP)
+Added Pin To Net: NetName=BOOT1 Pin=P?-2
+Added Pin To Net: NetName=BOOT0 Pin=P?-4
+Added Pin To Net: NetName=SYS_GND Pin=P?-5
+Added Pin To Net: NetName=SYS_3.3V Pin=P?-6
+Added Pin To Net: NetName=SYS_GND Pin=P?-7
+Added Pin To Net: NetName=SYS_3.3V Pin=P?-8
+Added Pin To Net: NetName=NetP?_1 Pin=P?-1
+Added Pin To Net: NetName=NetP?_1 Pin=R20-2
+Added Net: Name=NetP?_1
+Added Pin To Net: NetName=NetP?_3 Pin=P?-3
+Added Pin To Net: NetName=NetP?_3 Pin=R25-2
+Added Net: Name=NetP?_3
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P? 拨码开关4
+Added Room: Name=STM32_Controller_V2.0_ZET6

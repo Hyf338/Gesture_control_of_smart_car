@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=GND Pin=LED1-2
+Added Pin To Net: NetName=POWER_GND Pin=LED1-2
+Added Room: Name=STM32_Controller_V2.0_ZET6

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=SYS_3.3V Pin=R21-1
+Removed Pin From Net: NetName=NetR4_1 Pin=T1-1
+Removed Pin From Net: NetName=POWER_GND Pin=T1-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=T1
+Added Component: Designator=P?(DC-050)
+Added Pin To Net: NetName=NetR4_1 Pin=P?-1
+Added Pin To Net: NetName=NetR4_1 Pin=P?-1
+Added Pin To Net: NetName=POWER_GND Pin=P?-2
+Added Pin To Net: NetName=POWER_GND Pin=P?-3
+Change Net Name : Old Net Name=NetR4_1 New Net Name=NetP?_1
+Change Net Color : Old Net Color=RGB(110, 110, 255) New Net Color=Default
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component P? DC-005

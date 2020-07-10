@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=5V Pin=P7-1
+Added Pin To Net: NetName=GND Pin=P7-2
+Added Room: Name=STM32_Controller_V2.0_ZET6

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=VCC_PROWER Pin=S3-2
+Removed Pin From Net: NetName=ADC_PROWER Pin=S3-3
+Added Pin To Net: NetName=3.3V Pin=C34-2
+Added Pin To Net: NetName=3.3V Pin=R21-1
+Added Pin To Net: NetName=3.3V Pin=R22-1
+Added Pin To Net: NetName=3.3V Pin=U14-8
+Added Pin To Net: NetName=3.3V Pin=U14-8
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component U1 ´®¿ÚÆÁÍâ¿ò

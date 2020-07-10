@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=BOOT1 Pin=P?-2
+Removed Pin From Net: NetName=BOOT0 Pin=P?-4
+Removed Pin From Net: NetName=SYS_GND Pin=P?-5
+Removed Pin From Net: NetName=SYS_3.3V Pin=P?-6
+Removed Pin From Net: NetName=SYS_GND Pin=P?-7
+Removed Pin From Net: NetName=SYS_3.3V Pin=P?-8
+Removed Pin From Net: NetName=BOOT1 Pin=R20-1
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P?
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R20
+Added Pin To Net: NetName=SYS_GND Pin=R25-2
+Added Room: Name=STM32_Controller_V2.0_ZET6

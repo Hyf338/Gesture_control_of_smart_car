@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : E:\Git_project\Gesture_control_of_smart_car\Hardware\STM32_Controller_V2.0_ZET6.PcbDoc
+Date         : 2020/6/4
+Time         : 20:02:53
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 350
+    Connections routed, 350
+    Connections remaining, 0
+count : 4

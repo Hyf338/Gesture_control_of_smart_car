@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=BO Pin=U9-114
+Removed Pin From Net: NetName=BEEP Pin=U9-115
+Removed Pin From Net: NetName=LED_B Pin=U9-116
+Removed Pin From Net: NetName=LED_G Pin=U9-117
+Removed Pin From Net: NetName=LED_R Pin=U9-118
+Removed Pin From Net: NetName=OLED_D0 Pin=U9-125
+Removed Pin From Net: NetName=OLED_D1 Pin=U9-126
+Removed Pin From Net: NetName=OLED_DC Pin=U9-127
+Removed Pin From Net: NetName=OLED_RES Pin=U9-128
+Added Pin To Net: NetName=OLED_D0 Pin=U9-114
+Added Pin To Net: NetName=OLED_D1 Pin=U9-115
+Added Pin To Net: NetName=OLED_RES Pin=U9-116
+Added Pin To Net: NetName=OLED_DC Pin=U9-117
+Added Pin To Net: NetName=BO Pin=U9-118

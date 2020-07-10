@@ -1,0 +1,4 @@
+Change Component Comment : Designator=LED4 Old Comment=π©µÁLED New Comment=LED
+Added Pin To Net: NetName=USART3_TX Pin=LED2-2
+Added Pin To Net: NetName=USART3_RX Pin=LED3-2
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D

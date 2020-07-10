@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetC29_1 Pin=C29-1
+Removed Pin From Net: NetName=SYS_3.3V Pin=C29-2
+Change Component Comment : Designator=C30 Old Comment=104 New Comment=225
+Change Component Comment : Designator=C31 Old Comment=104 New Comment=225
+Added Component: Designator=B?(CR2032)
+Added Component: Designator=D?(SMA/DO-214AC)
+Added Component: Designator=D?(SMA/DO-214AC)
+Added Pin To Net: NetName=SYS_GND Pin=B?-2
+Added Pin To Net: NetName=SYS_GND Pin=C29-1
+Added Pin To Net: NetName=NetC29_1 Pin=C29-2
+Added Pin To Net: NetName=SYS_3.3V Pin=D?-1
+Added Pin To Net: NetName=NetC29_1 Pin=D?-2
+Added Pin To Net: NetName=NetC29_1 Pin=D?-2
+Change Net Name : Old Net Name=NetC29_1 New Net Name=VBAT
+Added Pin To Net: NetName=NetB?_1 Pin=B?-1
+Added Pin To Net: NetName=NetB?_1 Pin=D?-1
+Added Net: Name=NetB?_1
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component B? Å¦¿Ûµç³Øµ××ù
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=VCC_PROWER Pin=D2-2
+Removed Pin From Net: NetName=POWER_GND Pin=P1-1
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=D2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=P1
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R3

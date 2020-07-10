@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=IMU_SDA Pin=R20-1
+Removed Pin From Net: NetName=SYS_3.3V Pin=R20-2
+Removed Pin From Net: NetName=IMU_SCL Pin=R20-3
+Removed Pin From Net: NetName=SYS_3.3V Pin=R20-4
+Removed Pin From Net: NetName=AD0 Pin=R20-5
+Removed Pin From Net: NetName=GND Pin=R20-6
+Removed Pin From Net: NetName=FSYNC Pin=R20-7
+Removed Pin From Net: NetName=GND Pin=R20-8
+Added Pin To Net: NetName=SYS_3.3V Pin=R20-1
+Added Pin To Net: NetName=IMU_SDA Pin=R20-2
+Added Pin To Net: NetName=SYS_3.3V Pin=R20-3
+Added Pin To Net: NetName=IMU_SCL Pin=R20-4
+Added Pin To Net: NetName=GND Pin=R20-5
+Added Pin To Net: NetName=AD0 Pin=R20-6
+Added Pin To Net: NetName=GND Pin=R20-7
+Added Pin To Net: NetName=FSYNC Pin=R20-8

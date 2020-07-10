@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC_PROWER Pin=R30-1
+Added Pin To Net: NetName=NetC20_1 Pin=R30-1
+Change Net Name : Old Net Name=NetC20_1 New Net Name=ADC_PROWER
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component D? D

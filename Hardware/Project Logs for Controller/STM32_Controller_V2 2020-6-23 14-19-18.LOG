@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=C27-1
+Removed Pin From Net: NetName=5V Pin=C27-2
+Removed Pin From Net: NetName=GND Pin=C28-1
+Removed Pin From Net: NetName=5V Pin=C28-2
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C27
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=C28
+Added Component: Designator=E?(CM E(8*10.2))
+Added Component: Designator=E?(CM E(8*10.2))
+Added Pin To Net: NetName=GND Pin=E?-1
+Added Pin To Net: NetName=GND Pin=E?-1
+Added Pin To Net: NetName=5V Pin=E?-2
+Added Pin To Net: NetName=5V Pin=E?-2
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component E? 10uF
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component E? 10uF

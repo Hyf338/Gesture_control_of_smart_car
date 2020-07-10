@@ -1,0 +1,67 @@
+Removed Pin From Net: NetName=NetP22_1 Pin=P22-1
+Removed Pin From Net: NetName=NetP22_1 Pin=P22-2
+Removed Pin From Net: NetName=GND Pin=P22-3
+Removed Pin From Net: NetName=3.3V Pin=P22-4
+Removed Pin From Net: NetName=3.3V Pin=R22-1
+Removed Pin From Net: NetName=NetR22_2 Pin=R22-2
+Removed Pin From Net: NetName=NetR23_1 Pin=R23-1
+Removed Pin From Net: NetName=NetP22_1 Pin=R23-2
+Removed Pin From Net: NetName=NetR24_1 Pin=R24-1
+Removed Pin From Net: NetName=3.3V Pin=R24-2
+Removed Pin From Net: NetName=NetR27_1 Pin=R27-1
+Removed Pin From Net: NetName=GND Pin=R27-2
+Removed Pin From Net: NetName=BEEP Pin=R29-7
+Removed Pin From Net: NetName=LED_R Pin=U9-79
+Removed Pin From Net: NetName=LED_G Pin=U9-80
+Removed Pin From Net: NetName=LED_B Pin=U9-87
+Removed Pin From Net: NetName=BEEP Pin=U9-88
+Removed Pin From Net: NetName=NetR22_2 Pin=U14-3
+Removed Pin From Net: NetName=NetR22_2 Pin=U14-3
+Removed Pin From Net: NetName=NetR23_1 Pin=U14-18
+Removed Pin From Net: NetName=NetR23_1 Pin=U14-18
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R22
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R23
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R24
+Removed Member From Class: ClassName=STM32_Controller_V2.0_ZET6 Member=R27
+Change Component Footprint: Designator=P22 Old Footprint=拨码开关2-SOP New Footprint=拨码开关4-SOP
+Change Component Comment : Designator=P22 Old Comment=拨码开关2 New Comment=拨码开关4
+Change Component Designator: OldDesignator=P? NewDesignator=P5
+Added Component: Designator=R4(0603R)
+Added Component: Designator=R5(排阻(4位贴片))
+Added Pin To Net: NetName=BEEP Pin=P22-1
+Added Pin To Net: NetName=NetR22_2 Pin=P22-3
+Added Pin To Net: NetName=NetR23_1 Pin=P22-4
+Added Pin To Net: NetName=3.3V Pin=P22-5
+Added Pin To Net: NetName=GND Pin=P22-6
+Added Pin To Net: NetName=GND Pin=P22-7
+Added Pin To Net: NetName=SYS_3.3V Pin=R4-1
+Added Pin To Net: NetName=NetR22_2 Pin=R5-1
+Added Pin To Net: NetName=NetR23_1 Pin=R5-2
+Added Pin To Net: NetName=NetR24_1 Pin=R5-3
+Added Pin To Net: NetName=3.3V Pin=R5-4
+Added Pin To Net: NetName=NetR27_1 Pin=R5-5
+Added Pin To Net: NetName=GND Pin=R5-6
+Added Pin To Net: NetName=NetP22_1 Pin=R5-7
+Added Pin To Net: NetName=3.3V Pin=R5-8
+Added Pin To Net: NetName=BEEP Pin=U9-115
+Added Pin To Net: NetName=LED_B Pin=U9-116
+Added Pin To Net: NetName=LED_G Pin=U9-117
+Added Pin To Net: NetName=LED_R Pin=U9-118
+Added Pin To Net: NetName=NetP22_1 Pin=U14-2
+Added Pin To Net: NetName=NetP22_1 Pin=U14-2
+Added Pin To Net: NetName=NetR22_2 Pin=U14-18
+Added Pin To Net: NetName=NetR22_2 Pin=U14-18
+Change Net Name : Old Net Name=NetP22_1 New Net Name=WIFI_2
+Change Net Name : Old Net Name=NetR22_2 New Net Name=NetP22_3
+Change Net Name : Old Net Name=NetR23_1 New Net Name=NetP22_4
+Change Net Name : Old Net Name=NetR24_1 New Net Name=NetR5_3
+Change Net Name : Old Net Name=NetR27_1 New Net Name=NetR5_5
+Added Pin To Net: NetName=BO_BEEP Pin=P22-8
+Added Pin To Net: NetName=BO_BEEP Pin=R29-7
+Added Net: Name=BO_BEEP
+Added Pin To Net: NetName=BO Pin=P22-2
+Added Pin To Net: NetName=BO Pin=R4-2
+Added Pin To Net: NetName=BO Pin=U9-110
+Added Net: Name=BO
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R4 1K
+Added Member To Class: ClassName=STM32_Controller_V2.0_ZET6 Member=Component R5 10k

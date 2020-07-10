@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=ULTRASONIC_TRIG Pin=U9-69
+Removed Pin From Net: NetName=ULTRASONIC_ECHO Pin=U9-70
+Added Pin To Net: NetName=ULTRASONIC_TRIG Pin=U9-134
+Added Pin To Net: NetName=ULTRASONIC_ECHO Pin=U9-135
