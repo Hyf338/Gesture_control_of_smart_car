@@ -53,7 +53,9 @@
 
 ![PCB - 3D模型示意图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/20200903230555.png)
 
+- [x] pcb实物图
 
+  ![pcb实物图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/IMG_20200903_231727.jpg)
 
 # Software
 
