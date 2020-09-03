@@ -40,6 +40,21 @@
         - 交互单元采用OLED进行数据的实现，并且利用蓝牙模块向手持遥控器传送小车的基本信息，例如电量、障碍、信号丢失标志位等
         - 核心控制单元综合传感器单元和交互单元的信息，结合PID算法，输出信号通过执行单元，作用于电机。
 
+![系统整体设计框图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/遥感车系统功能框图.png)
+
 # Hardware
 >系统硬件设计首先平台采用Altium Designer电子设计软件，进行原理图的设计和PPCB的绘制。
 
+
+
+![原理图设计](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/20200903230435.png)
+
+- [x] PCB - 3D模型示意图
+
+![PCB - 3D模型示意图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/20200903230555.png)
+
+
+
+# Software
+
+> 系统软件设计平台采用RT-Thread实时操作系统
