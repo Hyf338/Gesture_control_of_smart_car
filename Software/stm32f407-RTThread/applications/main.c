@@ -12,12 +12,16 @@
 #include <rtthread.h>
 #include <rtdevice.h>
 #include <board.h>
-//#include "led.h"
+#include "led.h"
+#include "pwm.h"
 
 /* defined the LED0 pin: PF9 */
 #define LED0_PIN    GET_PIN(G, 2)
 
 int main(void)
 {
-    //led_thread();
+    led_thread();
+		pwm_thread();
 }
+
+

@@ -13,7 +13,7 @@
 void led_thread_entry(void)
 {
 	
-		rt_kprintf("THIS IS THREAD ENTRY");
+	//	rt_kprintf("THIS IS THREAD ENTRY");
 	 while (1)
     {
         rt_pin_write(LED_RED, PIN_HIGH);
@@ -38,7 +38,7 @@ int led_thread(void)
 		return -1;
 	}
 	else 
-		rt_kprintf("create led thread SUCCESS!");
+		//rt_kprintf("create led thread SUCCESS!");
 		rt_pin_mode(LED_RED, PIN_MODE_OUTPUT);	
 		rt_thread_startup(led);
 	
