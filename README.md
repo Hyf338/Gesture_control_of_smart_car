@@ -47,6 +47,8 @@
 
 ![系统整体设计框图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/遥感车系统功能框图.png)
 
+![系统整体设计框图](/Data/picture/系统整体设计框图.png)
+
 # Hardware
 >系统硬件设计首先平台采用Altium Designer电子设计软件，进行原理图的设计和PPCB的绘制。
 
@@ -54,14 +56,19 @@
 
 ![原理图设计](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/20200903230435.png)
 
+![原理图设计](/Data/picture/原理图设计.png)
+
 - [x] PCB - 3D模型示意图
 
 ![PCB - 3D模型示意图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/20200903230555.png)
+
+![PCB - 3D模型示意图](/Data/picture/PCB - 3D模型示意图.png)
 
 - [x] pcb实物图
 
   ![pcb实物图](https://hyifen.oss-cn-hangzhou.aliyuncs.com/img/IMG_20200903_231727.jpg)
 
+  ![pcb实物图](/Data/picture/pcb实物图.jpg)
 ***
 
 - [x] :exclamation:  硬件电路板当前存在的问题和需要改进的地方，可以查看项目中的[Projects](https://github.com/Hyf338/Gesture_control_of_smart_car/projects/1)：
